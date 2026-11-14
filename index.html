@@ -308,8 +308,8 @@ const SPACED=()=>!(LANG==='zh'||LANG==='ja');
 const SFX=(function(){
   let ctx=null,master=null,muted=false,adMute=false;const last={};
   try{muted=localStorage.getItem('kyz_mute')==='1'}catch(e){}
-  function ensure(){if(ctx)return ctx;try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;ctx=new AC();master=ctx.createGain();master.gain.value=0.5;master.connect(ctx.destination)}catch(e){ctx=null}return ctx}
-  function unlock(){const c=ensure();if(c&&c.state!=='running')c.resume().catch(()=>{})}
+  function ensure(){if(ctx)return ctx;try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;ctx=new AC();master=ctx.createGain();master.gain.value=0.5;master.connect(ctx.destination);if(adMute)ctx.suspend().catch(()=>{})}catch(e){ctx=null}return ctx}
+  function unlock(){const c=ensure();if(c&&c.state!=='running'&&!adMute)c.resume().catch(()=>{})}
   function tone(f,d,type,vol,f2,delay){const c=ctx,t=c.currentTime+(delay||0),o=c.createOscillator(),g=c.createGain();o.type=type||'sine';o.frequency.setValueAtTime(f,t);if(f2)o.frequency.exponentialRampToValueAtTime(f2,t+d);g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(vol||0.2,t+0.01);g.gain.exponentialRampToValueAtTime(0.0001,t+d);o.connect(g);g.connect(master);o.start(t);o.stop(t+d+0.02)}
   function noise(d,vol,ftype,freq,delay){const c=ctx,t=c.currentTime+(delay||0),n=Math.floor(c.sampleRate*d),b=c.createBuffer(1,n,c.sampleRate),a=b.getChannelData(0);for(let i=0;i<n;i++)a[i]=Math.random()*2-1;const src=c.createBufferSource();src.buffer=b;const f=c.createBiquadFilter();f.type=ftype||'lowpass';f.frequency.value=freq||1000;const g=c.createGain();g.gain.setValueAtTime(vol||0.2,t);g.gain.exponentialRampToValueAtTime(0.0001,t+d);src.connect(f);f.connect(g);g.connect(master);src.start(t);src.stop(t+d+0.02)}
   const LIB={
@@ -1188,6 +1188,7 @@ function frame(t){
   if(cv.width){ctx.setTransform(cv.width/W,0,0,cv.height/H,0,0);game.draw(ctx)}
   requestAnimationFrame(frame);
 }
+if(/debug/.test(location.search))window.__game=()=>game;
 let booted=false;
 function boot(){if(booted)return;booted=true;layout(true);if(CG)cgSafe(()=>CG.game.loadingStop());try{game.autoStart()}catch(e){}requestAnimationFrame(frame)}
 (async()=>{
