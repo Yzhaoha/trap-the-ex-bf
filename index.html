@@ -1,0 +1,1195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Trap the Hero</title>
+<style>
+@font-face{font-family:'PixelGame';src:url(data:font/woff;base64,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) format('woff');font-weight:100 900;font-display:block;size-adjust:128%}
+:root{
+  --bg:#f088b4; --deep:#c86aa0; --surface:#c86aa8; --surface-2:#d886bc; --line:#6a5c8f;
+  --wall:#2b2442; --brick:#3a3157; --stone:#9b8f9e; --copper:#f08a3c;
+  --fg:#f4efe6; --muted:#a99fc4;
+  --coral:#ff5a4a; --sun:#ffd250; --mint:#5bd18a; --sky:#5aa8f0;
+}
+html,body{margin:0;height:100%;background:var(--deep);overflow:hidden;overscroll-behavior:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none}
+#wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+canvas{display:block;width:min(100vw, calc(100vh * 960 / 440));height:min(100vh, calc(100vw * 440 / 960));width:min(100vw, calc(100dvh * 960 / 440));height:min(100dvh, calc(100vw * 440 / 960));touch-action:none;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent;background:var(--deep)}
+#rotate{display:none;position:fixed;inset:0;z-index:5;background:var(--deep);color:var(--fg);flex-direction:column;align-items:center;justify-content:center;gap:16px;font:700 20px system-ui,'PingFang SC',sans-serif;text-align:center;padding:24px}
+#rotate svg{width:72px;height:72px}
+@media (orientation:portrait) and (pointer:coarse){#rotate{display:flex}}
+</style>
+</head>
+<body>
+<div id="rotate"><svg viewBox="0 0 72 72" fill="none" stroke="#ffc94a" stroke-width="4" stroke-linecap="round"><rect x="22" y="8" width="28" height="48" rx="5"/><path d="M60 40a24 24 0 0 1-20 24M40 64l6-2M40 64l2-6"/></svg><div>Rotate your phone to landscape</div></div><div id="wrap"><canvas id="cv"></canvas></div>
+<script>
+(function(){
+'use strict';
+function updateBest(){}
+const $=s=>document.querySelector(s);
+const css=getComputedStyle(document.documentElement);
+const tok=n=>css.getPropertyValue(n).trim();
+const C={bg:tok('--bg'),deep:tok('--deep'),surface:tok('--surface'),surface2:tok('--surface-2'),line:tok('--line'),wall:tok('--wall'),brick:tok('--brick'),stone:tok('--stone'),copper:tok('--copper'),fg:tok('--fg'),muted:tok('--muted'),coral:tok('--coral'),sun:tok('--sun'),mint:tok('--mint'),sky:tok('--sky')};
+const FONT='"PixelGame","PingFang SC","Hiragino Sans","Noto Sans SC","Noto Sans JP","Noto Sans Devanagari","Noto Sans Bengali","Microsoft YaHei",system-ui,sans-serif';
+const W=960;let H=440;const COMPACT=true;
+const rand=(a,b)=>a+Math.random()*(b-a);
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const choice=a=>a[Math.floor(Math.random()*a.length)];
+/* ====================== 像素美术（统一调色板 + 精灵 + 界面） ====================== */
+const PAL={k:'#1a1426',w:'#f4efe6',s:'#f3b98c',S:'#c97f5d',b:'#4a8fe0',B:'#2d5aa6',r:'#e04b3c',R:'#94263a',g:'#5bbf5a',G:'#2f7a45',y:'#ffd250',Y:'#d08a2c',n:'#9a6038',N:'#5e3a26',m:'#c8c6d6',M:'#7c7a94',p:'#9a6ae0',P:'#5b3c99',c:'#7fd6f0',C:'#3b8fb8',o:'#f08a3c',e:'#2a1f38',h:'#6b4430',x:'#9b8f9e',X:'#605668',l:'#fff4c2',v:'#f2b6d6',V:'#d08ab8',d:'#a8508c',D:'#b86a8c'};
+const PX=3; // 一个像素 = 3 个世界单位
+function shade(hex,a){let n=parseInt(hex.slice(1),16),r=n>>16,g=(n>>8)&255,b=n&255;const t=a<0?0:255,f=Math.abs(a);r=Math.round(r+(t-r)*f);g=Math.round(g+(t-g)*f);b=Math.round(b+(t-b)*f);return '#'+((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1)}
+function newCv(w,h){const cv=document.createElement('canvas');cv.width=Math.max(1,w);cv.height=Math.max(1,h);return cv}
+function mkSpr(rows,outline){
+  const h0=rows.length,w0=Math.max(...rows.map(r=>r.length)),o=outline===false?0:1;
+  const cv=newCv(w0+2*o,h0+2*o),c=cv.getContext('2d');
+  const op=(x,y)=>y>=0&&y<h0&&x>=0&&x<rows[y].length&&rows[y][x]!=='.'&&rows[y][x]!==' ';
+  if(o){c.fillStyle=PAL.k;for(let y=-1;y<=h0;y++)for(let x=-1;x<=w0;x++){if(op(x,y))continue;if(op(x-1,y)||op(x+1,y)||op(x,y-1)||op(x,y+1))c.fillRect(x+o,y+o,1,1)}}
+  for(let y=0;y<h0;y++)for(let x=0;x<rows[y].length;x++){const ch=rows[y][x];if(ch!=='.'&&ch!==' '){c.fillStyle=PAL[ch]||ch;c.fillRect(x+o,y+o,1,1)}}
+  return cv;
+}
+function tintSpr(cv,col){const t=newCv(cv.width,cv.height),c=t.getContext('2d');c.drawImage(cv,0,0);c.globalCompositeOperation='source-in';c.fillStyle=col;c.fillRect(0,0,t.width,t.height);return t}
+/* 像素球：光从左上来，cr 为裂纹角度 */
+function ballSpr(R,base,crack){const d=R*2+1,cv=newCv(d+2,d+2),c=cv.getContext('2d');
+  const lit=shade(base,0.25),dk=shade(base,-0.3),dk2=shade(base,-0.5);
+  const inside=(x,y)=>{const dx=x-R,dy=y-R;return dx*dx+dy*dy<=R*R+R*0.6};
+  c.fillStyle=PAL.k;for(let y=-1;y<=d;y++)for(let x=-1;x<=d;x++)if(!inside(x,y)&&(inside(x-1,y)||inside(x+1,y)||inside(x,y-1)||inside(x,y+1)))c.fillRect(x+1,y+1,1,1);
+  for(let y=0;y<d;y++)for(let x=0;x<d;x++){if(!inside(x,y))continue;const nx=(x-R)/R,ny=(y-R)/R,l=-nx*0.6-ny*0.7;c.fillStyle=l>0.55?lit:l>-0.1?base:l>-0.6?dk:dk2;c.fillRect(x+1,y+1,1,1)}
+  if(crack!=null){c.fillStyle=dk2;const ca=Math.cos(crack),sa=Math.sin(crack);for(let t=-R*0.6;t<=R*0.5;t+=0.5){const wob=Math.sin(t*1.7)*1.2;const x=Math.round(R+ca*t-sa*wob),y=Math.round(R+sa*t+ca*wob);if(inside(x,y))c.fillRect(x+1,y+1,1,1)}
+    c.fillStyle=lit;const hx=Math.round(R+Math.cos(crack+2.2)*R*0.45),hy=Math.round(R+Math.sin(crack+2.2)*R*0.45);if(inside(hx,hy))c.fillRect(hx+1,hy+1,1,1)}
+  return cv}
+function drawSpr(c,cv,x,y,s,flip){s=s||PX;const w=cv.width*s,h=cv.height*s;const L=Math.round((x-w/2)/s)*s,T=Math.round((y-h)/s)*s;c.imageSmoothingEnabled=false;if(flip){c.save();c.translate(L+w,T);c.scale(-1,1);c.drawImage(cv,0,0,w,h);c.restore()}else c.drawImage(cv,L,T,w,h)}
+const LEGS={a:['..nn..nn..','..NN..NN..'],b:['...nnnn...','...NNNN...'],ma:['..mm..mm..','..MM..MM..'],mb:['...mmmm...','...MMMM...']};
+const HERO_ROWS={
+ rookie:{body:['....bbb...','...bbbbb.m','..bbbbbbbm','..hssses.m','..hsssss.m','...SSSS..m','..bbbbbbsn','..bBbbbb.Y','..bBbbbb..','..NNYNNN..'],legs:['a','b']},
+ knight:{body:['....rr....','...mmmm...','..mmmmmm..','..mmkkkm..','..mmmmmm..','...MMMBBB.','..rrrrBbbB','..rRrrBbbB','..rrrrBbbB','..MMMM.BB.'],legs:['ma','mb']},
+ thief:{body:['...GGG....','..GgggG...','.Gggggggg.','.Gghssse..','.GGhssss..','..eeeee...','..gggggsm.','..gGgggg..','..NNNNNN..'],legs:['a','b']},
+ brute:{body:['...MMMM...','..MmmmmM..','..Mmmmmm..','..Mmkkkm..','..MmmmmM..','.MMmmmmMM.','MmmmmmmmmM','MmMMmmMMmM','.MmmmmmmM.','.MMmmmmMM.','.NNNYYNNN.'],legs:['ma','mb']},
+ sapper:{body:['...yyyy...','..yyyyyyw.','.yyyyyyyy.','..hssses..','..hsssss..','...SSSS.M.','..oooooMmM','..oYooosn.','..ooooo.n.','..NNNNNN..'],legs:['a','b']},
+ priest:{body:['...wwww...','..wwwwww..','..wsssew..','..wssssw..','...ssss.y.','..wwwwwyyy','..wwyywwn.','..wyyyywn.','..wmyywmn.','.wwmmmmwn.'],legs:['a','b']},
+ scout:{body:['......y...','...NNNNy..','..NNNNNNN.','..hssses..','..hsssss..','..cccccc..','..cCcccsYY','..cCcccc..','..NNNNNN..'],legs:['a','b']},
+ boss:{body:['....y.y.y.....','....yyyyy.....','....yrybY.....','...hsssssh....','...hsssese....','...hssssss....','...hwwwwwh....','....wwww......','..RrrmmmmrR...','.RrrmMyyMmrR..','.RrrmmyymmrR..','.RrrmmmmmmrR..','.RRrMMMMMMrR..','..RRNYYYYNRR..'],legs:['ma','mb'],wide:true}
+};
+const HSPR={};
+function heroSpr(cls,fr){const k=cls+fr;if(HSPR[k])return HSPR[k];const d=HERO_ROWS[cls];let lg=LEGS[d.legs[fr]];if(d.wide)lg=lg.map(r=>'..'+r+'..');HSPR[k]=mkSpr(d.body.concat(lg));HSPR[k+'w']=tintSpr(HSPR[k],'#ffffff');HSPR[k+'g']=tintSpr(HSPR[k],PAL.g);return HSPR[k]}
+const TSPR_ROWS={
+ spike:['..w....w....w..','..m....m....m..','.mmM..mmM..mmM.','.mmM..mmM..mmM.','mmmMMmmmMMmmmMM','MMMMMMMMMMMMMMM'],
+ chest:['.NNNNNNNNNN.','NnnnnnnnnnnN','NnnnnnnnnnnN','YYYYYyyYYYYY','NnnnnyYnnnnN','NnnnnnnnnnnN','NNNNNNNNNNNN'],
+ chestOpen:['NnnnnnnnnnnN','YYYYYYYYYYYY','.y.l.yy.l.y.','YyyyyyyyyyyY','NnnnnyYnnnnN','NnnnnnnnnnnN','NNNNNNNNNNNN'],
+ arrowBox:['MMMMMMMMMM','MmmmmmmmyM','kkkmmmmmmM','MmmmmmmmyM','MMMMMMMMMM'],
+ arrow:['.m.......','mmnnnnnww','.m.......'],
+ rock:['...XXXX.....','..XxxxxXX...','.XxxmxxxxX..','XxxmxxxxxxX.','XxxxxxxxxxXX','XxxxxxxxxXX.','.XXxxxxXXX..','..XXXXXX....'],
+ spring:['rrrrrrrrrrrr','RRRRRRRRRRRR','...mmmmmm...','..MMMMMMMM..','...mmmmmm...','..MMMMMMMM..','MMMMMMMMMMMM'],
+ nozzle:['MMMMMMMM','MmkkkkmM','MMMMMMMM'],
+ vent:['.MMMMMM.','MmGGGGmM','MMMMMMMM'],
+ hatch:['NNNNNNNNNNNNNN','NnnnnnNNnnnnnN','NNNNNNNNNNNNNN'],
+ heart:['.rr.rr.','rwrrrrr','rrrrrrr','.rrrrr.','..rrr..','...r...'],
+ heartE:['.VV.VV.','VVVVVVV','VVVVVVV','.VVVVV.','..VVV..','...V...'],
+ coin:['.yyyy.','yylyyY','ylyyyY','yyyyyY','YyyyYY','.YYYY.'],
+ star:['...y...','..yyy..','yyyyyyy','.yyyyy.','.yy.yy.','.y...y.'],
+ starE:['...V...','..VVV..','VVVVVVV','.VVVVV.','.VV.VV.','.V...V.'],
+ skull:['.mmmm.','mmmmmm','mkmmkm','mmmmmm','.m.m..'],
+ lock:['..MMM..','.M...M.','.M...M.','yyyyyyy','yyYkYyy','yyyYyyy','YYYYYYY'],
+ crown:['y.y.y','yyyyy','yrybY'],
+ torch:['.Y.','YnY','.n.','.n.','.N.'],
+ banner:['RRRRRR','RrrrrR','RryyrR','RrrrrR','RryyrR','RrrrrR','Rr..rR','R....R']
+};
+const TS_={};
+function tspr(k){return TS_[k]||(TS_[k]=mkSpr(TSPR_ROWS[k]))}
+function ceilSpr(){return TS_.ceil||(TS_.ceil=mkSpr(TSPR_ROWS.spike.slice().reverse()))}
+const BALLS={};
+function boulderSpr(R,i){const k=R+'_'+i;return BALLS[k]||(BALLS[k]=ballSpr(R,PAL.x,i*Math.PI/4))}
+/* 像素火焰：在 (x,底y) 处画宽 w、高 h 的火 */
+function pxFlame(c,x,y,w,h,t,s){s=s||PX;const cols=Math.max(3,Math.round(w/s));for(let i=0;i<cols;i++){const u=i/(cols-1)*2-1,hh=Math.max(1,Math.round(h/s*(1-u*u*0.8)*(0.75+0.25*Math.sin(t*23+i*1.9))));for(let j=0;j<hh;j++){const f=j/hh;c.fillStyle=f>0.8?PAL.r:f>0.55?PAL.o:Math.abs(u)<0.45&&f<0.45?PAL.l:PAL.y;c.fillRect(Math.round((x-w/2)/s)*s+i*s,Math.round(y/s)*s-(j+1)*s,s,s)}}}
+/* 背景：砖墙 + 地板，一次画进小画布 */
+function buildBG(pw,wallH,floorH,seed,tileOff,tilePx){
+  let sd=seed||7;const R=()=>{sd=(sd*16807)%2147483647;return sd/2147483647};
+  const cv=newCv(pw,wallH+floorH),c=cv.getContext('2d');
+  c.fillStyle=PAL.D;c.fillRect(0,0,pw,wallH);
+  const bricks=['#e898b4','#e28ca9','#eca5bd','#dc85a3','#e69db7'];
+  for(let row=0,y=wallH-1;y>-6;row++,y-=6){const off=(row%2)?-7:0,dk=Math.min(0.12,Math.max(0,(wallH-y)/wallH-0.25)*0.6);for(let x=off;x<pw;){const bw=10+Math.floor(R()*6);const col=shade(bricks[Math.floor(R()*bricks.length)],-dk);
+      c.fillStyle=col;c.fillRect(x,y-4,bw-1,5);c.fillStyle=shade(col,0.12);c.fillRect(x,y-4,bw-1,1);c.fillStyle=shade(col,-0.18);c.fillRect(x,y,bw-1,1);
+      if(R()<0.12){c.fillStyle=PAL.D;c.fillRect(x+Math.floor(R()*(bw-3)),y-3+Math.floor(R()*3),1+Math.floor(R()*2),1)}
+      if(y>wallH-14&&R()<0.25){c.fillStyle=R()<0.5?PAL.G:'#3f6b4a';c.fillRect(x+Math.floor(R()*bw),y-1,1+Math.floor(R()*3),1)}
+      x+=bw}}
+  // 石柱
+  for(let px=tileOff+tilePx*3-6;px<pw-20;px+=tilePx*5){c.fillStyle=PAL.k;c.fillRect(px-1,0,14,wallH);for(let y=wallH-3,i=0;y>0;y-=8,i++){const col=shade(i%2?'#d9a0e0':'#e3b2ea',-Math.min(0.1,Math.max(0,(wallH-y)/wallH-0.25)*0.6));c.fillStyle=col;c.fillRect(px,y-7,12,7);c.fillStyle=shade(col,0.15);c.fillRect(px,y-7,12,1);c.fillRect(px,y-7,1,7);c.fillStyle=shade(col,-0.25);c.fillRect(px+11,y-7,1,7)}
+    c.fillStyle='#f0c6f2';c.fillRect(px-2,wallH-6,16,3);c.fillStyle=PAL.k;c.fillRect(px-2,wallH-7,16,1)}
+  // 底部踢脚石
+  c.fillStyle='#b77cc8';c.fillRect(0,wallH-3,pw,3);c.fillStyle='#d6a2e2';c.fillRect(0,wallH-3,pw,1);
+  // 地板
+  const fy=wallH;c.fillStyle='#a86fc0';c.fillRect(0,fy,pw,floorH);
+  c.fillStyle='#e2baf0';c.fillRect(0,fy,pw,1);c.fillStyle='#c48fd8';c.fillRect(0,fy+1,pw,1);
+  for(let x=tileOff%tilePx-tilePx;x<pw;x+=tilePx){c.fillStyle=PAL.D;c.fillRect(x,fy+2,1,floorH-2);c.fillStyle='#9a62b4';c.fillRect(x+1,fy+2,1,floorH-2);
+    for(let k=0;k<3;k++){if(R()<0.6){c.fillStyle=R()<0.5?'#9060a8':'#c89ade';c.fillRect(x+2+Math.floor(R()*(tilePx-4)),fy+3+Math.floor(R()*(floorH-4)),1+Math.floor(R()*2),1)}}}
+  for(let x=tileOff%tilePx-tilePx;x<pw;x+=tilePx)for(let yy=fy+4,k=0;yy<fy+floorH;yy+=8,k++){const odd=((Math.floor((x-tileOff)/tilePx)+k)&1);c.fillStyle=odd?'rgba(255,255,255,0.16)':'rgba(120,50,140,0.10)';c.fillRect(x+2,yy,tilePx-2,8);if(odd){c.fillStyle='rgba(255,220,240,0.35)';c.fillRect(x+7,yy+3,2,2)}}
+  c.fillStyle='rgba(90,40,110,0.18)';c.fillRect(0,fy+Math.floor(floorH*0.6),pw,floorH);
+  return cv;
+}
+
+PAL.q='#ff7eb6';PAL.Q='#d4508e';PAL.z='#fff3fa';PAL.j='#4a6fb8';PAL.J='#2f4a85';
+Object.assign(LEGS,{ja:['..jj..jj..','..kk..kk..'],jb:['...jjjj...','...kkkk...'],ea:['..ee..ee..','..NN..NN..'],eb:['...eeee...','...NNNN...'],sa:['..ss..ss..','..kk..kk..'],sb:['...ssss...','...kkkk...'],ya:['..YY..YY..','..NN..NN..'],yb:['...YYYY...','...NNNN...']});
+Object.assign(HERO_ROWS,{
+ rookie:{body:['...hhhh...','..hhhhhhh.','..hssses..','..hsssss..','...SSSS...','..xxxxxx..','..xXxxxxs.','..xXxxxx..','..xxxxxx..','..xxxxxx..'],legs:['ja','jb']},
+ knight:{body:['...hhhh...','..khhhhk..','..ksssek..','..ksssss..','...SSSS...','..ggggMMM.','..gGggMkM.','..gGggMMM.','..gggg....','..gggggg..'],legs:['ja','jb']},
+ thief:{body:['...eeee...','..eeeeeee.','..eskkkk..','..esssss..','...SSSS...','..NwwwwN..','..NNwwNNs.','..NNwwNN..','..NNNNNN..'],legs:['ea','eb']},
+ brute:{body:['...hhhh...','..hhhhhh..','..sssses..','..ssssss..','...SSSS...','.sswwwwss.','ssSwwwwSss','ss.wwww.ss','...wwww...','..bbbbbb..','..bBbbBb..'],legs:['sa','sb']},
+ sapper:{body:['...oooo...','..oooooooo','..hssses..','..hsssss..','...SSSS.M.','..rRrRrMmM','..RrRrRs..','..rRrRr...','..rRrRr...','..NNNNNN..'],legs:['ja','jb']},
+ priest:{body:['...hhhh...','..hhhhhh..','..hkskks..','..hsssss..','...SSSS...','..wyyyyw..','..wyYYyws.','..wyyyyw..','..wyyyyw..','..YYYYYY..'],legs:['ya','yb']},
+ scout:{body:['...qqqq...','..qqqqqq..','..qkkkks..','..qsssss.k','...SSSS..k','..ccccccs.','..cCcccc..','..cCcccc..','..NNNNNN..'],legs:['ja','jb']},
+ boss:{body:['....y.y.y.....','....yyyyy.....','...hhhhhhh....','...hkkkkkk....','...hsssssss...','...hsssse.....','....SSSS......','..RrrwwwwrR...','.RrrrwyywrrR..','.Rrrrwyywrrrs.','.RrrrwwwwrrR..','.RRrrrrrrrrR..','..kkkkkkkkk...','..kkkkkkkkk...'],legs:['ma','mb'],wide:true}
+});
+for(const k in HSPR)delete HSPR[k];
+Object.assign(TSPR_ROWS,{
+ spike:['..M....M....M..','..M....M....M..','.rM...rM...rM..','.rrr..rrr..rrr.','rrrrrrrrrrrrrrr','RRRRRRRRRRRRRRR'],
+ hanger:['MMMMMMMMMMMMMMM','..m....m....m..','..m....m....m..','.mmm..mmm..mmm.','m...mm...mm...m','mmmmmmmmmmmmmmm'],
+ chest:['...y....y...','....yyyy....','qqqqqyyqqqqq','QqqqqyyqqqqQ','yyyyyyyyyyyy','qqqqqyyqqqqq','qqqqqyyqqqqq','QQQQQyyQQQQQ'],
+ chestOpen:['.y..l..q..y.','l..q..y...l.','qqqqqyyqqqqq','QqqqqyyqqqqQ','qqqqqyyqqqqq','QQQQQyyQQQQQ'],
+ arrowBox:['QQQQQQQQQQ','QqqqqqqqyQ','kkkqqqqqqQ','QqqqqqqqyQ','QQQQQQQQQQ'],
+ arrow:['.rr......','rrryyyyYY','.rr......'],
+ rock:['....r.r.....','...rryrr....','....rrr.....','.....g......','....gg......','..oooooooo..','...oooooo...','...oonnoo...','....nnnn....'],
+ spring:['.zzzzzzzzzz.','zzqzzzzzzqzz','zzzzzzzzzzzz','.zzzzzzzzzz.','...MMMMMM...','..MMMMMMMM..','MMMMMMMMMMMM'],
+ nozzle:['.kkkkkk.','.qqqqqq.','qqqqqqqq','qqqqqqqq','.QQqqQQ.','...QQ...','...QQ...'],
+ vent:['...yy...','...MM...','..pppp..','.pppppp.','.pzpppp.','.pppppp.','..pppp..'],
+ hatch:['PPPPPPPPPPPPPP','PppppyyyyppppP','PPPPPPPPPPPPPP'],
+ banner:['qqqqqq','qQqqQq','qqqqqq','.qqqq.','..qq..'],
+ bheart:['.rr.rr.','rrr.rrr','rrrk.rr','.rr.rr.','..r.r..','...r...']
+});
+for(const k in TS_)delete TS_[k];
+ceilSpr=function(){return TS_.ceil||(TS_.ceil=mkSpr(TSPR_ROWS.hanger))};
+boulderSpr=function(R,i){const k='y'+R+'_'+i;return BALLS[k]||(BALLS[k]=ballSpr(R,'#b06ad0',i*Math.PI/4))};
+/* ===== 界面 ===== */
+function rr(c,x,y,w,h,r){c.beginPath();let tl=1,tr=1,br=1,bl=1;if(Array.isArray(r)){tl=r[0]>0;tr=r[1]>0;br=r[2]>0;bl=r[3]>0;r=Math.max(...r)}
+  const n=Math.min(r>=10?6:r>=4?4:r>0?2:0,w/3,h/3),s=n/2;
+  c.moveTo(x+(tl?n:0),y);
+  if(tr){c.lineTo(x+w-n,y);c.lineTo(x+w-n,y+s);c.lineTo(x+w-s,y+s);c.lineTo(x+w-s,y+n);c.lineTo(x+w,y+n)}else c.lineTo(x+w,y);
+  if(br){c.lineTo(x+w,y+h-n);c.lineTo(x+w-s,y+h-n);c.lineTo(x+w-s,y+h-s);c.lineTo(x+w-n,y+h-s);c.lineTo(x+w-n,y+h)}else c.lineTo(x+w,y+h);
+  if(bl){c.lineTo(x+n,y+h);c.lineTo(x+n,y+h-s);c.lineTo(x+s,y+h-s);c.lineTo(x+s,y+h-n);c.lineTo(x,y+h-n)}else c.lineTo(x,y+h);
+  if(tl){c.lineTo(x,y+n);c.lineTo(x+s,y+n);c.lineTo(x+s,y+s);c.lineTo(x+n,y+s);c.lineTo(x+n,y)}
+  c.closePath()}
+/* 立体像素面板：深色描边 + 下沿厚度 + 顶部高光 */
+function bevel(c,x,y,w,h,col,o){o=o||{};const d=o.depth==null?4:o.depth,r=o.r==null?10:o.r;
+  if(o.shadow!==false){rr(c,x+2,y+d+3,w,h,r);c.fillStyle='rgba(10,6,20,0.35)';c.fill()}
+  rr(c,x,y,w,h+d,r);c.fillStyle=o.dark||shade(col,-0.38);c.fill();
+  rr(c,x,y,w,h,r);c.fillStyle=col;c.fill();
+  c.save();rr(c,x,y,w,h,r);c.clip();c.fillStyle=o.lite||shade(col,0.22);c.fillRect(x,y,w,Math.max(2,Math.min(4,h*0.08)));c.fillStyle='rgba(255,255,255,0.06)';c.fillRect(x,y,w,h*0.45);c.restore();
+  rr(c,x-1,y-1,w+2,h+d+2,r);c.strokeStyle=PAL.k;c.lineWidth=2;c.stroke();
+  if(o.ring){rr(c,x-4,y-4,w+8,h+d+8,r+2);c.strokeStyle=o.ring;c.lineWidth=3;c.stroke()}}
+/* 描边字 */
+function txtO(c,s,x,y,size,col,align,weight,ow,oc){c.font=`${weight||800} ${size}px ${FONT}`;c.textAlign=align||'center';c.textBaseline='middle';c.lineJoin='round';c.strokeStyle=oc||PAL.k;c.lineWidth=ow==null?Math.max(3,size*0.2):ow;c.strokeText(s,x,y);c.fillStyle=col;c.fillText(s,x,y)}
+function fitTxtO(c,s,x,y,size,maxW,col,align,weight,ow){let sz=size;c.font=`${weight||800} ${sz}px ${FONT}`;while(sz>9&&c.measureText(s).width>maxW){sz--;c.font=`${weight||800} ${sz}px ${FONT}`}txtO(c,s,x,y,sz,col,align,weight,ow)}
+
+function txt(c,s,x,y,size,col,align,weight){c.font=`${weight||700} ${size}px ${FONT}`;c.fillStyle=col;c.textAlign=align||'center';c.textBaseline='middle';c.fillText(s,x,y)}
+function line(c,x1,y1,x2,y2){c.beginPath();c.moveTo(x1,y1);c.lineTo(x2,y2);c.stroke()}
+function fitTxt(c,s,x,y,size,maxW,col,align,weight){let sz=size;c.font=`${weight||700} ${sz}px ${FONT}`;while(sz>9&&c.measureText(s).width>maxW){sz--;c.font=`${weight||700} ${sz}px ${FONT}`}txt(c,s,x,y,sz,col,align,weight)}
+function pill(c,s,x,y,size,bg,fg){c.font=`700 ${size}px ${FONT}`;while(size>10&&c.measureText(s).width>W-40){size--;c.font=`700 ${size}px ${FONT}`}const w=c.measureText(s).width+28,h=size*2;const col=(typeof bg==='string'&&bg.startsWith('rgba'))?'#a8508c':bg;bevel(c,x-w/2,y-size,w,h-3,col,{depth:3,r:6,shadow:false});txt(c,s,x,y-2,size,fg)}
+function bubble(c,s,x,y){c.font=`700 15px ${FONT}`;const w=c.measureText(s).width+20;const bx=clamp(x-w/2,6,W-w-6);const ty=Math.max(y,40);const tx=clamp(x,bx+12,bx+w-12);c.fillStyle=PAL.k;c.beginPath();c.moveTo(tx-9,ty-6);c.lineTo(tx+9,ty-6);c.lineTo(tx,ty+6);c.closePath();c.fill();rr(c,bx-2,ty-34,w+4,32,6);c.fill();rr(c,bx,ty-32,w,28,6);c.fillStyle=PAL.w;c.fill();c.beginPath();c.moveTo(tx-6,ty-6);c.lineTo(tx+6,ty-6);c.lineTo(tx,ty+2);c.closePath();c.fill();txt(c,s,bx+w/2,ty-18,15,PAL.k)}
+function overlay(c,title,lines){c.fillStyle='rgba(12,17,28,0.8)';c.fillRect(0,0,W,H);txt(c,title,W/2,H/2-70,46,C.fg,'center',800);lines.forEach((l,i)=>txt(c,l,W/2,H/2-10+i*36,i===lines.length-1?18:22,i===lines.length-1?C.sun:C.muted,'center',i===lines.length-1?700:600))}
+function makeFX(){return{parts:[],shake:0,
+  burst(x,y,col,n,sp){n=n||12;sp=sp||200;for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,s=sp*(0.3+Math.random()*0.8);this.parts.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-80,life:0.5+Math.random()*0.4,col,sz:3+Math.random()*4})}},
+  update(dt){this.shake=Math.max(0,this.shake-dt*30);for(const p of this.parts){p.life-=dt;p.vy+=700*dt;p.x+=p.vx*dt;p.y+=p.vy*dt}this.parts=this.parts.filter(p=>p.life>0)},
+  draw(c){for(const p of this.parts){c.globalAlpha=clamp(p.life*2,0,1);c.fillStyle=p.col;const z=p.sz>4.5?6:3;c.fillRect(Math.round(p.x/3)*3-z/2,Math.round(p.y/3)*3-z/2,z,z)}c.globalAlpha=1},
+  apply(c){if(this.shake>0)c.translate((Math.random()-0.5)*this.shake,(Math.random()-0.5)*this.shake)}}}
+function stepPops(S,dt){for(const p of S.pops){p.life-=dt;p.y-=28*dt}S.pops=S.pops.filter(p=>p.life>0);if(S.msgT>0)S.msgT-=dt}
+function drawPops(c,S){for(const p of S.pops){c.globalAlpha=clamp(p.life,0,1);txtO(c,p.s,p.x,p.y,18,p.col,'center',800,4)}c.globalAlpha=1}
+
+/* best scores: localStorage when allowed, memory otherwise */
+const memBest={};
+function getBest(k){let v=0;try{v=Number(localStorage.getItem('proto3_best_'+k))||0}catch(e){}return Math.max(v,memBest[k]||0)}
+function saveBest(k,v){if(v>getBest(k)){memBest[k]=v;try{localStorage.setItem('proto3_best_'+k,String(v))}catch(e){}}updateBest()}
+
+const HOOK={};
+/* ====================== 多语言 ====================== */
+const I18N={
+en:{
+ sch:{spike:['Spike Build','Spike','Spike traps +1 durability'],fall:['Drop Build','Drop','Trapdoors stay open 2s, Ice and Portals +2 durability'],mech:['Machine Build','Machine','Arrows and Flames fire faster, Poison Gas is deadlier'],heavy:['Heavy Build','Heavy','Rocks and Boulders refund half their cost on a kill']},
+ td:{spike:['Spikes','Step on it and die'],pit:['Trapdoor','Step on it and fall'],chest:['Bait Chest','Heroes stop to open it. Combo it with other traps'],arrow:['Arrow Trap','Wall-mounted, fires arrows on a timer'],rock:['Falling Rock','Drops when a hero walks under it'],boulder:['Boulder','Released after a hero passes, rolls back and flattens a row'],spring:['Spring Pad','Launches heroes into the ceiling'],ceil:['Ceiling Spikes','Impales launched heroes. Pair with Spring Pad'],ice:['Ice Floor','Heroes slide: they can\'t stop or jump'],flame:['Flame Jet','Shoots fire in bursts'],portal:['Portal','Sends a hero back to the entrance. Once per hero'],gas:['Poison Gas','Linger too long and die']},
+ upg:{spike_dur:['Reinforced Spikes','Spikes +2 durability'],pit_dur:['Reinforced Trapdoor','Trapdoor +2 durability'],chest_long:['Heavy Chest','Heroes take twice as long to open it'],arrow_double:['Double Shot','Fires an extra low arrow. Ducking won\'t help'],rock_roll:['Rolling Rock','Falling rocks roll back after landing'],boulder_big:['Giant Boulder','Too big to jump over'],spring_back:['Angled Spring','Bounces heroes 2-3 tiles back'],ceil_dur:['Long Spikes','Ceiling Spikes +3 durability'],ice_long:['Mirror Ice','Slide faster and longer'],flame_long:['Inferno','Each burst lasts longer'],portal_dur:['Stable Portal','Portal +3 durability'],gas_wide:['Thick Gas','Gas spreads from 3 to 5 tiles']},
+ gen:{gold:['Windfall','Get 40 gold now'],life:['Reinforced Gate','+1 hero you can let escape'],cap:['Expand Dungeon','+2 max traps']},
+ cls:{rookie:['Rookie','An ordinary hero'],knight:['Shield Knight','His shield blocks arrows'],thief:['Thief','Fast, and better at spotting floor traps'],brute:['Heavy Armor','Takes one extra hit (not trapdoors)'],sapper:['Sapper','Disarms floor traps he spots'],priest:['Priest','Can revive a fallen ally once'],scout:['Scout','Traps he spots are revealed to the whole party'],boss:['Hero King','Lots of HP, takes several hits. Costs extra lives if he escapes']},
+ afx:{fast:'Forced March: speed +25%',armor:'Ironclad: everyone takes one extra hit',intel:'Veterans: better at spotting traps',horde:'Horde: 3 extra heroes'},
+ death:{spike:'Ow, my feet! Tell everyone there are spikes!',pit:'The floor is fake! Tell the guild!',arrow:'Shot in the back...',rock:'Something fell on my head...',chest:'The chest was bait...',boulder:'Where did that boulder come from?!',ceil:'Spikes on the ceiling!',flame:'Hot hot hot!',gas:'This fog is poison...',ice:'I can\'t stop!',portal:'Back here again...',spring:'Too high!'},
+ dodge:['The guild warned us about this!','Saw that coming!','I know this one~','Nice try.','It\'s in the guild notes.'],
+ esc:['That\'s it? I\'ll be back!','Too easy!','I\'ll be back with experience!'],
+ goal:{arrow:'Kill 10 heroes with Spikes in one run',rock:'Kill a hero while he opens a chest (3 total)',boulder:'Survive wave 5',spring:'Kill 2 heroes at once with one trap',ice:'Let no one escape for 3 waves in a row (one run)',ceil:'Make heroes hit the ceiling (5 total)',flame:'Kill Shield Knights (5 total)',portal:'Kill Veterans (3 total)',gas:'Survive wave 10'},
+ ui:{play:'PLAY',levels:'Levels',lvShort:'Level {id}',go:"▶ Start now ({n})",tut1:"Tap the floor to place a trap",tut2:"Ready? Send in the heroes!",chapter:"Chapter {n}",ch1:"Rookie Dungeon",ch2:"Machine Vault",ch3:"Bounce Hall",ch4:"Flame Abyss",ch5:"Hero Guild",ch6:"Legend Dungeon",endless:"Endless Mode",endlessBest:"Best: wave {n}",endlessLock:"Endless Mode · Clear 1-5 to unlock",chLocked:"Clear {id} to unlock this chapter",lvLocked:"Clear the previous level first",lvTitle:"Level {id} · Hold {n} waves",waveOf:"Wave {n}/{m}",newTrapLv:"New trap: {name} · {desc}",r_cap:"Max {n} traps",r_poor:"No gold for kills · Bigger wave bonus",r_nodraft:"No card draws in this level",r_lives:"Only {n} heroes may escape",r_block:"Rubble: some tiles can't hold traps",r_affix:"Every wave · {a}",r_rand:"Random wave modifiers",r_boss:"Final wave: {name} ×{n}",blockedTile:"Rubble here. Can't build",homeConfirm:"Tap again to quit to the menu",winT:"Level {id} Clear!",winStats:"Trapped {k} heroes · {e} escaped",star3:"★★★: let no hero escape",lostLv:"Fell on wave {w}/{m} · Trapped {k} heroes",nextLv:"Next Level",retry:"Retry",menu:"Menu",allDone:"All 60 levels cleared!",unlockNew:'New trap unlocked: {name}! It can now appear in draws',gotTrap:'New trap: {name}',gotUpg:'Upgrade: {name}',schoolDone:'Build complete: {name} · {bonus}',rerollNoGold:'Not enough gold. Reroll costs {n}',newClass:'New class: {name} · {info}',affixNow:'Wave modifier · {a}',waveHeld:'Wave {n} held! +{g} gold',forgot:'Unused traps, the guild forgot: {list}',listSep:', ',broke:'{name} broke',bossTaunt:'Is that all?',tough:'Tough skin!',ah:'Argh!',priest:'Rise, hero!',escaped:'A hero escaped. He returns next wave as a veteran',removed:'Removed {name}, refunded {g} gold',max3:'Max 3 of the same trap. Mix it up',maxCap:'Max {n} traps. Tap a placed trap to remove it',noGold:'Not enough gold. {name} costs {n}',tooClose:'Too close to a hero',chainJump:'Long jump!',bonk:'Ouch, my head!',revived:'I\'m alive again!',scout:'{name} ahead, watch out!',sapper:'I can disarm this.',chestMine:'Treasure! It\'s mine!',slide:'Whoaaa, slippery—',ported:'Huh? Why am I back here?',disarmed:'Disarmed by a Sapper',blocked:'Clang! Blocked.',vets:'Veteran×{n}',tagNew:'New trap · {s}',cardTrapDesc:'{desc}. Now {n} gold each.',tagUpg:'Upgrade · {name}',tagItem:'Item',schoolProg:'{name} {n}/3',schoolReady:' ✓',exit:'EXIT',wave:'Wave {n}',gold:'Gold {n}',traps:'Traps {a}/{b}',intel:'Guild intel (what heroes know)',lives:'Escapes left',cost:'{n} gold',next:'Next wave: {s}',startIn:'Starts in {n}s · Space to start now',hint:'Pick a trap below and tap the floor · Draw a card after each wave · {a}/{b} traps unlocked',pickCard:'Wave {n} held! Pick a card',reroll:'Reroll ({n} gold)',lost:'Dungeon Fallen',lostStats:'Held {w} waves, trapped {k} heroes · Best: {b} waves',unlockProg:'Trap unlocks {a}/{b}',allUnlocked:'All traps unlocked!',tapRestart:'Tap to play again',goalLine:'{name}: {text}',revive:'Watch an ad to revive (+2 lives)',reviveFree:'Revive (+2 lives, no ad in test build)',restart:'Restart',reviveDone:'Revived! +2 lives',adFail:'Ad not finished, can\'t revive',rotate:'Please turn your phone sideways',title:'Trap the Hero'}
+},
+pt:{
+ sch:{spike:['Build Espinhos','Espinho','Armadilhas de espinho +1 de durabilidade'],fall:['Build Queda','Queda','Alçapões ficam abertos 2s, Gelo e Portais +2 de durabilidade'],mech:['Build Máquina','Máquina','Flechas e Chamas mais rápidas, Gás mais letal'],heavy:['Build Peso','Peso','Pedras e Rochas devolvem metade do custo ao matar']},
+ td:{spike:['Espinhos','Pisou, morreu'],pit:['Alçapão','Pisou, caiu'],chest:['Baú Isca','Heróis param para abrir. Combine com outras armadilhas'],arrow:['Besta','Presa na parede, dispara flechas'],rock:['Pedra','Cai quando um herói passa por baixo'],boulder:['Rocha Rolante','Solta depois que o herói passa e rola esmagando a fila'],spring:['Mola','Lança heróis contra o teto'],ceil:['Espinhos do Teto','Empala heróis lançados. Use com a Mola'],ice:['Gelo','Heróis escorregam: não param nem pulam'],flame:['Lança-chamas','Solta fogo em rajadas'],portal:['Portal','Manda o herói de volta à entrada. Uma vez por herói'],gas:['Gás Venenoso','Ficar muito tempo nele mata']},
+ upg:{spike_dur:['Espinhos Reforçados','Espinhos +2 de durabilidade'],pit_dur:['Alçapão Reforçado','Alçapão +2 de durabilidade'],chest_long:['Baú Pesado','Heróis demoram o dobro para abrir'],arrow_double:['Tiro Duplo','Dispara uma flecha baixa extra. Agachar não adianta'],rock_roll:['Pedra Rolante','A pedra rola de volta ao cair'],boulder_big:['Rocha Gigante','Grande demais para pular'],spring_back:['Mola Inclinada','Joga heróis 2-3 casas para trás'],ceil_dur:['Espinhos Longos','Espinhos do Teto +3 de durabilidade'],ice_long:['Gelo Espelhado','Escorrega mais rápido e por mais tempo'],flame_long:['Inferno','Cada rajada dura mais'],portal_dur:['Portal Estável','Portal +3 de durabilidade'],gas_wide:['Gás Denso','O gás cobre 5 casas em vez de 3']},
+ gen:{gold:['Sorte Grande','Ganhe 40 de ouro agora'],life:['Portão Reforçado','+1 herói que pode escapar'],cap:['Expandir Masmorra','+2 no limite de armadilhas']},
+ cls:{rookie:['Novato','Um herói comum'],knight:['Cavaleiro','O escudo dele bloqueia flechas'],thief:['Ladrão','Rápido e bom em notar armadilhas no chão'],brute:['Armadura Pesada','Aguenta um golpe extra (menos alçapão)'],sapper:['Sapador','Desarma armadilhas de chão que notar'],priest:['Sacerdote','Pode reviver um aliado uma vez'],scout:['Batedor','As armadilhas que ele vê, o grupo todo fica sabendo'],boss:['Rei Herói','Muita vida, precisa de vários golpes. Escapar custa várias vidas']},
+ afx:{fast:'Marcha Forçada: velocidade +25%',armor:'Blindados: todos aguentam um golpe extra',intel:'Veteranos: notam mais armadilhas',horde:'Horda: +3 heróis'},
+ death:{spike:'Ai, meu pé! Avisem todos que tem espinhos!',pit:'O chão é falso! Avisem a guilda!',arrow:'Flechada pelas costas...',rock:'Algo caiu na minha cabeça...',chest:'O baú era isca...',boulder:'De onde veio essa rocha?!',ceil:'Tem espinhos no teto!',flame:'Tá quente, tá quente!',gas:'Essa névoa é venenosa...',ice:'Não consigo parar!',portal:'Voltei pra cá de novo...',spring:'Alto demais!'},
+ dodge:['A guilda avisou sobre isso!','Já sabia!','Essa eu conheço~','Boa tentativa.','Está nas anotações da guilda.'],
+ esc:['Só isso? Eu volto!','Fácil demais!','Volto com experiência!'],
+ goal:{arrow:'Mate 10 heróis com Espinhos numa partida',rock:'Mate um herói abrindo um baú (3 no total)',boulder:'Sobreviva à onda 5',spring:'Mate 2 heróis de uma vez com uma armadilha',ice:'Ninguém escapa por 3 ondas seguidas (numa partida)',ceil:'Faça heróis baterem no teto (5 no total)',flame:'Mate Cavaleiros (5 no total)',portal:'Mate Veteranos (3 no total)',gas:'Sobreviva à onda 10'},
+ ui:{play:'JOGAR',levels:'Fases',lvShort:'Fase {id}',go:"▶ Começar já ({n})",tut1:"Toque no chão para pôr uma armadilha",tut2:"Pronto? Deixe os heróis entrarem!",chapter:"Capítulo {n}",ch1:"Masmorra Novata",ch2:"Cofre das Máquinas",ch3:"Salão dos Saltos",ch4:"Abismo de Fogo",ch5:"Guilda dos Heróis",ch6:"Masmorra Lendária",endless:"Modo Infinito",endlessBest:"Recorde: onda {n}",endlessLock:"Modo Infinito · Vença a 1-5 para liberar",chLocked:"Vença a {id} para liberar este capítulo",lvLocked:"Vença a fase anterior primeiro",lvTitle:"Fase {id} · Resista {n} ondas",waveOf:"Onda {n}/{m}",newTrapLv:"Nova armadilha: {name} · {desc}",r_cap:"Máximo de {n} armadilhas",r_poor:"Sem ouro por abate · Bônus maior por onda",r_nodraft:"Sem cartas nesta fase",r_lives:"Só {n} heróis podem escapar",r_block:"Entulho: alguns espaços não aceitam armadilhas",r_affix:"Toda onda · {a}",r_rand:"Modificadores aleatórios",r_boss:"Última onda: {name} ×{n}",blockedTile:"Tem entulho aqui. Não dá para construir",homeConfirm:"Toque de novo para voltar ao menu",winT:"Fase {id} concluída!",winStats:"Pegou {k} heróis · {e} escaparam",star3:"★★★: não deixe nenhum herói escapar",lostLv:"Caiu na onda {w}/{m} · Pegou {k} heróis",nextLv:"Próxima fase",retry:"Tentar de novo",menu:"Menu",allDone:"Todas as 60 fases concluídas!",unlockNew:'Armadilha desbloqueada: {name}! Agora pode aparecer nas cartas',gotTrap:'Nova armadilha: {name}',gotUpg:'Melhoria: {name}',schoolDone:'Build completa: {name} · {bonus}',rerollNoGold:'Ouro insuficiente. Trocar custa {n}',newClass:'Nova classe: {name} · {info}',affixNow:'Modificador da onda · {a}',waveHeld:'Onda {n} resistida! +{g} de ouro',forgot:'Armadilhas não usadas, a guilda esqueceu: {list}',listSep:', ',broke:'{name} quebrou',bossTaunt:'Só isso?',tough:'Casca grossa!',ah:'Argh!',priest:'Levante-se, herói!',escaped:'Um herói escapou. Volta na próxima onda como veterano',removed:'{name} removido, +{g} de ouro',max3:'Máximo de 3 da mesma armadilha. Varie!',maxCap:'Máximo de {n} armadilhas. Toque numa armadilha para remover',noGold:'Ouro insuficiente. {name} custa {n}',tooClose:'Perto demais de um herói',chainJump:'Pulo longo!',bonk:'Ai, minha cabeça!',revived:'Voltei à vida!',scout:'{name} à frente, cuidado!',sapper:'Isso eu desarmo.',chestMine:'Tesouro! É meu!',slide:'Uaaa, escorregando—',ported:'Hã? Por que voltei pra cá?',disarmed:'Desarmada por um Sapador',blocked:'Clang! Bloqueado.',vets:'Veterano×{n}',tagNew:'Nova armadilha · {s}',cardTrapDesc:'{desc}. Agora {n} de ouro cada.',tagUpg:'Melhoria · {name}',tagItem:'Item',schoolProg:'{name} {n}/3',schoolReady:' ✓',exit:'SAÍDA',wave:'Onda {n}',gold:'Ouro {n}',traps:'Armadilhas {a}/{b}',intel:'Informações da guilda',lives:'Fugas restantes',cost:'{n} ouro',next:'Próxima onda: {s}',startIn:'Começa em {n}s · Espaço para começar já',hint:'Escolha uma armadilha e toque no chão · Pegue uma carta a cada onda · {a}/{b} desbloqueadas',pickCard:'Onda {n} resistida! Escolha uma carta',reroll:'Trocar ({n} de ouro)',lost:'A Masmorra Caiu',lostStats:'Resistiu {w} ondas, pegou {k} heróis · Recorde: {b} ondas',unlockProg:'Armadilhas desbloqueadas {a}/{b}',allUnlocked:'Todas as armadilhas desbloqueadas!',tapRestart:'Toque para jogar de novo',goalLine:'{name}: {text}',revive:'Ver anúncio para reviver (+2 vidas)',reviveFree:'Reviver (+2 vidas, sem anúncio no teste)',restart:'Recomeçar',reviveDone:'Reviveu! +2 vidas',adFail:'O anúncio não terminou, não dá para reviver',rotate:'Gire o celular para a horizontal',title:'Armadilha pro Herói'}
+},
+es:{
+ sch:{spike:['Build Pinchos','Pincho','Trampas de pinchos +1 de durabilidad'],fall:['Build Caída','Caída','Las trampillas siguen abiertas 2s, Hielo y Portales +2 de durabilidad'],mech:['Build Máquina','Máquina','Flechas y Llamas más rápidas, Gas más letal'],heavy:['Build Peso','Peso','Rocas y Pedruscos devuelven la mitad del coste al matar']},
+ td:{spike:['Pinchos','Lo pisas y mueres'],pit:['Trampilla','La pisas y caes'],chest:['Cofre Cebo','Los héroes paran a abrirlo. Combínalo con otras trampas'],arrow:['Ballesta','En la pared, dispara flechas'],rock:['Roca','Cae cuando un héroe pasa debajo'],boulder:['Pedrusco','Se suelta tras pasar un héroe y rueda aplastando la fila'],spring:['Muelle','Lanza a los héroes contra el techo'],ceil:['Pinchos de Techo','Empalan a los héroes lanzados. Úsalos con el Muelle'],ice:['Hielo','Los héroes resbalan: no frenan ni saltan'],flame:['Lanzallamas','Escupe fuego a ráfagas'],portal:['Portal','Devuelve al héroe a la entrada. Una vez por héroe'],gas:['Gas Venenoso','Si te quedas mucho, mueres']},
+ upg:{spike_dur:['Pinchos Reforzados','Pinchos +2 de durabilidad'],pit_dur:['Trampilla Reforzada','Trampilla +2 de durabilidad'],chest_long:['Cofre Pesado','Tardan el doble en abrirlo'],arrow_double:['Disparo Doble','Dispara una flecha baja extra. Agacharse no sirve'],rock_roll:['Roca Rodante','La roca rueda hacia atrás al caer'],boulder_big:['Pedrusco Gigante','Demasiado grande para saltarlo'],spring_back:['Muelle Inclinado','Lanza a los héroes 2-3 casillas atrás'],ceil_dur:['Pinchos Largos','Pinchos de Techo +3 de durabilidad'],ice_long:['Hielo Espejo','Resbalan más rápido y más tiempo'],flame_long:['Infierno','Cada ráfaga dura más'],portal_dur:['Portal Estable','Portal +3 de durabilidad'],gas_wide:['Gas Denso','El gas cubre 5 casillas en vez de 3']},
+ gen:{gold:['Golpe de Suerte','Consigue 40 de oro ahora'],life:['Puerta Reforzada','+1 héroe que puede escapar'],cap:['Ampliar Mazmorra','+2 al límite de trampas']},
+ cls:{rookie:['Novato','Un héroe normal'],knight:['Caballero','Su escudo bloquea las flechas'],thief:['Ladrón','Rápido y bueno detectando trampas de suelo'],brute:['Acorazado','Aguanta un golpe extra (salvo trampillas)'],sapper:['Zapador','Desarma las trampas de suelo que detecta'],priest:['Sacerdote','Puede revivir a un aliado una vez'],scout:['Explorador','Las trampas que ve, las sabe todo el grupo'],boss:['Rey Héroe','Mucha vida, necesita varios golpes. Si escapa, cuesta varias vidas']},
+ afx:{fast:'Marcha Forzada: velocidad +25%',armor:'Blindados: todos aguantan un golpe extra',intel:'Veteranos: detectan más trampas',horde:'Horda: +3 héroes'},
+ death:{spike:'¡Ay, mis pies! ¡Avisad de los pinchos!',pit:'¡El suelo es falso! ¡Avisad al gremio!',arrow:'Una flecha por la espalda...',rock:'Algo me cayó en la cabeza...',chest:'El cofre era un cebo...',boulder:'¡¿De dónde salió esa roca?!',ceil:'¡Hay pinchos en el techo!',flame:'¡Quema, quema!',gas:'Esta niebla es veneno...',ice:'¡No puedo frenar!',portal:'Otra vez aquí...',spring:'¡Demasiado alto!'},
+ dodge:['¡El gremio nos avisó de esto!','¡Lo vi venir!','Esta me la sé~','Buen intento.','Está en las notas del gremio.'],
+ esc:['¿Eso es todo? ¡Volveré!','¡Demasiado fácil!','¡Volveré con experiencia!'],
+ goal:{arrow:'Mata 10 héroes con Pinchos en una partida',rock:'Mata a un héroe mientras abre un cofre (3 en total)',boulder:'Sobrevive a la oleada 5',spring:'Mata 2 héroes a la vez con una trampa',ice:'Que nadie escape 3 oleadas seguidas (en una partida)',ceil:'Haz que los héroes choquen con el techo (5 en total)',flame:'Mata Caballeros (5 en total)',portal:'Mata Veteranos (3 en total)',gas:'Sobrevive a la oleada 10'},
+ ui:{play:'JUGAR',levels:'Niveles',lvShort:'Nivel {id}',go:"▶ Empezar ya ({n})",tut1:"Toca el suelo para poner una trampa",tut2:"¿Listo? ¡Que entren los héroes!",chapter:"Capítulo {n}",ch1:"Mazmorra Novata",ch2:"Cámara de Máquinas",ch3:"Salón de Rebotes",ch4:"Abismo de Fuego",ch5:"Gremio de Héroes",ch6:"Mazmorra Legendaria",endless:"Modo Infinito",endlessBest:"Récord: oleada {n}",endlessLock:"Modo Infinito · Supera el 1-5 para desbloquear",chLocked:"Supera el {id} para desbloquear este capítulo",lvLocked:"Supera el nivel anterior primero",lvTitle:"Nivel {id} · Resiste {n} oleadas",waveOf:"Oleada {n}/{m}",newTrapLv:"Nueva trampa: {name} · {desc}",r_cap:"Máximo {n} trampas",r_poor:"Sin oro por eliminar · Más bonus por oleada",r_nodraft:"Sin cartas en este nivel",r_lives:"Solo pueden escapar {n} héroes",r_block:"Escombros: algunas casillas no admiten trampas",r_affix:"Cada oleada · {a}",r_rand:"Modificadores aleatorios",r_boss:"Última oleada: {name} ×{n}",blockedTile:"Hay escombros. No se puede construir",homeConfirm:"Toca otra vez para volver al menú",winT:"¡Nivel {id} superado!",winStats:"Atrapaste {k} héroes · escaparon {e}",star3:"★★★: que no escape ningún héroe",lostLv:"Caíste en la oleada {w}/{m} · Atrapaste {k} héroes",nextLv:"Siguiente nivel",retry:"Reintentar",menu:"Menú",allDone:"¡Superaste los 60 niveles!",unlockNew:'¡Trampa desbloqueada: {name}! Ya puede salir en las cartas',gotTrap:'Nueva trampa: {name}',gotUpg:'Mejora: {name}',schoolDone:'Build completa: {name} · {bonus}',rerollNoGold:'Oro insuficiente. Cambiar cuesta {n}',newClass:'Nueva clase: {name} · {info}',affixNow:'Modificador de oleada · {a}',waveHeld:'¡Oleada {n} resistida! +{g} de oro',forgot:'Trampas sin usar, el gremio las olvidó: {list}',listSep:', ',broke:'{name} se rompió',bossTaunt:'¿Eso es todo?',tough:'¡Piel dura!',ah:'¡Argh!',priest:'¡Levántate, héroe!',escaped:'Un héroe escapó. Vuelve en la próxima oleada como veterano',removed:'{name} retirado, +{g} de oro',max3:'Máximo 3 de la misma trampa. ¡Varía!',maxCap:'Máximo {n} trampas. Toca una trampa para quitarla',noGold:'Oro insuficiente. {name} cuesta {n}',tooClose:'Demasiado cerca de un héroe',chainJump:'¡Salto largo!',bonk:'¡Ay, mi cabeza!',revived:'¡He vuelto a la vida!',scout:'¡{name} delante, cuidado!',sapper:'Esto lo desarmo yo.',chestMine:'¡Tesoro! ¡Es mío!',slide:'¡Uaaa, resbala—',ported:'¿Eh? ¿Por qué estoy aquí otra vez?',disarmed:'Desarmada por un Zapador',blocked:'¡Clang! Bloqueado.',vets:'Veterano×{n}',tagNew:'Nueva trampa · {s}',cardTrapDesc:'{desc}. Ahora {n} de oro cada una.',tagUpg:'Mejora · {name}',tagItem:'Objeto',schoolProg:'{name} {n}/3',schoolReady:' ✓',exit:'SALIDA',wave:'Oleada {n}',gold:'Oro {n}',traps:'Trampas {a}/{b}',intel:'Info del gremio',lives:'Fugas restantes',cost:'{n} oro',next:'Próxima oleada: {s}',startIn:'Empieza en {n}s · Espacio para empezar ya',hint:'Elige una trampa y toca el suelo · Coge una carta tras cada oleada · {a}/{b} desbloqueadas',pickCard:'¡Oleada {n} resistida! Elige una carta',reroll:'Cambiar ({n} de oro)',lost:'La Mazmorra Cayó',lostStats:'Resististe {w} oleadas, atrapaste {k} héroes · Récord: {b} oleadas',unlockProg:'Trampas desbloqueadas {a}/{b}',allUnlocked:'¡Todas las trampas desbloqueadas!',tapRestart:'Toca para jugar otra vez',goalLine:'{name}: {text}',revive:'Ver anuncio para revivir (+2 vidas)',reviveFree:'Revivir (+2 vidas, sin anuncio en prueba)',restart:'Reiniciar',reviveDone:'¡Revivido! +2 vidas',adFail:'El anuncio no terminó, no puedes revivir',rotate:'Gira el móvil en horizontal',title:'Trampa al Héroe'}
+},
+ja:{
+ sch:{spike:['トゲ型','トゲ','トゲ系トラップの耐久+1'],fall:['落下型','落下','落とし穴は2秒開いたまま、氷とポータルの耐久+2'],mech:['からくり型','からくり','矢と炎が速くなり、毒ガスが強くなる'],heavy:['重量型','重量','落石と大岩で倒すと費用の半分が戻る']},
+ td:{spike:['トゲ床','踏んだら即アウト'],pit:['落とし穴','踏むと落ちる'],chest:['おとり宝箱','勇者が開けるために立ち止まる。他の罠と組み合わせよう'],arrow:['隠し矢','壁に付いて定期的に矢を撃つ'],rock:['落石','勇者が真下に来ると落ちる'],boulder:['大岩','勇者が通り過ぎると転がり戻り、まとめて潰す'],spring:['バネ床','勇者を天井まで跳ね上げる'],ceil:['天井トゲ','跳ね上げられた勇者を串刺し。バネ床と一緒に'],ice:['氷の床','勇者が滑って止まれず跳べない'],flame:['火炎放射口','一定間隔で炎を噴く'],portal:['ポータル','勇者を入口に戻す。一人一回まで'],gas:['毒ガス','長くいると毒で倒れる']},
+ upg:{spike_dur:['強化トゲ','トゲ床の耐久+2'],pit_dur:['強化落とし穴','落とし穴の耐久+2'],chest_long:['重い宝箱','開ける時間が2倍'],arrow_double:['二連矢','低い矢も撃つ。しゃがんでも避けられない'],rock_roll:['転がる落石','落石が着地後に転がり戻る'],boulder_big:['巨大岩','大きすぎて跳び越せない'],spring_back:['斜めバネ','勇者を2〜3マス後ろへ跳ね返す'],ceil_dur:['長い天井トゲ','天井トゲの耐久+3'],ice_long:['鏡の氷','もっと速く、もっと長く滑る'],flame_long:['猛火','炎が長く続く'],portal_dur:['安定ポータル','ポータルの耐久+3'],gas_wide:['濃い毒ガス','範囲が3マスから5マスに']},
+ gen:{gold:['臨時収入','すぐに40ゴールド'],life:['門の補強','逃がせる人数+1'],cap:['ダンジョン拡張','罠の上限+2']},
+ cls:{rookie:['新米','普通の勇者'],knight:['盾騎士','盾で矢を防ぐ'],thief:['盗賊','足が速く、床の罠に気づきやすい'],brute:['重装兵','一回多く耐える（落とし穴以外）'],sapper:['工兵','見破った床の罠を解除する'],priest:['僧侶','倒れた仲間を一度だけ復活させる'],scout:['斥候','見破った罠をパーティ全員に共有する'],boss:['勇者王','体力が多く、何度も罠にかける必要あり。逃がすと命を多く失う']},
+ afx:{fast:'強行軍：速度+25%',armor:'鉄壁：全員一回多く耐える',intel:'熟練：罠に気づきやすい',horde:'大群：3人追加'},
+ death:{spike:'足が痛い…みんな、床にトゲがあるぞ！',pit:'床が偽物だ！ギルドに報告を！',arrow:'背後から矢が…',rock:'頭上に岩が…',chest:'宝箱は罠だった…',boulder:'どこから大岩が！？',ceil:'天井にトゲが！',flame:'熱い熱い！',gas:'この霧、毒だ…',ice:'止まれない！',portal:'また戻された…',spring:'高すぎる！'},
+ dodge:['ギルドで聞いた手だ！','お見通しだ！','知ってるよ〜','その手には乗らない。','情報にあったぞ。'],
+ esc:['それだけ？また来るぞ！','楽勝だ！','経験を積んで戻ってくる！'],
+ goal:{arrow:'1回のプレイでトゲ床で10人倒す',rock:'宝箱を開けている勇者を倒す（累計3回）',boulder:'第5ウェーブを守り切る',spring:'1つの罠で同時に2人倒す',ice:'1回のプレイで3ウェーブ連続で誰も逃がさない',ceil:'勇者を天井にぶつける（累計5回）',flame:'盾騎士を倒す（累計5人）',portal:'ベテランを倒す（累計3人）',gas:'第10ウェーブを守り切る'},
+ ui:{play:'プレイ',levels:'ステージ',lvShort:'ステージ {id}',go:"▶ すぐ出発（{n}）",tut1:"床をタップして罠を置こう",tut2:"準備OK？勇者を呼び込もう！",chapter:"第{n}章",ch1:"初心者ダンジョン",ch2:"からくり部屋",ch3:"はずむ回廊",ch4:"炎の深淵",ch5:"勇者ギルド",ch6:"伝説のダンジョン",endless:"エンドレス",endlessBest:"最高 {n} ウェーブ",endlessLock:"エンドレス · 1-5 クリアで解放",chLocked:"{id} をクリアすると解放",lvLocked:"前のステージをクリアしてね",lvTitle:"ステージ {id} · {n} ウェーブ守れ",waveOf:"ウェーブ {n}/{m}",newTrapLv:"新しい罠：{name} · {desc}",r_cap:"罠は最大 {n} 個",r_poor:"撃破でゴールドなし · ウェーブ報酬アップ",r_nodraft:"このステージはカードなし",r_lives:"逃がせるのは {n} 人まで",r_block:"がれき：置けないマスがある",r_affix:"全ウェーブ · {a}",r_rand:"ランダムな特殊効果",r_boss:"最終ウェーブ：{name} ×{n}",blockedTile:"がれきがあって置けない",homeConfirm:"もう一度タップでメニューへ",winT:"ステージ {id} クリア！",winStats:"{k} 人撃破 · {e} 人逃走",star3:"★★★：1人も逃がさない",lostLv:"ウェーブ {w}/{m} で陥落 · {k} 人撃破",nextLv:"次のステージ",retry:"リトライ",menu:"メニュー",allDone:"全60ステージクリア！",unlockNew:'新しい罠を解放：{name}！ 抽選に出るようになった',gotTrap:'新しい罠：{name}',gotUpg:'強化：{name}',schoolDone:'ビルド完成：{name} · {bonus}',rerollNoGold:'ゴールド不足。引き直しは{n}',newClass:'新職業：{name} · {info}',affixNow:'ウェーブ効果 · {a}',waveHeld:'第{n}ウェーブ防衛！ +{g}ゴールド',forgot:'使わなかった罠をギルドが忘れた：{list}',listSep:'、',broke:'{name}が壊れた',bossTaunt:'その程度か？',tough:'皮が厚いぜ！',ah:'ぐわっ！',priest:'立て、勇者よ！',escaped:'勇者が逃げた。次のウェーブでベテランとして戻ってくる',removed:'{name}を撤去、{g}ゴールド返却',max3:'同じ罠は3つまで。組み合わせを変えよう',maxCap:'罠は最大{n}個。置いた罠をタップで撤去',noGold:'ゴールド不足。{name}は{n}',tooClose:'勇者に近すぎる',chainJump:'大ジャンプ！',bonk:'いてっ、頭が！',revived:'生き返った！',scout:'前方に{name}、気をつけろ！',sapper:'これは解除できる。',chestMine:'宝箱だ！いただき！',slide:'うわぁ、滑る——',ported:'あれ？なんで戻ってるの',disarmed:'工兵に解除された',blocked:'カキン！防いだ。',vets:'ベテラン×{n}',tagNew:'新しい罠 · {s}',cardTrapDesc:'{desc}。現在1個{n}ゴールド。',tagUpg:'強化 · {name}',tagItem:'アイテム',schoolProg:'{name} {n}/3',schoolReady:' ✓',exit:'出口',wave:'第{n}ウェーブ',gold:'ゴールド {n}',traps:'罠 {a}/{b}',intel:'ギルド情報（勇者の知識）',lives:'逃がせる数',cost:'{n}ゴールド',next:'次のウェーブ：{s}',startIn:'{n}秒後に開始 · スペースですぐ開始',hint:'下の罠を選んで床をタップ · ウェーブごとにカードを引ける · 解放済み {a}/{b}',pickCard:'第{n}ウェーブ防衛！カードを選ぼう',reroll:'引き直し（{n}ゴールド）',lost:'ダンジョン陥落',lostStats:'{w}ウェーブ防衛、勇者{k}人を撃退 · 最高 {b}ウェーブ',unlockProg:'罠の解放 {a}/{b}',allUnlocked:'すべての罠を解放した！',tapRestart:'タップでもう一度',goalLine:'{name}：{text}',revive:'広告を見て復活（命+2）',reviveFree:'復活（命+2、テスト版は広告なし）',restart:'やり直す',reviveDone:'復活！命+2',adFail:'広告が最後まで再生されず、復活できない',rotate:'スマホを横向きにしてください',title:'勇者ハメ'}
+},
+hi:{
+ sch:{spike:['काँटा बिल्ड','काँटा','काँटे वाले जाल +1 टिकाऊपन'],fall:['गिरावट बिल्ड','गिरावट','चोर दरवाज़ा 2 सेकंड खुला रहता है, बर्फ़ और पोर्टल +2 टिकाऊपन'],mech:['मशीन बिल्ड','मशीन','तीर और आग तेज़, ज़हरीली गैस ज़्यादा घातक'],heavy:['भारी बिल्ड','भारी','पत्थर और शिला से मारने पर आधी कीमत वापस']},
+ td:{spike:['काँटे','पैर रखा, खेल खत्म'],pit:['चोर दरवाज़ा','पैर रखते ही गिरो'],chest:['लालच संदूक','हीरो खोलने के लिए रुकते हैं। दूसरे जालों के साथ इस्तेमाल करें'],arrow:['छिपा तीर','दीवार पर लगा, समय-समय पर तीर चलाता है'],rock:['गिरता पत्थर','हीरो नीचे आते ही गिरता है'],boulder:['लुढ़कती शिला','हीरो के गुज़रने के बाद पीछे लुढ़ककर कतार कुचलती है'],spring:['स्प्रिंग','हीरो को छत तक उछालता है'],ceil:['छत के काँटे','उछले हीरो को छेद देते हैं। स्प्रिंग के साथ'],ice:['बर्फ़ का फ़र्श','हीरो फिसलते हैं: न रुक सकते, न कूद सकते'],flame:['आग की नली','रुक-रुक कर आग फेंकती है'],portal:['पोर्टल','हीरो को प्रवेश पर वापस भेजता है। हर हीरो पर एक बार'],gas:['ज़हरीली गैस','ज़्यादा देर रुके तो मौत']},
+ upg:{spike_dur:['मज़बूत काँटे','काँटे +2 टिकाऊपन'],pit_dur:['मज़बूत चोर दरवाज़ा','चोर दरवाज़ा +2 टिकाऊपन'],chest_long:['भारी संदूक','खोलने में दोगुना समय'],arrow_double:['दोहरा तीर','एक नीचा तीर और। झुकने से नहीं बचेंगे'],rock_roll:['लुढ़कता पत्थर','गिरने के बाद पत्थर पीछे लुढ़कता है'],boulder_big:['विशाल शिला','इतनी बड़ी कि कूद नहीं सकते'],spring_back:['तिरछा स्प्रिंग','हीरो को 2-3 खाने पीछे उछालता है'],ceil_dur:['लंबे काँटे','छत के काँटे +3 टिकाऊपन'],ice_long:['शीशे जैसी बर्फ़','और तेज़, और देर तक फिसलन'],flame_long:['प्रचंड आग','हर बार आग ज़्यादा देर'],portal_dur:['स्थिर पोर्टल','पोर्टल +3 टिकाऊपन'],gas_wide:['घनी गैस','गैस 3 की जगह 5 खानों तक']},
+ gen:{gold:['अचानक धन','अभी 40 सोना पाएँ'],life:['मज़बूत दरवाज़ा','+1 हीरो भागने की छूट'],cap:['कालकोठरी बढ़ाएँ','जाल की सीमा +2']},
+ cls:{rookie:['नौसिखिया','साधारण हीरो'],knight:['ढाल योद्धा','ढाल से तीर रोक लेता है'],thief:['चोर','तेज़, फ़र्श के जाल जल्दी पहचानता है'],brute:['भारी कवच','एक वार ज़्यादा सह लेता है (चोर दरवाज़ा छोड़कर)'],sapper:['सैपर','पहचाने हुए फ़र्श के जाल तोड़ देता है'],priest:['पुजारी','गिरे साथी को एक बार जिला सकता है'],scout:['जासूस','जो जाल वह देखे, पूरी टोली जान जाती है'],boss:['हीरो राजा','बहुत जान, कई बार फँसाना होगा। भागा तो कई जानें जाएँगी']},
+ afx:{fast:'तेज़ कूच: गति +25%',armor:'लौह कवच: सब एक वार ज़्यादा सहेंगे',intel:'अनुभवी: जाल ज़्यादा पहचानते हैं',horde:'भीड़: 3 हीरो ज़्यादा'},
+ death:{spike:'आह, मेरे पैर! सबको बताओ, यहाँ काँटे हैं!',pit:'फ़र्श नकली है! संघ को खबर करो!',arrow:'पीठ में तीर...',rock:'सिर पर पत्थर...',chest:'संदूक तो जाल था...',boulder:'ये शिला कहाँ से आई?!',ceil:'छत पर काँटे हैं!',flame:'जल गया, जल गया!',gas:'ये धुंध ज़हरीली है...',ice:'रुक नहीं पा रहा!',portal:'फिर वापस यहीं...',spring:'बहुत ऊँचा!'},
+ dodge:['संघ ने इसके बारे में बताया था!','पहले ही समझ गया!','ये तो मुझे पता है~','अच्छी कोशिश।','संघ की सूचना में है।'],
+ esc:['बस इतना? मैं वापस आऊँगा!','बहुत आसान!','अनुभव लेकर लौटूँगा!'],
+ goal:{arrow:'एक खेल में काँटों से 10 हीरो मारें',rock:'संदूक खोलते हीरो को मारें (कुल 3 बार)',boulder:'लहर 5 तक टिके रहें',spring:'एक जाल से एक साथ 2 हीरो मारें',ice:'एक खेल में लगातार 3 लहरों तक किसी को न भागने दें',ceil:'हीरो को छत से टकराएँ (कुल 5 बार)',flame:'ढाल योद्धा मारें (कुल 5)',portal:'अनुभवी मारें (कुल 3)',gas:'लहर 10 तक टिके रहें'},
+ ui:{play:'खेलें',levels:'लेवल',lvShort:'लेवल {id}',go:"▶ अभी शुरू ({n})",tut1:"जाल लगाने के लिए फ़र्श पर टैप करें",tut2:"तैयार? नायकों को आने दो!",chapter:"अध्याय {n}",ch1:"नौसिखिया कालकोठरी",ch2:"मशीनों का तहख़ाना",ch3:"उछाल गलियारा",ch4:"आग की खाई",ch5:"नायक संघ",ch6:"महान कालकोठरी",endless:"अंतहीन मोड",endlessBest:"सर्वश्रेष्ठ: लहर {n}",endlessLock:"अंतहीन मोड · खोलने के लिए 1-5 पार करें",chLocked:"यह अध्याय खोलने के लिए {id} पार करें",lvLocked:"पहले पिछला लेवल पार करें",lvTitle:"लेवल {id} · {n} लहरें रोकें",waveOf:"लहर {n}/{m}",newTrapLv:"नया जाल: {name} · {desc}",r_cap:"अधिकतम {n} जाल",r_poor:"मारने पर सोना नहीं · लहर बोनस ज़्यादा",r_nodraft:"इस लेवल में कार्ड नहीं",r_lives:"सिर्फ़ {n} नायक भाग सकते हैं",r_block:"मलबा: कुछ खानों पर जाल नहीं लगेगा",r_affix:"हर लहर · {a}",r_rand:"हर लहर में रैंडम बदलाव",r_boss:"आख़िरी लहर: {name} ×{n}",blockedTile:"यहाँ मलबा है, जाल नहीं लगेगा",homeConfirm:"मेनू पर जाने के लिए फिर टैप करें",winT:"लेवल {id} पार!",winStats:"{k} नायक फँसे · {e} भागे",star3:"★★★: एक भी नायक न भागे",lostLv:"लहर {w}/{m} पर गिरे · {k} नायक फँसे",nextLv:"अगला लेवल",retry:"फिर कोशिश",menu:"मेनू",allDone:"सभी 60 लेवल पार!",unlockNew:'नया जाल खुला: {name}! अब यह कार्डों में आ सकता है',gotTrap:'नया जाल: {name}',gotUpg:'अपग्रेड: {name}',schoolDone:'बिल्ड पूरा: {name} · {bonus}',rerollNoGold:'सोना कम है। बदलने का दाम {n}',newClass:'नई श्रेणी: {name} · {info}',affixNow:'लहर का असर · {a}',waveHeld:'लहर {n} रोकी! +{g} सोना',forgot:'न इस्तेमाल हुए जाल संघ भूल गया: {list}',listSep:', ',broke:'{name} टूट गया',bossTaunt:'बस इतना ही?',tough:'मोटी चमड़ी!',ah:'आह!',priest:'उठो, हीरो!',escaped:'एक हीरो भाग गया। अगली लहर में अनुभवी बनकर लौटेगा',removed:'{name} हटाया, {g} सोना वापस',max3:'एक तरह के जाल अधिकतम 3। कुछ अलग आज़माएँ',maxCap:'अधिकतम {n} जाल। हटाने के लिए जाल पर टैप करें',noGold:'सोना कम है। {name} का दाम {n}',tooClose:'हीरो के बहुत पास',chainJump:'लंबी छलाँग!',bonk:'उफ़, मेरा सिर!',revived:'मैं फिर ज़िंदा हूँ!',scout:'आगे {name} है, सावधान!',sapper:'इसे मैं तोड़ सकता हूँ।',chestMine:'खज़ाना! मेरा है!',slide:'अरे, फिसल रहा—',ported:'हैं? मैं वापस यहाँ कैसे?',disarmed:'सैपर ने तोड़ दिया',blocked:'टन! रोक लिया।',vets:'अनुभवी×{n}',tagNew:'नया जाल · {s}',cardTrapDesc:'{desc}। अभी {n} सोना प्रति जाल।',tagUpg:'अपग्रेड · {name}',tagItem:'वस्तु',schoolProg:'{name} {n}/3',schoolReady:' ✓',exit:'निकास',wave:'लहर {n}',gold:'सोना {n}',traps:'जाल {a}/{b}',intel:'संघ की सूचना',lives:'भागने की छूट',cost:'{n} सोना',next:'अगली लहर: {s}',startIn:'{n} सेकंड में शुरू · अभी शुरू करने के लिए स्पेस',hint:'नीचे से जाल चुनें, फ़र्श पर टैप करें · हर लहर के बाद कार्ड लें · खुले जाल {a}/{b}',pickCard:'लहर {n} रोकी! एक कार्ड चुनें',reroll:'बदलें ({n} सोना)',lost:'कालकोठरी गिर गई',lostStats:'{w} लहरें रोकीं, {k} हीरो फँसाए · सर्वश्रेष्ठ: {b} लहरें',unlockProg:'जाल खुले {a}/{b}',allUnlocked:'सारे जाल खुल गए!',tapRestart:'फिर खेलने के लिए टैप करें',goalLine:'{name}: {text}',revive:'विज्ञापन देखकर फिर जिएँ (+2 जान)',reviveFree:'फिर जिएँ (+2 जान, टेस्ट में विज्ञापन नहीं)',restart:'फिर शुरू करें',reviveDone:'फिर ज़िंदा! +2 जान',adFail:'विज्ञापन पूरा नहीं हुआ',rotate:'कृपया फ़ोन को आड़ा करें',title:'हीरो को फँसाओ'}
+},
+bn:{
+ sch:{spike:['কাঁটা বিল্ড','কাঁটা','কাঁটার ফাঁদ +1 স্থায়িত্ব'],fall:['পতন বিল্ড','পতন','গুপ্ত দরজা 2 সেকেন্ড খোলা থাকে, বরফ ও পোর্টাল +2 স্থায়িত্ব'],mech:['যন্ত্র বিল্ড','যন্ত্র','তীর ও আগুন দ্রুত, বিষাক্ত গ্যাস আরও মারাত্মক'],heavy:['ভারী বিল্ড','ভারী','পাথর ও গড়ানো পাথরে মারলে অর্ধেক দাম ফেরত']},
+ td:{spike:['কাঁটা','পা দিলেই শেষ'],pit:['গুপ্ত দরজা','পা দিলেই পড়ে যাবে'],chest:['টোপ সিন্দুক','বীরেরা খুলতে থামে। অন্য ফাঁদের সাথে মেলান'],arrow:['গোপন তীর','দেয়ালে বসানো, নিয়মিত তীর ছোড়ে'],rock:['পড়ন্ত পাথর','বীর নিচে এলে পড়ে'],boulder:['গড়ানো পাথর','বীর পার হলে পেছনে গড়িয়ে সারি পিষে দেয়'],spring:['স্প্রিং','বীরকে ছাদে ছুড়ে দেয়'],ceil:['ছাদের কাঁটা','ছোড়া বীরকে বিঁধে দেয়। স্প্রিং-এর সাথে'],ice:['বরফের মেঝে','বীর পিছলে যায়: থামতে বা লাফাতে পারে না'],flame:['আগুনের নল','থেমে থেমে আগুন ছোড়ে'],portal:['পোর্টাল','বীরকে প্রবেশপথে ফেরত পাঠায়। প্রতি বীরে একবার'],gas:['বিষাক্ত গ্যাস','বেশিক্ষণ থাকলে মৃত্যু']},
+ upg:{spike_dur:['শক্ত কাঁটা','কাঁটা +2 স্থায়িত্ব'],pit_dur:['শক্ত গুপ্ত দরজা','গুপ্ত দরজা +2 স্থায়িত্ব'],chest_long:['ভারী সিন্দুক','খুলতে দ্বিগুণ সময়'],arrow_double:['জোড়া তীর','একটা নিচু তীর বেশি। ঝুঁকে বাঁচা যাবে না'],rock_roll:['গড়ানো পড়ন্ত পাথর','পড়ার পর পাথর পেছনে গড়ায়'],boulder_big:['বিশাল পাথর','এত বড় যে লাফিয়ে পার হওয়া যায় না'],spring_back:['বাঁকা স্প্রিং','বীরকে 2-3 ঘর পেছনে ছোড়ে'],ceil_dur:['লম্বা ছাদের কাঁটা','ছাদের কাঁটা +3 স্থায়িত্ব'],ice_long:['আয়না বরফ','আরও দ্রুত, আরও বেশিক্ষণ পিছলানো'],flame_long:['প্রচণ্ড আগুন','প্রতিবার আগুন বেশিক্ষণ'],portal_dur:['স্থির পোর্টাল','পোর্টাল +3 স্থায়িত্ব'],gas_wide:['ঘন গ্যাস','গ্যাস 3 ঘরের বদলে 5 ঘর']},
+ gen:{gold:['হঠাৎ ধন','এখনই 40 সোনা'],life:['শক্ত দরজা','+1 বীর পালানোর সুযোগ'],cap:['অন্ধকূপ বাড়ান','ফাঁদের সীমা +2']},
+ cls:{rookie:['নবিশ','সাধারণ বীর'],knight:['ঢাল যোদ্ধা','ঢালে তীর আটকায়'],thief:['চোর','দ্রুত, মেঝের ফাঁদ সহজে চেনে'],brute:['ভারী বর্ম','একটা আঘাত বেশি সয় (গুপ্ত দরজা ছাড়া)'],sapper:['স্যাপার','চেনা মেঝের ফাঁদ নষ্ট করে'],priest:['পুরোহিত','পড়ে যাওয়া সঙ্গীকে একবার বাঁচাতে পারে'],scout:['গুপ্তচর','যে ফাঁদ সে দেখে, পুরো দল জেনে যায়'],boss:['বীর রাজা','অনেক প্রাণশক্তি, বহুবার ফাঁদে ফেলতে হবে। পালালে অনেক জীবন যাবে']},
+ afx:{fast:'দ্রুত যাত্রা: গতি +25%',armor:'লৌহবর্ম: সবাই একটা আঘাত বেশি সয়',intel:'অভিজ্ঞ: ফাঁদ বেশি চেনে',horde:'দলবল: আরও 3 জন বীর'},
+ death:{spike:'আহ, আমার পা! সবাইকে বলো, এখানে কাঁটা!',pit:'মেঝে নকল! সংঘকে খবর দাও!',arrow:'পিঠে তীর...',rock:'মাথার ওপর পাথর...',chest:'সিন্দুকটা ছিল টোপ...',boulder:'এই পাথর কোথা থেকে এল?!',ceil:'ছাদে কাঁটা!',flame:'পুড়ে গেলাম!',gas:'এই কুয়াশা বিষাক্ত...',ice:'থামতে পারছি না!',portal:'আবার এখানে...',spring:'অনেক উঁচু!'},
+ dodge:['সংঘ এটার কথা বলেছিল!','আগেই বুঝেছি!','এটা আমি জানি~','ভালো চেষ্টা।','সংঘের খবরে আছে।'],
+ esc:['এইটুকুই? আবার আসব!','খুব সহজ!','অভিজ্ঞতা নিয়ে ফিরব!'],
+ goal:{arrow:'এক খেলায় কাঁটা দিয়ে 10 জন বীর মারুন',rock:'সিন্দুক খোলার সময় বীর মারুন (মোট 3 বার)',boulder:'ঢেউ 5 পর্যন্ত টিকে থাকুন',spring:'এক ফাঁদে একসাথে 2 জন মারুন',ice:'এক খেলায় টানা 3 ঢেউ কাউকে পালাতে দেবেন না',ceil:'বীরকে ছাদে ধাক্কা খাওয়ান (মোট 5 বার)',flame:'ঢাল যোদ্ধা মারুন (মোট 5)',portal:'অভিজ্ঞ বীর মারুন (মোট 3)',gas:'ঢেউ 10 পর্যন্ত টিকে থাকুন'},
+ ui:{play:'খেলুন',levels:'লেভেল',lvShort:'লেভেল {id}',go:"▶ এখনই শুরু ({n})",tut1:"ফাঁদ বসাতে মেঝেতে ট্যাপ করো",tut2:"তৈরি? বীরদের ঢুকতে দাও!",chapter:"অধ্যায় {n}",ch1:"নবিশ অন্ধকূপ",ch2:"যন্ত্রের কুঠুরি",ch3:"লাফের করিডোর",ch4:"আগুনের খাদ",ch5:"বীরদের গিল্ড",ch6:"কিংবদন্তি অন্ধকূপ",endless:"অন্তহীন মোড",endlessBest:"সেরা: ঢেউ {n}",endlessLock:"অন্তহীন মোড · খুলতে 1-5 পার করো",chLocked:"এই অধ্যায় খুলতে {id} পার করো",lvLocked:"আগে আগের লেভেল পার করো",lvTitle:"লেভেল {id} · {n} ঢেউ আটকাও",waveOf:"ঢেউ {n}/{m}",newTrapLv:"নতুন ফাঁদ: {name} · {desc}",r_cap:"সর্বোচ্চ {n}টি ফাঁদ",r_poor:"মারলে সোনা নেই · ঢেউ বোনাস বেশি",r_nodraft:"এই লেভেলে কার্ড নেই",r_lives:"মাত্র {n} জন বীর পালাতে পারবে",r_block:"ধ্বংসস্তূপ: কিছু ঘরে ফাঁদ বসবে না",r_affix:"প্রতি ঢেউ · {a}",r_rand:"প্রতি ঢেউয়ে এলোমেলো বদল",r_boss:"শেষ ঢেউ: {name} ×{n}",blockedTile:"এখানে ধ্বংসস্তূপ, বসানো যাবে না",homeConfirm:"মেনুতে যেতে আবার ট্যাপ করো",winT:"লেভেল {id} পার!",winStats:"{k} জন বীর ফাঁদে · {e} জন পালাল",star3:"★★★: একজন বীরও যেন না পালায়",lostLv:"ঢেউ {w}/{m}-এ পতন · {k} জন বীর ফাঁদে",nextLv:"পরের লেভেল",retry:"আবার চেষ্টা",menu:"মেনু",allDone:"সব 60 লেভেল পার!",unlockNew:'নতুন ফাঁদ খুলল: {name}! এখন কার্ডে আসতে পারে',gotTrap:'নতুন ফাঁদ: {name}',gotUpg:'আপগ্রেড: {name}',schoolDone:'বিল্ড সম্পূর্ণ: {name} · {bonus}',rerollNoGold:'সোনা কম। বদলাতে লাগবে {n}',newClass:'নতুন শ্রেণি: {name} · {info}',affixNow:'ঢেউয়ের প্রভাব · {a}',waveHeld:'ঢেউ {n} ঠেকানো গেল! +{g} সোনা',forgot:'অব্যবহৃত ফাঁদ সংঘ ভুলে গেছে: {list}',listSep:', ',broke:'{name} ভেঙে গেছে',bossTaunt:'এইটুকুই?',tough:'মোটা চামড়া!',ah:'আহ!',priest:'ওঠো, বীর!',escaped:'একজন বীর পালিয়েছে। পরের ঢেউয়ে অভিজ্ঞ হয়ে ফিরবে',removed:'{name} সরানো হলো, {g} সোনা ফেরত',max3:'একই ফাঁদ সর্বোচ্চ 3টি। অন্যরকম চেষ্টা করুন',maxCap:'সর্বোচ্চ {n}টি ফাঁদ। সরাতে ফাঁদে ট্যাপ করুন',noGold:'সোনা কম। {name}-এর দাম {n}',tooClose:'বীরের খুব কাছে',chainJump:'লম্বা লাফ!',bonk:'উফ, আমার মাথা!',revived:'আমি আবার বেঁচে উঠেছি!',scout:'সামনে {name}, সাবধান!',sapper:'এটা আমি নষ্ট করতে পারি।',chestMine:'গুপ্তধন! আমার!',slide:'ওরে, পিছলে যাচ্ছি—',ported:'অ্যাঁ? আমি আবার এখানে কেন?',disarmed:'স্যাপার নষ্ট করে দিয়েছে',blocked:'ঠং! আটকে দিলাম।',vets:'অভিজ্ঞ×{n}',tagNew:'নতুন ফাঁদ · {s}',cardTrapDesc:'{desc}। এখন প্রতিটি {n} সোনা।',tagUpg:'আপগ্রেড · {name}',tagItem:'জিনিস',schoolProg:'{name} {n}/3',schoolReady:' ✓',exit:'প্রস্থান',wave:'ঢেউ {n}',gold:'সোনা {n}',traps:'ফাঁদ {a}/{b}',intel:'সংঘের তথ্য',lives:'পালানোর সুযোগ',cost:'{n} সোনা',next:'পরের ঢেউ: {s}',startIn:'{n} সেকেন্ডে শুরু · এখনই শুরু করতে স্পেস',hint:'নিচ থেকে ফাঁদ বেছে মেঝেতে ট্যাপ করুন · প্রতি ঢেউয়ের পর কার্ড নিন · খোলা ফাঁদ {a}/{b}',pickCard:'ঢেউ {n} ঠেকানো গেল! একটা কার্ড নিন',reroll:'বদলান ({n} সোনা)',lost:'অন্ধকূপের পতন',lostStats:'{w} ঢেউ ঠেকানো, {k} জন বীর ফাঁদে · সেরা: {b} ঢেউ',unlockProg:'খোলা ফাঁদ {a}/{b}',allUnlocked:'সব ফাঁদ খোলা হয়েছে!',tapRestart:'আবার খেলতে ট্যাপ করুন',goalLine:'{name}: {text}',revive:'বিজ্ঞাপন দেখে আবার বাঁচুন (+2 জীবন)',reviveFree:'আবার বাঁচুন (+2 জীবন, টেস্টে বিজ্ঞাপন নেই)',restart:'আবার শুরু',reviveDone:'আবার বেঁচে উঠল! +2 জীবন',adFail:'বিজ্ঞাপন শেষ হয়নি',rotate:'অনুগ্রহ করে ফোনটি আড়াআড়ি ধরুন',title:'বীরকে ফাঁদে ফেলো'}
+},
+zh:{
+ sch:{spike:[null,'尖刺',null],fall:[null,'坠落',null],mech:[null,'机关',null],heavy:[null,'重物',null]},
+ ui:{play:'开始',levels:'选关',lvShort:'第 {id} 关',go:"▶ 立即出发（{n}）",tut1:"点地面放陷阱",tut2:"准备好了？放勇者进来！",chapter:"第 {n} 章",ch1:"新手地牢",ch2:"机关密室",ch3:"弹跳回廊",ch4:"烈焰深渊",ch5:"勇者公会",ch6:"传说地牢",endless:"无尽模式",endlessBest:"最高 {n} 波",endlessLock:"无尽模式 · 通关 1-5 解锁",chLocked:"通关 {id} 解锁本章",lvLocked:"先通关上一关",lvTitle:"第 {id} 关 · 守住 {n} 波",waveOf:"第 {n}/{m} 波",newTrapLv:"新陷阱：{name} · {desc}",r_cap:"最多只能放 {n} 个陷阱",r_poor:"击杀不给金币 · 守住一波奖励更多",r_nodraft:"本关不能抽卡",r_lives:"最多只能放走 {n} 人",r_block:"地上有碎石，部分格子不能放陷阱",r_affix:"每一波 · {a}",r_rand:"每波随机突变",r_boss:"最后一波：{name} ×{n}",blockedTile:"这里有碎石，不能放",homeConfirm:"再点一次返回菜单",winT:"第 {id} 关通关！",winStats:"坑死 {k} 人 · 放走 {e} 人",star3:"三星：一个都不放走",lostLv:"倒在第 {w}/{m} 波 · 坑死 {k} 人",nextLv:"下一关",retry:"重试",menu:"菜单",allDone:"60 关全部通关！",unlockNew:'解锁新陷阱：{name}！之后抽卡会出现它',gotTrap:'获得新陷阱：{name}',gotUpg:'强化：{name}',schoolDone:'流派成型：{name} · {bonus}',rerollNoGold:'金币不够，换一批要 {n}',newClass:'新职业：{name} · {info}',affixNow:'本波词缀 · {a}',waveHeld:'第 {n} 波守住了  +{g} 金币',forgot:'没用上的陷阱，公会淡忘了：{list}',listSep:'、',broke:'{name}用坏了',bossTaunt:'就这点力气？',tough:'皮糙肉厚！',ah:'啊！',priest:'起来，勇者！',escaped:'有人逃走了，下一波他会作为老兵回来',removed:'拆掉了{name}，退回 {g} 金币',max3:'同一种陷阱最多放 3 个，换个花样',maxCap:'最多 {n} 个陷阱，点已有的陷阱可以拆掉',noGold:'金币不够，{name}要 {n}',tooClose:'离勇者太近了',chainJump:'连跳！',bonk:'哎哟，我的头！',revived:'我又活了！',scout:'前面有{name}，大家小心！',sapper:'这个我会拆。',chestMine:'宝箱！归我了！',slide:'哇啊，滑——',ported:'诶？我怎么回来了',disarmed:'被工兵拆掉了',blocked:'叮！挡住了。',vets:'老兵×{n}',tagNew:'新陷阱 · {s}',cardTrapDesc:'{desc}。现价 {n} 金币一个。',tagUpg:'强化 · {name}',tagItem:'道具',schoolProg:'{name} {n}/3',schoolReady:' 成型',exit:'出口',wave:'第 {n} 波',gold:'金币 {n}',traps:'陷阱 {a}/{b}',intel:'公会情报（勇者认得多少）',lives:'还能放走',cost:'{n} 金币',next:'下一波：{s}',startIn:'{n} 秒后出发 · 按空格立刻出发',hint:'选下面的陷阱，点地面放置 · 每守住一波可以抽卡 · 已解锁 {a}/{b} 种陷阱',pickCard:'守住第 {n} 波！选一张卡',reroll:'换一批（{n} 金币）',lost:'地牢失守',lostStats:'守住了 {w} 波，坑死 {k} 名勇者 · 最好成绩 {b} 波',unlockProg:'陷阱解锁进度 {a}/{b}',allUnlocked:'全部陷阱都解锁了！',tapRestart:'点击画面再来一局',goalLine:'{name}：{text}',revive:'看一段广告，复活继续（+2 条命）',reviveFree:'复活继续（+2 条命，测试版不放广告）',restart:'重新开始',reviveDone:'复活了！+2 条命',adFail:'广告没有播完，不能复活',rotate:'请把手机横过来玩',title:'坑勇者'}
+}};
+const EXBF={"en": {"td": {"spike": ["Stiletto Heels", "Step on them. Ouch!"], "pit": ["Open Suitcase", "He falls in and gets packed away"], "chest": ["Gift Box", "Exes stop to open it. Combo it with other traps"], "arrow": ["Lipstick Launcher", "Wall-mounted, fires lipstick on a timer"], "rock": ["Flower Pot", "Drops when an ex walks under it"], "boulder": ["Yoga Ball", "Released after an ex passes, rolls back and bowls over a row"], "spring": ["Bouncy Pillow", "Launches exes into the ceiling"], "ceil": ["Hanger Hooks", "Snag launched exes. Pair with Bouncy Pillow"], "ice": ["Spilled Lotion", "Exes slide: they can't stop or jump"], "flame": ["Hair Dryer", "Blasts hot air in bursts"], "portal": ["Block Button", "Sends an ex back to the start. Once per ex"], "gas": ["Perfume Cloud", "Linger too long and he's out"]}, "upg": {"spike_dur": ["Stronger Heels", "Heels +2 durability"], "pit_dur": ["Bigger Suitcase", "Suitcase +2 durability"], "chest_long": ["Fancy Wrapping", "Exes take twice as long to open it"], "arrow_double": ["Double Lipstick", "Fires an extra low lipstick. Ducking won't help"], "rock_roll": ["Rolling Pot", "Flower pots roll back after landing"], "boulder_big": ["Giant Yoga Ball", "Too big to jump over"], "spring_back": ["Angled Pillow", "Bounces exes 2-3 tiles back"], "ceil_dur": ["More Hangers", "Hanger Hooks +3 durability"], "ice_long": ["Extra Lotion", "Slide faster and longer"], "flame_long": ["Turbo Dryer", "Each blast lasts longer"], "portal_dur": ["Permanent Block", "Block Button +3 durability"], "gas_wide": ["Strong Perfume", "Cloud spreads from 3 to 5 tiles"]}, "gen": {"gold": ["Payday", "Get 40 gold now"], "life": ["Double Lock", "+1 ex you can let through"], "cap": ["Bigger Place", "+2 max traps"]}, "sch": {"spike": ["Sharp Build", "Sharp", "Heels, Pillows and Hangers +1 durability"], "fall": ["Slip Build", "Slip", "Suitcases stay open 2s, Lotion and Block Button +2 durability"], "mech": ["Gadget Build", "Gadget", "Lipstick and Hair Dryer fire faster, Perfume is stronger"], "heavy": ["Heavy Build", "Heavy", "Flower Pots and Yoga Balls refund half their cost on a hit"]}, "cls": {"rookie": ["Basic Ex", "Just an ordinary ex"], "knight": ["Gamer Ex", "His controller blocks lipstick"], "thief": ["Smooth Talker", "Fast, and better at spotting floor traps"], "brute": ["Gym Bro", "Takes one extra hit (not suitcases)"], "sapper": ["Mr. Fix-It", "Fixes (removes) floor traps he spots"], "priest": ["Mama's Boy", "Calls Mom to get a buddy back up, once"], "scout": ["Influencer", "Posts every trap he spots, so all exes know"], "boss": ["Toxic Ex", "Lots of HP, takes several hits. Costs extra lives if he gets through"]}, "afx": {"fast": "In a Hurry: speed +25%", "armor": "Thick Skin: everyone takes one extra hit", "intel": "Been Warned: better at spotting traps", "horde": "Ex Parade: 3 extra exes"}, "death": {"spike": "Ow! Who leaves heels on the floor?!", "pit": "Wait, she packed ME?!", "arrow": "Lipstick on my collar...", "rock": "A flower pot? Really?", "chest": "It was an empty box...", "boulder": "Strike! I'm out...", "ceil": "Hung up like her old jacket!", "flame": "My hair! My perfect hair!", "gas": "Too... much... perfume...", "ice": "Whoa, slippery!", "portal": "She blocked me?!", "spring": "Boing! I'm outta here!"}, "dodge": ["The group chat warned me!", "Saw that coming!", "She did this last time~", "Nice try, babe.", "I read her stories."], "esc": ["Told you she misses me!", "Too easy!", "I'll be back, babe!"], "goal": {"arrow": "Trip 10 exes with Heels in one run", "rock": "Catch an ex while he opens a gift (3 total)", "boulder": "Survive wave 5", "spring": "Get 2 exes at once with one trap", "ice": "Let no ex through for 3 waves in a row (one run)", "ceil": "Bounce exes into the ceiling (5 total)", "flame": "Stop Gamer Exes (5 total)", "portal": "Stop Clingy Exes (3 total)", "gas": "Survive wave 10"}, "ui": {"ch1": "Living Room", "ch2": "Beauty Salon", "ch3": "Bedroom", "ch4": "Kitchen", "ch5": "Shopping Mall", "ch6": "Wedding Hall", "r_poor": "No gold per ex · Bigger wave bonus", "r_lives": "Only {n} exes may get through", "winStats": "Dumped {k} exes · {e} got through", "star3": "★★★: let no ex through", "lostLv": "Broke in on wave {w}/{m} · Dumped {k} exes", "allDone": "All 60 levels cleared! You're free!", "newClass": "New ex type: {name} · {info}", "forgot": "Unused traps, the exes forgot: {list}", "bossTaunt": "Is that all, babe?", "tough": "Didn't even hurt!", "ah": "Ouch!", "priest": "Mom says get up!", "escaped": "An ex got through. He comes back next wave, even clingier", "tooClose": "Too close to an ex", "revived": "I'm back, babe!", "scout": "{name} ahead, guys!", "sapper": "I can fix this.", "chestMine": "A gift? For me?", "ported": "Wait, where am I?", "disarmed": "Removed by Mr. Fix-It", "blocked": "Blocked by my controller!", "vets": "Clingy×{n}", "exit": "DOOR", "intel": "Ex group chat (what they know)", "lives": "Can let through", "lost": "He Got In!", "lostStats": "Held {w} waves, dumped {k} exes · Best: {b} waves", "title": "Trap the Ex BF"}}, "zh": {"td": {"spike": ["高跟鞋", "踩上去疼得跳脚"], "pit": ["行李箱", "一脚踩空，被打包带走"], "chest": ["礼物盒", "前任会停下来拆礼物，配合别的陷阱用"], "arrow": ["口红发射器", "挂在墙上，定时发射口红"], "rock": ["花盆", "前任走到下面时砸下来"], "boulder": ["瑜伽球", "前任走过后放出，往回滚撞翻一串"], "spring": ["弹弹枕", "把前任弹到天花板上"], "ceil": ["衣架钩", "挂住被弹上来的前任，配合弹弹枕"], "ice": ["洒了的身体乳", "前任打滑，停不下也跳不起来"], "flame": ["吹风机", "一阵一阵吹热风"], "portal": ["拉黑按钮", "把前任送回起点重走一遍，每人只会被拉黑一次"], "gas": ["香水雾", "在香水雾里待太久就会被熏跑"]}, "upg": {"spike_dur": ["加固高跟鞋", "高跟鞋耐久 +2"], "pit_dur": ["大号行李箱", "行李箱耐久 +2"], "chest_long": ["精美包装", "拆礼物时间翻倍"], "arrow_double": ["双发口红", "多射一支低处的口红，蹲下躲不掉"], "rock_roll": ["滚落花盆", "花盆落地后会往回滚"], "boulder_big": ["巨型瑜伽球", "大到跳不过去"], "spring_back": ["斜弹枕", "把前任往回弹两三格"], "ceil_dur": ["更多衣架", "衣架钩耐久 +3"], "ice_long": ["加量身体乳", "滑得更快、更久"], "flame_long": ["涡轮吹风机", "每次吹风时间更长"], "portal_dur": ["永久拉黑", "拉黑按钮耐久 +3"], "gas_wide": ["浓香水", "香水雾范围从 3 格扩大到 5 格"]}, "gen": {"gold": ["发工资", "立刻获得 40 金币"], "life": ["双重门锁", "还能放过的人数 +1"], "cap": ["换大房子", "陷阱总数上限 +2"]}, "sch": {"spike": ["尖刺流", "尖刺", "高跟鞋、弹弹枕、衣架钩耐久 +1"], "fall": ["滑倒流", "滑倒", "行李箱 2 秒后才关上，身体乳和拉黑按钮耐久 +2"], "mech": ["电器流", "电器", "口红和吹风机更快，香水更浓"], "heavy": ["重物流", "重物", "花盆、瑜伽球坑到人后退还一半钱"]}, "cls": {"rookie": ["普通前任", "普通的前男友"], "knight": ["游戏宅前任", "手柄能挡住口红"], "thief": ["油嘴滑舌男", "跑得快，更容易发现地上的陷阱"], "brute": ["健身男", "皮厚，能多扛一下（行李箱除外）"], "sapper": ["修理工", "会修好（拆掉）他认出的地上陷阱"], "priest": ["妈宝男", "能打电话叫妈妈，把倒下的同伴扶起来一次"], "scout": ["网红", "他发现的陷阱会发到网上，所有前任都知道"], "boss": ["渣男之王", "血厚，要连着坑好几次；放他过去扣好几条命"]}, "afx": {"fast": "急着复合：速度 +25%", "armor": "脸皮厚：每人多扛一下", "intel": "早有防备：都更会认陷阱", "horde": "前任大军：多来 3 个人"}, "death": {"spike": "谁把高跟鞋扔地上的！", "pit": "她把我打包了？！", "arrow": "衣领上全是口红印…", "rock": "花盆？认真的吗？", "chest": "盒子是空的…", "boulder": "全中！我出局了…", "ceil": "被挂起来了，像她的旧外套！", "flame": "我的发型！", "gas": "香水…太…浓了…", "ice": "好滑好滑！", "portal": "她把我拉黑了？！", "spring": "我飞走啦！"}, "dodge": ["兄弟群里说过这招！", "早看穿了！", "她上次就这么干的～", "想骗我？没门。", "我看过她朋友圈。"], "esc": ["我就说她还想我！", "太简单了！", "宝贝我还会回来的！"], "goal": {"arrow": "一局里用高跟鞋坑到 10 个前任", "rock": "在前任拆礼物时坑到他，累计 3 次", "boulder": "守住第 5 波", "spring": "一个陷阱同时坑到 2 个前任", "ice": "一局里连续 3 波一个都不放过去", "ceil": "让前任撞到天花板，累计 5 次", "flame": "坑到游戏宅前任，累计 5 个", "portal": "坑到死缠烂打的前任，累计 3 个", "gas": "守住第 10 波"}, "ui": {"ch1": "客厅", "ch2": "美容院", "ch3": "卧室", "ch4": "厨房", "ch5": "商场", "ch6": "婚礼现场", "r_poor": "坑到前任不给金币 · 守住一波奖励更多", "r_lives": "最多只能放过 {n} 个前任", "winStats": "坑到 {k} 个前任 · 放过去 {e} 个", "star3": "三星：一个都不放过去", "lostLv": "在第 {w}/{m} 波被闯进来 · 坑到 {k} 个前任", "allDone": "60 关全部通关！你自由了！", "newClass": "新前任：{name} · {info}", "forgot": "没用上的陷阱，前任们淡忘了：{list}", "bossTaunt": "就这点手段？", "tough": "一点都不疼！", "ah": "哎哟！", "priest": "妈妈说快起来！", "escaped": "有个前任闯过去了，下一波他会更死缠烂打", "tooClose": "离前任太近了", "revived": "宝贝我又回来了！", "scout": "前面有{name}，兄弟们小心！", "sapper": "这个我会修。", "chestMine": "礼物？给我的？", "ported": "诶？我怎么回来了", "disarmed": "被修理工拆掉了", "blocked": "手柄挡住了！", "vets": "死缠烂打×{n}", "exit": "家门", "intel": "前任群聊（他们知道多少）", "lives": "还能放过", "lost": "前任闯进来了！", "lostStats": "守住了 {w} 波，坑到 {k} 个前任 · 最好成绩 {b} 波", "title": "坑前男友"}}, "pt": {"td": {"spike": ["Salto Agulha", "Pisou, doeu!"], "pit": ["Mala Aberta", "Ele cai dentro e é despachado"], "chest": ["Caixa de Presente", "Os ex param para abrir. Combine com outras armadilhas"], "arrow": ["Lança-Batom", "Presa na parede, dispara batons"], "rock": ["Vaso de Flor", "Cai quando um ex passa por baixo"], "boulder": ["Bola de Ioga", "Solta depois que o ex passa e rola derrubando a fila"], "spring": ["Travesseiro Saltitante", "Lança os ex contra o teto"], "ceil": ["Ganchos de Cabide", "Prendem os ex lançados. Use com o Travesseiro"], "ice": ["Hidratante Derramado", "Os ex escorregam: não param nem pulam"], "flame": ["Secador de Cabelo", "Solta ar quente em rajadas"], "portal": ["Botão Bloquear", "Manda o ex de volta ao início. Uma vez por ex"], "gas": ["Nuvem de Perfume", "Ficar muito tempo nela e ele foge"]}, "upg": {"spike_dur": ["Saltos Reforçados", "Saltos +2 de durabilidade"], "pit_dur": ["Mala Maior", "Mala +2 de durabilidade"], "chest_long": ["Embrulho Caprichado", "Demoram o dobro para abrir"], "arrow_double": ["Batom Duplo", "Dispara um batom baixo extra. Agachar não adianta"], "rock_roll": ["Vaso Rolante", "O vaso rola de volta ao cair"], "boulder_big": ["Bola Gigante", "Grande demais para pular"], "spring_back": ["Travesseiro Inclinado", "Joga os ex 2-3 casas para trás"], "ceil_dur": ["Mais Cabides", "Ganchos +3 de durabilidade"], "ice_long": ["Mais Hidratante", "Escorrega mais rápido e por mais tempo"], "flame_long": ["Secador Turbo", "Cada rajada dura mais"], "portal_dur": ["Bloqueio Permanente", "Bloquear +3 de durabilidade"], "gas_wide": ["Perfume Forte", "A nuvem cobre 5 casas em vez de 3"]}, "gen": {"gold": ["Dia de Pagamento", "Ganhe 40 de ouro agora"], "life": ["Tranca Dupla", "+1 ex que pode passar"], "cap": ["Casa Maior", "+2 no limite de armadilhas"]}, "sch": {"spike": ["Build Pontiaguda", "Ponta", "Saltos, Travesseiros e Cabides +1 de durabilidade"], "fall": ["Build Escorregão", "Escorrega", "Malas ficam abertas 2s, Hidratante e Bloquear +2 de durabilidade"], "mech": ["Build Aparelhos", "Aparelho", "Batom e Secador mais rápidos, Perfume mais forte"], "heavy": ["Build Peso", "Peso", "Vasos e Bolas devolvem metade do custo ao acertar"]}, "cls": {"rookie": ["Ex Comum", "Um ex qualquer"], "knight": ["Ex Gamer", "O controle dele bloqueia batons"], "thief": ["Galanteador", "Rápido e bom em notar armadilhas no chão"], "brute": ["Marombeiro", "Aguenta um golpe extra (menos a mala)"], "sapper": ["Faz-Tudo", "Conserta (remove) armadilhas de chão que notar"], "priest": ["Filhinho da Mamãe", "Liga para a mãe e levanta um amigo uma vez"], "scout": ["Influencer", "Posta cada armadilha que vê, todos os ex ficam sabendo"], "boss": ["Ex Tóxico", "Muita vida, precisa de vários golpes. Se passar, custa várias vidas"]}, "afx": {"fast": "Com Pressa: velocidade +25%", "armor": "Cara de Pau: todos aguentam um golpe extra", "intel": "Avisados: notam mais armadilhas", "horde": "Desfile de Ex: +3 ex"}, "death": {"spike": "Ai! Quem deixa salto no chão?!", "pit": "Ela ME colocou na mala?!", "arrow": "Batom na minha gola...", "rock": "Um vaso? Sério?", "chest": "A caixa estava vazia...", "boulder": "Strike! Tô fora...", "ceil": "Pendurado igual ao casaco dela!", "flame": "Meu cabelo! Meu cabelo perfeito!", "gas": "Perfume... demais...", "ice": "Uaaa, escorrega!", "portal": "Ela me bloqueou?!", "spring": "Boing! Tô indo embora!"}, "dodge": ["O grupo me avisou!", "Já sabia!", "Ela fez isso da última vez~", "Boa tentativa, amor.", "Eu vi os stories dela."], "esc": ["Eu disse que ela sente minha falta!", "Fácil demais!", "Eu volto, amor!"], "goal": {"arrow": "Pegue 10 ex com Saltos numa partida", "rock": "Pegue um ex abrindo um presente (3 no total)", "boulder": "Sobreviva à onda 5", "spring": "Pegue 2 ex de uma vez com uma armadilha", "ice": "Nenhum ex passa por 3 ondas seguidas (numa partida)", "ceil": "Faça os ex baterem no teto (5 no total)", "flame": "Pare Ex Gamers (5 no total)", "portal": "Pare Ex Grudentos (3 no total)", "gas": "Sobreviva à onda 10"}, "ui": {"ch1": "Sala de Estar", "ch2": "Salão de Beleza", "ch3": "Quarto", "ch4": "Cozinha", "ch5": "Shopping", "ch6": "Salão de Casamento", "r_poor": "Sem ouro por ex · Bônus maior por onda", "r_lives": "Só {n} ex podem passar", "winStats": "Despachou {k} ex · {e} passaram", "star3": "★★★: não deixe nenhum ex passar", "lostLv": "Invadiram na onda {w}/{m} · Despachou {k} ex", "allDone": "Todas as 60 fases concluídas! Você está livre!", "newClass": "Novo tipo de ex: {name} · {info}", "forgot": "Armadilhas não usadas, os ex esqueceram: {list}", "bossTaunt": "Só isso, amor?", "tough": "Nem doeu!", "ah": "Ai!", "priest": "A mãe mandou levantar!", "escaped": "Um ex passou. Volta na próxima onda ainda mais grudento", "tooClose": "Perto demais de um ex", "revived": "Voltei, amor!", "scout": "{name} à frente, galera!", "sapper": "Isso eu conserto.", "chestMine": "Um presente? Pra mim?", "ported": "Ué, onde eu tô?", "disarmed": "Removida pelo Faz-Tudo", "blocked": "Bloqueei com o controle!", "vets": "Grudento×{n}", "exit": "PORTA", "intel": "Grupo dos ex (o que eles sabem)", "lives": "Pode deixar passar", "lost": "Ele Entrou!", "lostStats": "Resistiu {w} ondas, despachou {k} ex · Recorde: {b} ondas", "title": "Trap the Ex BF"}}, "es": {"td": {"spike": ["Tacones de Aguja", "¡Los pisa y duele!"], "pit": ["Maleta Abierta", "Cae dentro y queda empaquetado"], "chest": ["Caja de Regalo", "Los ex paran a abrirla. Combínala con otras trampas"], "arrow": ["Lanzapintalabios", "En la pared, dispara pintalabios"], "rock": ["Maceta", "Cae cuando un ex pasa debajo"], "boulder": ["Pelota de Yoga", "Se suelta tras pasar un ex y rueda derribando la fila"], "spring": ["Almohada Saltarina", "Lanza a los ex contra el techo"], "ceil": ["Ganchos de Percha", "Atrapan a los ex lanzados. Úsalos con la Almohada"], "ice": ["Crema Derramada", "Los ex resbalan: no frenan ni saltan"], "flame": ["Secador de Pelo", "Sopla aire caliente a ráfagas"], "portal": ["Botón Bloquear", "Devuelve al ex al inicio. Una vez por ex"], "gas": ["Nube de Perfume", "Si se queda mucho, sale huyendo"]}, "upg": {"spike_dur": ["Tacones Reforzados", "Tacones +2 de durabilidad"], "pit_dur": ["Maleta Grande", "Maleta +2 de durabilidad"], "chest_long": ["Envoltorio Elegante", "Tardan el doble en abrirla"], "arrow_double": ["Pintalabios Doble", "Dispara uno bajo extra. Agacharse no sirve"], "rock_roll": ["Maceta Rodante", "La maceta rueda hacia atrás al caer"], "boulder_big": ["Pelota Gigante", "Demasiado grande para saltarla"], "spring_back": ["Almohada Inclinada", "Lanza a los ex 2-3 casillas atrás"], "ceil_dur": ["Más Perchas", "Ganchos +3 de durabilidad"], "ice_long": ["Más Crema", "Resbalan más rápido y más tiempo"], "flame_long": ["Secador Turbo", "Cada ráfaga dura más"], "portal_dur": ["Bloqueo Permanente", "Bloquear +3 de durabilidad"], "gas_wide": ["Perfume Fuerte", "La nube cubre 5 casillas en vez de 3"]}, "gen": {"gold": ["Día de Cobro", "Consigue 40 de oro ahora"], "life": ["Doble Cerrojo", "+1 ex que puede pasar"], "cap": ["Casa Más Grande", "+2 al límite de trampas"]}, "sch": {"spike": ["Build Punzante", "Punta", "Tacones, Almohadas y Perchas +1 de durabilidad"], "fall": ["Build Resbalón", "Resbalón", "Las maletas siguen abiertas 2s, Crema y Bloquear +2 de durabilidad"], "mech": ["Build Aparatos", "Aparato", "Pintalabios y Secador más rápidos, Perfume más fuerte"], "heavy": ["Build Peso", "Peso", "Macetas y Pelotas devuelven la mitad del coste al acertar"]}, "cls": {"rookie": ["Ex Normal", "Un ex cualquiera"], "knight": ["Ex Gamer", "Su mando bloquea los pintalabios"], "thief": ["Ligón", "Rápido y bueno detectando trampas de suelo"], "brute": ["Chico Gym", "Aguanta un golpe extra (salvo la maleta)"], "sapper": ["Manitas", "Arregla (quita) las trampas de suelo que detecta"], "priest": ["Niño de Mamá", "Llama a mamá para levantar a un amigo una vez"], "scout": ["Influencer", "Publica cada trampa que ve, todos los ex se enteran"], "boss": ["Ex Tóxico", "Mucha vida, necesita varios golpes. Si pasa, cuesta varias vidas"]}, "afx": {"fast": "Con Prisa: velocidad +25%", "armor": "Caradura: todos aguantan un golpe extra", "intel": "Avisados: detectan más trampas", "horde": "Desfile de Ex: +3 ex"}, "death": {"spike": "¡Ay! ¿Quién deja tacones en el suelo?", "pit": "¿¡Me ha metido en la maleta!?", "arrow": "Pintalabios en mi cuello...", "rock": "¿Una maceta? ¿En serio?", "chest": "La caja estaba vacía...", "boulder": "¡Pleno! Estoy fuera...", "ceil": "¡Colgado como su chaqueta vieja!", "flame": "¡Mi pelo! ¡Mi pelo perfecto!", "gas": "Demasiado... perfume...", "ice": "¡Uaaa, resbala!", "portal": "¿¡Me ha bloqueado!?", "spring": "¡Boing! ¡Me largo!"}, "dodge": ["¡El grupo me avisó!", "¡Lo vi venir!", "Ya hizo esto la última vez~", "Buen intento, cariño.", "He visto sus stories."], "esc": ["¡Ya te dije que me echa de menos!", "¡Demasiado fácil!", "¡Volveré, cariño!"], "goal": {"arrow": "Pilla a 10 ex con Tacones en una partida", "rock": "Pilla a un ex abriendo un regalo (3 en total)", "boulder": "Sobrevive a la oleada 5", "spring": "Pilla a 2 ex a la vez con una trampa", "ice": "Que ningún ex pase 3 oleadas seguidas (en una partida)", "ceil": "Haz que los ex choquen con el techo (5 en total)", "flame": "Para a Ex Gamers (5 en total)", "portal": "Para a Ex Pesados (3 en total)", "gas": "Sobrevive a la oleada 10"}, "ui": {"ch1": "Salón", "ch2": "Salón de Belleza", "ch3": "Dormitorio", "ch4": "Cocina", "ch5": "Centro Comercial", "ch6": "Salón de Bodas", "r_poor": "Sin oro por ex · Más bonus por oleada", "r_lives": "Solo pueden pasar {n} ex", "winStats": "Despachaste {k} ex · pasaron {e}", "star3": "★★★: que no pase ningún ex", "lostLv": "Entraron en la oleada {w}/{m} · Despachaste {k} ex", "allDone": "¡Superaste los 60 niveles! ¡Eres libre!", "newClass": "Nuevo tipo de ex: {name} · {info}", "forgot": "Trampas sin usar, los ex las olvidaron: {list}", "bossTaunt": "¿Eso es todo, cariño?", "tough": "¡Ni me ha dolido!", "ah": "¡Ay!", "priest": "¡Mamá dice que te levantes!", "escaped": "Un ex pasó. Vuelve en la próxima oleada aún más pesado", "tooClose": "Demasiado cerca de un ex", "revived": "¡He vuelto, cariño!", "scout": "¡{name} delante, chicos!", "sapper": "Esto lo arreglo yo.", "chestMine": "¿Un regalo? ¿Para mí?", "ported": "¿Eh? ¿Dónde estoy?", "disarmed": "Quitada por el Manitas", "blocked": "¡Bloqueado con el mando!", "vets": "Pesado×{n}", "exit": "PUERTA", "intel": "Grupo de los ex (lo que saben)", "lives": "Pueden pasar", "lost": "¡Ha Entrado!", "lostStats": "Resististe {w} oleadas, despachaste {k} ex · Récord: {b} oleadas", "title": "Trap the Ex BF"}}, "ja": {"td": {"spike": ["ハイヒール", "踏んだら痛い！"], "pit": ["開いたスーツケース", "落ちたら荷物ごと送り返される"], "chest": ["プレゼント箱", "元カレが開けるために立ち止まる。他の罠と組み合わせよう"], "arrow": ["リップ発射器", "壁に付いて定期的にリップを撃つ"], "rock": ["植木鉢", "元カレが真下に来ると落ちる"], "boulder": ["ヨガボール", "元カレが通り過ぎると転がり戻り、まとめて倒す"], "spring": ["ぽよぽよ枕", "元カレを天井まで跳ね上げる"], "ceil": ["ハンガーフック", "跳ね上げられた元カレを引っかける。枕と一緒に"], "ice": ["こぼれたボディクリーム", "元カレが滑って止まれず跳べない"], "flame": ["ドライヤー", "一定間隔で熱風を吹く"], "portal": ["ブロックボタン", "元カレをスタートに戻す。一人一回まで"], "gas": ["香水の霧", "長くいると逃げ出す"]}, "upg": {"spike_dur": ["強化ハイヒール", "ハイヒールの耐久+2"], "pit_dur": ["大きいスーツケース", "スーツケースの耐久+2"], "chest_long": ["豪華ラッピング", "開ける時間が2倍"], "arrow_double": ["ダブルリップ", "低いリップも撃つ。しゃがんでも避けられない"], "rock_roll": ["転がる植木鉢", "植木鉢が着地後に転がり戻る"], "boulder_big": ["巨大ヨガボール", "大きすぎて跳び越せない"], "spring_back": ["斜め枕", "元カレを2〜3マス後ろへ跳ね返す"], "ceil_dur": ["ハンガー追加", "ハンガーフックの耐久+3"], "ice_long": ["クリーム増量", "もっと速く、もっと長く滑る"], "flame_long": ["ターボドライヤー", "熱風が長く続く"], "portal_dur": ["永久ブロック", "ブロックボタンの耐久+3"], "gas_wide": ["濃い香水", "範囲が3マスから5マスに"]}, "gen": {"gold": ["給料日", "すぐに40ゴールド"], "life": ["ダブルロック", "通していい人数+1"], "cap": ["広い部屋", "罠の上限+2"]}, "sch": {"spike": ["トゲ型", "トゲ", "ヒール・枕・ハンガーの耐久+1"], "fall": ["すべり型", "すべり", "スーツケースは2秒開いたまま、クリームとブロックの耐久+2"], "mech": ["家電型", "家電", "リップとドライヤーが速くなり、香水が強くなる"], "heavy": ["重量型", "重量", "植木鉢とヨガボールで当てると費用の半分が戻る"]}, "cls": {"rookie": ["ふつうの元カレ", "どこにでもいる元カレ"], "knight": ["ゲーマー元カレ", "コントローラーでリップを防ぐ"], "thief": ["口のうまい男", "足が速く、床の罠に気づきやすい"], "brute": ["筋トレ男", "一回多く耐える（スーツケース以外）"], "sapper": ["なんでも修理屋", "見破った床の罠を直して（外して）しまう"], "priest": ["マザコン", "ママに電話して、倒れた仲間を一度だけ起こす"], "scout": ["インフルエンサー", "見つけた罠をSNSに投稿、全員に知れ渡る"], "boss": ["最悪の元カレ", "体力が多く、何度も罠にかける必要あり。通すと命を多く失う"]}, "afx": {"fast": "復縁したい：速度+25%", "armor": "面の皮が厚い：全員一回多く耐える", "intel": "警戒済み：罠に気づきやすい", "horde": "元カレ大行進：3人追加"}, "death": {"spike": "痛っ！誰だよヒール置いたの！", "pit": "え、俺が荷造りされた？！", "arrow": "襟にリップが…", "rock": "植木鉢？マジで？", "chest": "箱は空っぽだった…", "boulder": "ストライク！退場…", "ceil": "彼女の古いコートみたいに吊るされた！", "flame": "俺の髪！完璧な髪が！", "gas": "香水…強すぎ…", "ice": "うわっ、滑る！", "portal": "ブロックされた？！", "spring": "ぼよーん！帰ります！"}, "dodge": ["グループで聞いた手だ！", "お見通しだ！", "前もこれやってたよね～", "その手には乗らないよ。", "ストーリー見たし。"], "esc": ["ほら、まだ俺のこと好きなんだ！", "楽勝！", "また来るよ、ベイビー！"], "goal": {"arrow": "1回のプレイでハイヒールで10人やっつける", "rock": "プレゼントを開けている元カレをやっつける（累計3回）", "boulder": "第5ウェーブを守り切る", "spring": "1つの罠で同時に2人やっつける", "ice": "1回のプレイで3ウェーブ連続で誰も通さない", "ceil": "元カレを天井にぶつける（累計5回）", "flame": "ゲーマー元カレをやっつける（累計5人）", "portal": "しつこい元カレをやっつける（累計3人）", "gas": "第10ウェーブを守り切る"}, "ui": {"ch1": "リビング", "ch2": "美容室", "ch3": "寝室", "ch4": "キッチン", "ch5": "ショッピングモール", "ch6": "結婚式場", "r_poor": "撃退でゴールドなし · ウェーブ報酬アップ", "r_lives": "通していいのは {n} 人まで", "winStats": "{k} 人撃退 · {e} 人通過", "star3": "★★★：1人も通さない", "lostLv": "ウェーブ {w}/{m} で突破された · {k} 人撃退", "allDone": "全60ステージクリア！自由だ！", "newClass": "新しい元カレ：{name} · {info}", "forgot": "使わなかった罠を元カレたちが忘れた：{list}", "bossTaunt": "その程度？", "tough": "全然痛くない！", "ah": "いてっ！", "priest": "ママが起きろって！", "escaped": "元カレが通り抜けた。次のウェーブでもっとしつこく戻ってくる", "tooClose": "元カレに近すぎる", "revived": "戻ってきたよ、ベイビー！", "scout": "前方に{name}、みんな気をつけろ！", "sapper": "これなら直せる。", "chestMine": "プレゼント？俺に？", "ported": "あれ？ここどこ？", "disarmed": "修理屋に外された", "blocked": "コントローラーで防いだ！", "vets": "しつこい×{n}", "exit": "ドア", "intel": "元カレのグループチャット（知っていること）", "lives": "通していい数", "lost": "入られちゃった！", "lostStats": "{w}ウェーブ防衛、元カレ{k}人を撃退 · 最高 {b}ウェーブ", "title": "Trap the Ex BF"}}, "hi": {"td": {"spike": ["ऊँची एड़ी", "पैर पड़ा तो दर्द!"], "pit": ["खुला सूटकेस", "गिरा और पैक होकर गया"], "chest": ["गिफ़्ट बॉक्स", "एक्स खोलने के लिए रुकते हैं। दूसरे जालों के साथ इस्तेमाल करें"], "arrow": ["लिपस्टिक लॉन्चर", "दीवार पर लगा, समय-समय पर लिपस्टिक चलाता है"], "rock": ["गमला", "एक्स नीचे आते ही गिरता है"], "boulder": ["योगा बॉल", "एक्स के गुज़रने के बाद पीछे लुढ़ककर कतार गिराती है"], "spring": ["उछलता तकिया", "एक्स को छत तक उछालता है"], "ceil": ["हैंगर हुक", "उछले एक्स को टाँग देते हैं। तकिये के साथ"], "ice": ["गिरा हुआ लोशन", "एक्स फिसलते हैं: न रुक सकते, न कूद सकते"], "flame": ["हेयर ड्रायर", "रुक-रुक कर गर्म हवा फेंकता है"], "portal": ["ब्लॉक बटन", "एक्स को शुरुआत पर वापस भेजता है। हर एक्स पर एक बार"], "gas": ["परफ़्यूम बादल", "ज़्यादा देर रुका तो भाग जाएगा"]}, "upg": {"spike_dur": ["मज़बूत एड़ी", "एड़ी +2 टिकाऊपन"], "pit_dur": ["बड़ा सूटकेस", "सूटकेस +2 टिकाऊपन"], "chest_long": ["शानदार पैकिंग", "खोलने में दोगुना समय"], "arrow_double": ["दोहरी लिपस्टिक", "एक नीची लिपस्टिक और। झुकने से नहीं बचेंगे"], "rock_roll": ["लुढ़कता गमला", "गिरने के बाद गमला पीछे लुढ़कता है"], "boulder_big": ["विशाल योगा बॉल", "इतनी बड़ी कि कूद नहीं सकते"], "spring_back": ["तिरछा तकिया", "एक्स को 2-3 खाने पीछे उछालता है"], "ceil_dur": ["और हैंगर", "हैंगर हुक +3 टिकाऊपन"], "ice_long": ["ज़्यादा लोशन", "और तेज़, और देर तक फिसलन"], "flame_long": ["टर्बो ड्रायर", "हर बार गर्म हवा ज़्यादा देर"], "portal_dur": ["स्थायी ब्लॉक", "ब्लॉक बटन +3 टिकाऊपन"], "gas_wide": ["तेज़ परफ़्यूम", "बादल 3 की जगह 5 खानों तक"]}, "gen": {"gold": ["तनख़्वाह", "अभी 40 सोना पाएँ"], "life": ["दोहरा ताला", "+1 एक्स को जाने की छूट"], "cap": ["बड़ा घर", "जाल की सीमा +2"]}, "sch": {"spike": ["नुकीला बिल्ड", "नुकीला", "एड़ी, तकिया और हैंगर +1 टिकाऊपन"], "fall": ["फिसलन बिल्ड", "फिसलन", "सूटकेस 2 सेकंड खुला रहता है, लोशन और ब्लॉक +2 टिकाऊपन"], "mech": ["गैजेट बिल्ड", "गैजेट", "लिपस्टिक और ड्रायर तेज़, परफ़्यूम ज़्यादा तेज़"], "heavy": ["भारी बिल्ड", "भारी", "गमला और योगा बॉल से लगने पर आधी कीमत वापस"]}, "cls": {"rookie": ["साधारण एक्स", "एक आम एक्स"], "knight": ["गेमर एक्स", "उसका कंट्रोलर लिपस्टिक रोक लेता है"], "thief": ["बातूनी", "तेज़, फ़र्श के जाल जल्दी पहचानता है"], "brute": ["जिम ब्रो", "एक वार ज़्यादा सह लेता है (सूटकेस छोड़कर)"], "sapper": ["मिस्टर फ़िक्स-इट", "पहचाने हुए फ़र्श के जाल हटा देता है"], "priest": ["मम्मा बॉय", "मम्मी को फ़ोन करके एक दोस्त को एक बार उठा देता है"], "scout": ["इन्फ़्लुएंसर", "जो जाल देखे, पोस्ट कर देता है, सब एक्स जान जाते हैं"], "boss": ["टॉक्सिक एक्स", "बहुत जान, कई बार फँसाना होगा। निकल गया तो कई जानें जाएँगी"]}, "afx": {"fast": "जल्दी में: गति +25%", "armor": "मोटी चमड़ी: सब एक वार ज़्यादा सहेंगे", "intel": "पहले से चेताए गए: जाल ज़्यादा पहचानते हैं", "horde": "एक्स परेड: 3 एक्स ज़्यादा"}, "death": {"spike": "आह! फ़र्श पर एड़ी किसने छोड़ी?!", "pit": "उसने मुझे ही पैक कर दिया?!", "arrow": "कॉलर पर लिपस्टिक...", "rock": "गमला? सच में?", "chest": "डिब्बा तो खाली था...", "boulder": "स्ट्राइक! मैं बाहर...", "ceil": "उसकी पुरानी जैकेट की तरह टँग गया!", "flame": "मेरे बाल! मेरे परफ़ेक्ट बाल!", "gas": "बहुत... ज़्यादा... परफ़्यूम...", "ice": "अरे, फिसलन!", "portal": "उसने मुझे ब्लॉक कर दिया?!", "spring": "बोइंग! मैं चला!"}, "dodge": ["ग्रुप चैट ने बताया था!", "पहले ही समझ गया!", "पिछली बार भी यही किया था~", "अच्छी कोशिश, बेबी।", "मैंने उसकी स्टोरी देखी है।"], "esc": ["कहा था ना, वो मुझे याद करती है!", "बहुत आसान!", "मैं फिर आऊँगा, बेबी!"], "goal": {"arrow": "एक खेल में एड़ी से 10 एक्स को रोकें", "rock": "गिफ़्ट खोलते एक्स को पकड़ें (कुल 3 बार)", "boulder": "लहर 5 तक टिके रहें", "spring": "एक जाल से एक साथ 2 एक्स को रोकें", "ice": "एक खेल में लगातार 3 लहरों तक किसी एक्स को न निकलने दें", "ceil": "एक्स को छत से टकराएँ (कुल 5 बार)", "flame": "गेमर एक्स को रोकें (कुल 5)", "portal": "चिपकू एक्स को रोकें (कुल 3)", "gas": "लहर 10 तक टिके रहें"}, "ui": {"ch1": "लिविंग रूम", "ch2": "ब्यूटी सैलून", "ch3": "बेडरूम", "ch4": "किचन", "ch5": "शॉपिंग मॉल", "ch6": "शादी हॉल", "r_poor": "एक्स रोकने पर सोना नहीं · लहर बोनस ज़्यादा", "r_lives": "सिर्फ़ {n} एक्स निकल सकते हैं", "winStats": "{k} एक्स रोके · {e} निकल गए", "star3": "★★★: एक भी एक्स न निकले", "lostLv": "लहर {w}/{m} पर घुस आए · {k} एक्स रोके", "allDone": "सभी 60 लेवल पार! अब तुम आज़ाद हो!", "newClass": "नया एक्स: {name} · {info}", "forgot": "न इस्तेमाल हुए जाल एक्स भूल गए: {list}", "bossTaunt": "बस इतना ही, बेबी?", "tough": "दर्द तक नहीं हुआ!", "ah": "आह!", "priest": "मम्मी कह रही हैं उठो!", "escaped": "एक एक्स निकल गया। अगली लहर में और चिपकू बनकर लौटेगा", "tooClose": "एक्स के बहुत पास", "revived": "मैं वापस आ गया, बेबी!", "scout": "आगे {name} है, दोस्तों!", "sapper": "इसे मैं ठीक कर दूँगा।", "chestMine": "गिफ़्ट? मेरे लिए?", "ported": "हैं? मैं कहाँ हूँ?", "disarmed": "मिस्टर फ़िक्स-इट ने हटा दिया", "blocked": "कंट्रोलर से रोक लिया!", "vets": "चिपकू×{n}", "exit": "दरवाज़ा", "intel": "एक्स ग्रुप चैट (उन्हें क्या पता है)", "lives": "निकलने की छूट", "lost": "वो अंदर आ गया!", "lostStats": "{w} लहरें रोकीं, {k} एक्स रोके · सर्वश्रेष्ठ: {b} लहरें", "title": "Trap the Ex BF"}}, "bn": {"td": {"spike": ["হাই হিল", "পা দিলেই ব্যথা!"], "pit": ["খোলা স্যুটকেস", "পড়ে গিয়ে প্যাক হয়ে যায়"], "chest": ["গিফট বক্স", "এক্সরা খুলতে থামে। অন্য ফাঁদের সাথে মেলান"], "arrow": ["লিপস্টিক লঞ্চার", "দেয়ালে বসানো, নিয়মিত লিপস্টিক ছোড়ে"], "rock": ["ফুলের টব", "এক্স নিচে এলে পড়ে"], "boulder": ["যোগা বল", "এক্স পার হলে পেছনে গড়িয়ে সারি ফেলে দেয়"], "spring": ["লাফানো বালিশ", "এক্সকে ছাদে ছুড়ে দেয়"], "ceil": ["হ্যাঙ্গার হুক", "ছোড়া এক্সকে ঝুলিয়ে দেয়। বালিশের সাথে"], "ice": ["পড়ে যাওয়া লোশন", "এক্স পিছলে যায়: থামতে বা লাফাতে পারে না"], "flame": ["হেয়ার ড্রায়ার", "থেমে থেমে গরম হাওয়া দেয়"], "portal": ["ব্লক বাটন", "এক্সকে শুরুতে ফেরত পাঠায়। প্রতি এক্সে একবার"], "gas": ["পারফিউম মেঘ", "বেশিক্ষণ থাকলে পালিয়ে যায়"]}, "upg": {"spike_dur": ["শক্ত হিল", "হিল +2 স্থায়িত্ব"], "pit_dur": ["বড় স্যুটকেস", "স্যুটকেস +2 স্থায়িত্ব"], "chest_long": ["সুন্দর মোড়ক", "খুলতে দ্বিগুণ সময়"], "arrow_double": ["জোড়া লিপস্টিক", "একটা নিচু লিপস্টিক বেশি। ঝুঁকে বাঁচা যাবে না"], "rock_roll": ["গড়ানো টব", "পড়ার পর টব পেছনে গড়ায়"], "boulder_big": ["বিশাল যোগা বল", "এত বড় যে লাফিয়ে পার হওয়া যায় না"], "spring_back": ["বাঁকা বালিশ", "এক্সকে 2-3 ঘর পেছনে ছোড়ে"], "ceil_dur": ["আরও হ্যাঙ্গার", "হ্যাঙ্গার হুক +3 স্থায়িত্ব"], "ice_long": ["আরও লোশন", "আরও দ্রুত, আরও বেশিক্ষণ পিছলানো"], "flame_long": ["টার্বো ড্রায়ার", "প্রতিবার গরম হাওয়া বেশিক্ষণ"], "portal_dur": ["স্থায়ী ব্লক", "ব্লক বাটন +3 স্থায়িত্ব"], "gas_wide": ["কড়া পারফিউম", "মেঘ 3 ঘরের বদলে 5 ঘর"]}, "gen": {"gold": ["বেতনের দিন", "এখনই 40 সোনা"], "life": ["ডাবল তালা", "+1 এক্সকে যেতে দেওয়া যাবে"], "cap": ["বড় বাসা", "ফাঁদের সীমা +2"]}, "sch": {"spike": ["ধারালো বিল্ড", "ধারালো", "হিল, বালিশ আর হ্যাঙ্গার +1 স্থায়িত্ব"], "fall": ["পিছল বিল্ড", "পিছল", "স্যুটকেস 2 সেকেন্ড খোলা থাকে, লোশন ও ব্লক +2 স্থায়িত্ব"], "mech": ["গ্যাজেট বিল্ড", "গ্যাজেট", "লিপস্টিক আর ড্রায়ার দ্রুত, পারফিউম আরও কড়া"], "heavy": ["ভারী বিল্ড", "ভারী", "টব আর যোগা বলে লাগলে অর্ধেক দাম ফেরত"]}, "cls": {"rookie": ["সাধারণ এক্স", "একজন সাধারণ এক্স"], "knight": ["গেমার এক্স", "তার কন্ট্রোলার লিপস্টিক আটকায়"], "thief": ["মিষ্টি কথার লোক", "দ্রুত, মেঝের ফাঁদ সহজে চেনে"], "brute": ["জিম ব্রো", "একটা আঘাত বেশি সয় (স্যুটকেস ছাড়া)"], "sapper": ["মিস্টার ফিক্স-ইট", "চেনা মেঝের ফাঁদ সরিয়ে দেয়"], "priest": ["মায়ের ছেলে", "মাকে ফোন করে এক বন্ধুকে একবার তুলে দেয়"], "scout": ["ইনফ্লুয়েন্সার", "যে ফাঁদ দেখে পোস্ট করে, সব এক্স জেনে যায়"], "boss": ["টক্সিক এক্স", "অনেক প্রাণশক্তি, বহুবার ফাঁদে ফেলতে হবে। পার হলে অনেক জীবন যাবে"]}, "afx": {"fast": "তাড়াহুড়ো: গতি +25%", "armor": "মোটা চামড়া: সবাই একটা আঘাত বেশি সয়", "intel": "আগেই সতর্ক: ফাঁদ বেশি চেনে", "horde": "এক্স প্যারেড: আরও 3 জন এক্স"}, "death": {"spike": "আহ! মেঝেতে হিল কে ফেলে রাখল?!", "pit": "ও আমাকেই প্যাক করে দিল?!", "arrow": "কলারে লিপস্টিক...", "rock": "ফুলের টব? সত্যি?", "chest": "বাক্সটা খালি ছিল...", "boulder": "স্ট্রাইক! আমি আউট...", "ceil": "ওর পুরোনো জ্যাকেটের মতো ঝুলে গেলাম!", "flame": "আমার চুল! আমার নিখুঁত চুল!", "gas": "অনেক... বেশি... পারফিউম...", "ice": "ওরে, পিছল!", "portal": "ও আমাকে ব্লক করল?!", "spring": "বোইং! আমি চললাম!"}, "dodge": ["গ্রুপ চ্যাটে বলেছিল!", "আগেই বুঝেছি!", "গতবারও এটা করেছিল~", "ভালো চেষ্টা, বেবি।", "ওর স্টোরি দেখেছি।"], "esc": ["বলেছিলাম ও আমাকে মিস করে!", "খুব সহজ!", "আমি আবার আসব, বেবি!"], "goal": {"arrow": "এক খেলায় হিল দিয়ে 10 জন এক্সকে থামাও", "rock": "গিফট খোলার সময় এক্সকে ধরো (মোট 3 বার)", "boulder": "ঢেউ 5 পর্যন্ত টিকে থাকো", "spring": "এক ফাঁদে একসাথে 2 জন এক্সকে থামাও", "ice": "এক খেলায় টানা 3 ঢেউ কোনো এক্সকে যেতে দিও না", "ceil": "এক্সকে ছাদে ধাক্কা খাওয়াও (মোট 5 বার)", "flame": "গেমার এক্সকে থামাও (মোট 5)", "portal": "নাছোড় এক্সকে থামাও (মোট 3)", "gas": "ঢেউ 10 পর্যন্ত টিকে থাকো"}, "ui": {"ch1": "বসার ঘর", "ch2": "বিউটি সেলুন", "ch3": "শোবার ঘর", "ch4": "রান্নাঘর", "ch5": "শপিং মল", "ch6": "বিয়ের হল", "r_poor": "এক্স থামালে সোনা নেই · ঢেউ বোনাস বেশি", "r_lives": "মাত্র {n} জন এক্স যেতে পারবে", "winStats": "{k} জন এক্স থামানো · {e} জন পার হলো", "star3": "★★★: একজন এক্সও যেন পার না হয়", "lostLv": "ঢেউ {w}/{m}-এ ঢুকে পড়ল · {k} জন এক্স থামানো", "allDone": "সব 60 লেভেল পার! তুমি মুক্ত!", "newClass": "নতুন এক্স: {name} · {info}", "forgot": "অব্যবহৃত ফাঁদ এক্সরা ভুলে গেছে: {list}", "bossTaunt": "এইটুকুই, বেবি?", "tough": "ব্যথাই লাগেনি!", "ah": "আহ!", "priest": "মা বলছে উঠে পড়ো!", "escaped": "একজন এক্স পার হয়েছে। পরের ঢেউয়ে আরও নাছোড় হয়ে ফিরবে", "tooClose": "এক্সের খুব কাছে", "revived": "আমি ফিরে এসেছি, বেবি!", "scout": "সামনে {name}, বন্ধুরা!", "sapper": "এটা আমি ঠিক করতে পারি।", "chestMine": "গিফট? আমার জন্য?", "ported": "অ্যাঁ? আমি কোথায়?", "disarmed": "মিস্টার ফিক্স-ইট সরিয়ে দিয়েছে", "blocked": "কন্ট্রোলারে আটকে দিলাম!", "vets": "নাছোড়×{n}", "exit": "দরজা", "intel": "এক্স গ্রুপ চ্যাট (ওরা কী জানে)", "lives": "যেতে দেওয়া যাবে", "lost": "ও ঢুকে পড়েছে!", "lostStats": "{w} ঢেউ ঠেকানো, {k} জন এক্স থামানো · সেরা: {b} ঢেউ", "title": "Trap the Ex BF"}}};
+(function(){for(const l in EXBF){const d=I18N[l]||(I18N[l]={});for(const k in EXBF[l]){if(k==='ui')d.ui=Object.assign(d.ui||{},EXBF[l].ui);else d[k]=EXBF[l][k]}}})();
+const LANGS=['en','zh','pt','es','ja','hi','bn'];
+const LANG_LABEL={en:'EN',zh:'中',pt:'PT',es:'ES',ja:'日',hi:'हि',bn:'বা'};
+function detectLang(){
+  try{const q=new URLSearchParams(location.search).get('lang');if(q&&LANGS.includes(q))return q}catch(e){}
+  try{const s=localStorage.getItem('kyz_lang');if(s&&LANGS.includes(s))return s}catch(e){}
+  const list=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||'en'];
+  for(const l of list){const c=String(l||'').toLowerCase().slice(0,2);if(LANGS.includes(c))return c}
+  return 'en';
+}
+let LANG=detectLang();
+function T(k,v){let s=I18N[LANG].ui[k];if(s==null)s=I18N.en.ui[k];if(s==null)return k;if(v)s=s.replace(/\{(\w+)\}/g,(m,n)=>v[n]!=null?v[n]:m);return s}
+function cycleLang(){LANG=LANGS[(LANGS.indexOf(LANG)+1)%LANGS.length];try{localStorage.setItem('kyz_lang',LANG)}catch(e){}if(typeof window.__onLang==='function')window.__onLang();return LANG}
+const SPACED=()=>!(LANG==='zh'||LANG==='ja');
+/* ====================== 音效（WebAudio 合成，无音频文件） ====================== */
+const SFX=(function(){
+  let ctx=null,master=null,muted=false,adMute=false;const last={};
+  try{muted=localStorage.getItem('kyz_mute')==='1'}catch(e){}
+  function ensure(){if(ctx)return ctx;try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;ctx=new AC();master=ctx.createGain();master.gain.value=0.5;master.connect(ctx.destination)}catch(e){ctx=null}return ctx}
+  function unlock(){const c=ensure();if(c&&c.state!=='running')c.resume().catch(()=>{})}
+  function tone(f,d,type,vol,f2,delay){const c=ctx,t=c.currentTime+(delay||0),o=c.createOscillator(),g=c.createGain();o.type=type||'sine';o.frequency.setValueAtTime(f,t);if(f2)o.frequency.exponentialRampToValueAtTime(f2,t+d);g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(vol||0.2,t+0.01);g.gain.exponentialRampToValueAtTime(0.0001,t+d);o.connect(g);g.connect(master);o.start(t);o.stop(t+d+0.02)}
+  function noise(d,vol,ftype,freq,delay){const c=ctx,t=c.currentTime+(delay||0),n=Math.floor(c.sampleRate*d),b=c.createBuffer(1,n,c.sampleRate),a=b.getChannelData(0);for(let i=0;i<n;i++)a[i]=Math.random()*2-1;const src=c.createBufferSource();src.buffer=b;const f=c.createBiquadFilter();f.type=ftype||'lowpass';f.frequency.value=freq||1000;const g=c.createGain();g.gain.setValueAtTime(vol||0.2,t);g.gain.exponentialRampToValueAtTime(0.0001,t+d);src.connect(f);f.connect(g);g.connect(master);src.start(t);src.stop(t+d+0.02)}
+  const LIB={
+    place:()=>{tone(520,0.07,'square',0.08,700)},
+    remove:()=>{tone(500,0.08,'square',0.06,300)},
+    error:()=>{tone(160,0.14,'square',0.08,120)},
+    kill:()=>{noise(0.14,0.25,'lowpass',900);tone(190,0.16,'triangle',0.25,70);tone(1175,0.07,'sine',0.1,null,0.06);tone(1568,0.1,'sine',0.1,null,0.11)},
+    hurt:()=>{tone(260,0.09,'square',0.1,200);noise(0.06,0.12,'highpass',2000)},
+    escape:()=>{tone(440,0.35,'triangle',0.18,200)},
+    wave:()=>{tone(220,0.22,'sawtooth',0.07);tone(330,0.3,'sawtooth',0.06,null,0.12)},
+    boss:()=>{tone(98,0.7,'sawtooth',0.12,82);tone(147,0.7,'sawtooth',0.07,123,0.05);noise(0.5,0.1,'lowpass',300)},
+    clear:()=>{[523,659,784].forEach((f,i)=>tone(f,0.16,'sine',0.14,null,i*0.08))},
+    card:()=>{tone(660,0.06,'triangle',0.12,880)},
+    unlock:()=>{[523,659,784,1047].forEach((f,i)=>tone(f,0.22,'triangle',0.14,null,i*0.09))},
+    jump:()=>{tone(320,0.08,'square',0.04,620)},
+    spring:()=>{tone(180,0.22,'sine',0.18,900)},
+    rock:()=>{noise(0.3,0.3,'lowpass',380);tone(90,0.25,'sine',0.2,50)},
+    arrow:()=>{noise(0.08,0.08,'highpass',3000)},
+    flame:()=>{noise(0.45,0.14,'bandpass',700)},
+    chest:()=>{tone(880,0.08,'sine',0.12);tone(1320,0.12,'sine',0.1,null,0.06)},
+    portal:()=>{tone(400,0.25,'sine',0.14,1400)},
+    over:()=>{[392,330,262,196].forEach((f,i)=>tone(f,0.3,'triangle',0.16,null,i*0.16))}
+  };
+  const GAP={arrow:0.12,flame:0.2,jump:0.1,kill:0.04,hurt:0.06,place:0.03};
+  return{
+    unlock,
+    play(n){if(muted||adMute)return;const c=ensure();if(!c||c.state!=='running'||!LIB[n])return;const now=c.currentTime;if(last[n]!=null&&now-last[n]<(GAP[n]||0.05))return;last[n]=now;try{LIB[n]()}catch(e){}},
+    toggle(){muted=!muted;try{localStorage.setItem('kyz_mute',muted?'1':'0')}catch(e){}unlock();if(!muted)this.play('card');return muted},
+    get muted(){return muted},
+    setAdMute(v){adMute=!!v;if(ctx){try{v?ctx.suspend():ctx.resume()}catch(e){}}}
+  };
+})();
+/* ====================== A. 坑勇者（第三版：抽卡 + 流派 + 解锁） ====================== */
+function TrapGame(){
+  const CMP=(typeof COMPACT!=='undefined'&&COMPACT)||H<500,BAR=H-(CMP?74:64),FLOOR=BAR-(CMP?40:44),CEIL=CMP?46:112,K=CMP?clamp((FLOOR-CEIL)/190,1.4,2.0):1,WW=W/K,WCEIL=FLOOR-(FLOOR-CEIL)/K,WBAR=FLOOR+(BAR-FLOOR)/K,T0=48,TS=48,NT=Math.floor((WW-96)/TS),EXIT=WW-42,SPD=CMP?WW/W:1;
+  const RFT=Math.sqrt(2*(FLOOR-34-(WCEIL+34))/1400);
+  const toS=(x,y)=>({x:x*K,y:FLOOR-(FLOOR-y)*K});
+  const wpop=(s,x,y,col)=>{const q=toS(x,y);pop(s,q.x,q.y,col)};
+  const SCH={
+    spike:{name:'尖刺流',col:C.coral,bonus:'尖刺类陷阱耐久 +1'},
+    fall:{name:'坠落流',col:C.sky,bonus:'翻板 2 秒后才关上，冰面和传送门耐久 +2'},
+    mech:{name:'机关流',col:C.mint,bonus:'暗箭、火焰更快，毒雾更毒'},
+    heavy:{name:'重物流',col:C.sun,bonus:'落石、滚石杀人后退还一半钱'}
+  };
+  const TD={
+    spike:{name:'地刺',cost:10,up:0,uses:3,sch:'spike',desc:'踩上去就死'},
+    pit:{name:'翻板',cost:14,up:0,uses:2,sch:'fall',desc:'踩上去掉下去'},
+    chest:{name:'诱饵箱',cost:4,up:0,uses:1,sch:'heavy',desc:'勇者会停下来开箱，配合别的陷阱用'},
+    arrow:{name:'暗箭',cost:18,up:1,uses:3,sch:'mech',desc:'挂在墙上，定时射箭'},
+    rock:{name:'落石',cost:8,up:1,uses:1,sch:'heavy',desc:'勇者走到下面时砸下来'},
+    boulder:{name:'滚石',cost:12,up:1,uses:1,sch:'heavy',desc:'勇者走过后放出，往回滚砸一串'},
+    spring:{name:'弹簧板',cost:12,up:0,uses:4,sch:'spike',desc:'把勇者弹到天花板上'},
+    ceil:{name:'顶刺',cost:8,up:1,uses:4,sch:'spike',desc:'天花板尖刺，配合弹簧板'},
+    ice:{name:'冰面',cost:8,up:0,uses:6,sch:'fall',desc:'勇者打滑，停不下也跳不起来'},
+    flame:{name:'火焰喷口',cost:14,up:1,uses:4,sch:'mech',desc:'一阵一阵喷火'},
+    portal:{name:'传送门',cost:16,up:0,uses:3,sch:'fall',desc:'把勇者送回入口重走一遍，每人只会被送一次'},
+    gas:{name:'毒雾',cost:16,up:1,uses:3,sch:'mech',desc:'在雾里待太久会中毒死'}
+  };
+  const ALL=Object.keys(TD);
+  const FLOORT={spike:1,pit:1,ice:1,spring:1,portal:1};
+  const RANGE={arrow:340,rock:160,boulder:420,flame:170,gas:220};
+  const UPG={
+    spike_dur:{trap:'spike',name:'加固地刺',desc:'地刺耐久 +2'},
+    pit_dur:{trap:'pit',name:'加固翻板',desc:'翻板耐久 +2'},
+    chest_long:{trap:'chest',name:'沉重宝箱',desc:'勇者开箱时间翻倍'},
+    arrow_double:{trap:'arrow',name:'双发暗箭',desc:'多射一支低箭，蹲下躲不掉'},
+    rock_roll:{trap:'rock',name:'滚落',desc:'落石落地后会往回滚'},
+    boulder_big:{trap:'boulder',name:'巨型滚石',desc:'大到跳不过去'},
+    spring_back:{trap:'spring',name:'斜弹',desc:'把勇者往回弹两三格'},
+    ceil_dur:{trap:'ceil',name:'加长顶刺',desc:'顶刺耐久 +3'},
+    ice_long:{trap:'ice',name:'镜面冰',desc:'滑得更快、更久'},
+    flame_long:{trap:'flame',name:'猛火',desc:'每次喷火时间更长'},
+    portal_dur:{trap:'portal',name:'稳定传送门',desc:'传送门耐久 +3'},
+    gas_wide:{trap:'gas',name:'浓毒雾',desc:'毒雾范围从 3 格扩大到 5 格'}
+  };
+  const GEN={gold:{name:'意外之财',desc:'立刻获得 40 金币'},life:{name:'加固大门',desc:'还能放走的人数 +1'},cap:{name:'扩建地牢',desc:'陷阱总数上限 +2'}};
+  const DET=[0,0.45,0.75,0.9];
+  const CLS={
+    rookie:{name:'新手',spd:125,hp:1,gold:7,w:22,h:34,body:C.sun,info:'普通勇者'},
+    knight:{name:'盾骑士',spd:100,hp:1,gold:10,w:24,h:36,body:C.muted,info:'举着盾，暗箭射不死他'},
+    thief:{name:'盗贼',spd:165,hp:1,gold:10,w:18,h:32,body:C.mint,info:'跑得快，更容易发现地上的陷阱'},
+    brute:{name:'重甲兵',spd:92,hp:2,gold:13,w:30,h:40,body:C.stone,info:'皮厚，能多扛一下（翻板除外）'},
+    sapper:{name:'工兵',spd:110,hp:1,gold:11,w:22,h:34,body:C.copper,info:'会拆掉他认出的地上陷阱'},
+    priest:{name:'牧师',spd:100,hp:1,gold:12,w:22,h:36,body:C.fg,info:'能把刚倒下的同伴救起来一次'},
+    scout:{name:'斥候',spd:150,hp:1,gold:11,w:20,h:32,body:C.sky,info:'他认出的陷阱，全队都会知道'},
+    boss:{name:'勇者王',spd:105,hp:4,gold:40,w:34,h:46,body:C.sun,info:'血厚，要连着坑好几次；放走他扣好几条命'}
+  };
+  const AFX={fast:'急行军：速度 +25%',armor:'铁甲：每人多扛一下',intel:'情报精通：都更会认陷阱',horde:'人海：多来 3 个人'};
+  const DEATH={spike:'脚好痛…告诉大家地上有刺！',pit:'地板是假的！快告诉公会！',arrow:'暗箭伤人…',rock:'头顶有石头…',chest:'宝箱是诱饵…',boulder:'哪来的大石头！',ceil:'天花板上有刺！',flame:'好烫好烫！',gas:'这雾有毒…',ice:'刹不住啊！',portal:'怎么又回来了…',spring:'飞太高了！'};
+  const DODGE=['公会说过这招！','早看穿了！','学过了～','想骗我？没门。','情报里有这个。'];
+  const ESC=['就这？我还会回来的！','地牢太简单了！','下次带着经验回来！'];
+  const GOALS=[
+    {id:'arrow',text:'一局里用地刺坑死 10 人',p:()=>[S.run.spikeKills,10]},
+    {id:'rock',text:'在勇者开箱时坑死他，累计 3 次',p:()=>[M.chestKills,3]},
+    {id:'boulder',text:'守住第 5 波',p:()=>[M.best,5]},
+    {id:'spring',text:'一个陷阱同时坑死 2 人',p:()=>[M.multi,1]},
+    {id:'ice',text:'一局里连续 3 波一个都不放走',p:()=>[S.run.streak,3]},
+    {id:'ceil',text:'让勇者撞到天花板，累计 5 次',p:()=>[M.bonks,5]},
+    {id:'flame',text:'坑死盾骑士，累计 5 个',p:()=>[M.knightKills,5]},
+    {id:'portal',text:'坑死老兵，累计 3 个',p:()=>[M.vetKills,3]},
+    {id:'gas',text:'守住第 10 波',p:()=>[M.best,10]}
+  ];
+  function snapZh(){const z=I18N.zh;if(z.td)return;z.td={};for(const k in TD)z.td[k]=[TD[k].name,TD[k].desc];z.upg={};for(const k in UPG)z.upg[k]=[UPG[k].name,UPG[k].desc];z.gen={};for(const k in GEN)z.gen[k]=[GEN[k].name,GEN[k].desc];z.cls={};for(const k in CLS)z.cls[k]=[CLS[k].name,CLS[k].info];z.afx=Object.assign({},AFX);z.death=Object.assign({},DEATH);z.dodge=DODGE.slice();z.esc=ESC.slice();z.goal={};for(const gl of GOALS)z.goal[gl.id]=gl.text;for(const k in SCH){z.sch[k][0]=SCH[k].name;z.sch[k][2]=SCH[k].bonus}}
+  function localize(){const L=I18N[LANG]||I18N.en;for(const k in TD){TD[k].name=L.td[k][0];TD[k].desc=L.td[k][1]}for(const k in UPG){UPG[k].name=L.upg[k][0];UPG[k].desc=L.upg[k][1]}for(const k in GEN){GEN[k].name=L.gen[k][0];GEN[k].desc=L.gen[k][1]}for(const k in CLS){CLS[k].name=L.cls[k][0];CLS[k].info=L.cls[k][1]}for(const k in AFX)AFX[k]=L.afx[k];for(const k in DEATH)DEATH[k]=L.death[k];DODGE.length=0;DODGE.push(...L.dodge);ESC.length=0;ESC.push(...L.esc);for(const gl of GOALS)gl.text=L.goal[gl.id];for(const k in SCH){SCH[k].name=L.sch[k][0];SCH[k].short=L.sch[k][1];SCH[k].bonus=L.sch[k][2]}}
+  snapZh();localize();
+  const META_KEY='kyz_meta_v1';let memMeta=null;
+  function loadMeta(){let m=null;try{m=JSON.parse(localStorage.getItem(META_KEY)||'null')}catch(e){}m=m||memMeta||{};const d={unlocked:{spike:1,pit:1,chest:1},lv:{},chestKills:0,knightKills:0,vetKills:0,bonks:0,multi:0,best:0};for(const k in d)if(m[k]==null)m[k]=d[k];return m}
+  function saveMeta(){memMeta=M;try{localStorage.setItem(META_KEY,JSON.stringify(M))}catch(e){}}
+  let M=loadMeta();
+  const CHD=[
+    {it:{0:['spike','pit'],2:'chest'},ic:{1:'knight',4:'thief'},ru:{5:{cap:5},6:{poor:1},7:{lives:3},8:{affix:'fast'},9:{boss:1}}},
+    {it:{0:'arrow',1:'rock',3:'boulder'},ic:{2:'brute'},ru:{4:{block:1},5:{nodraft:1},6:{affix:'armor'},7:{cap:5},8:{affix:'horde'},9:{boss:1}}},
+    {it:{0:'spring',1:'ceil',3:'ice'},ic:{2:'sapper'},ru:{4:{poor:1},5:{affix:'intel'},6:{block:1},7:{lives:3},8:{affix:'fast'},9:{boss:1}}},
+    {it:{0:'flame',2:'portal',3:'gas'},ic:{1:'priest'},ru:{4:{cap:5},5:{nodraft:1},6:{affix:'armor'},7:{affix:'horde'},8:{poor:1},9:{boss:2}}},
+    {it:{},ic:{0:'scout'},ru:{1:{affix:'rand'},2:{boss:1},3:{cap:4},4:{affix:'intel'},5:{lives:2},6:{block:1},7:{affix:'horde'},8:{affix:'rand',poor:1},9:{boss:2}}},
+    {it:{},ic:{},ru:{0:{affix:'rand'},1:{cap:5,block:1},2:{nodraft:1,affix:'armor'},3:{lives:3,affix:'fast'},4:{poor:1,affix:'intel'},5:{boss:1,affix:'rand'},6:{cap:4,affix:'horde'},7:{block:1,nodraft:1},8:{lives:2,affix:'rand'},9:{boss:3}}}
+  ];
+  const LV=[];
+  (function(){const kt=[],kc=['rookie'];
+    for(let ch=0;ch<CHD.length;ch++)for(let j=0;j<10;j++){const d=CHD[ch],i=ch*10+j,nts=[].concat(d.it[j]||[]),nt=nts[nts.length-1]||null,nc=d.ic[j]||null;
+      kt.push(...nts);if(nc)kc.push(nc);const r=Object.assign({},d.ru[j]||{});
+      const start=nts.slice();if(nt==='ceil')start.push('spring');
+      const want=Math.min((r.nodraft?4:2)+Math.floor(ch/2),kt.length);const off0=(i*7+3)%kt.length,rot=kt.slice(off0).concat(kt.slice(0,off0)).reverse();
+      for(const k of rot){if(start.length>=(ch===0?9:want))break;if(!start.includes(k)&&k!=='ceil')start.push(k)}
+      if(!start.includes('spike')&&!start.includes('pit')&&kt.includes('spike'))start.push(i%2?'pit':'spike');
+      LV.push({i,ch,j,id:(ch+1)+'-'+(j+1),waves:[3,3,4,4,5,5,5,6,6,6][j]+(ch>=2?1:0)+(ch>=4?1:0),off:ch+Math.floor(j/5),gold:50+ch*25,lives:r.lives||5,cap:r.cap||8,newT:nt,newC:nc,start,pool:kt.slice(),cls:kc.slice(),r})}})();
+  const lvOpen=i=>i===0||(M.lv[i-1]||0)>0;
+  const chOpen=k=>lvOpen(k*10);
+  const endlessOpen=()=>(M.lv[4]||0)>0||M.best>0;
+  const curCh=()=>{let k=0;for(let i=0;i<LV.length;i++)if(lvOpen(i))k=LV[i].ch;return k};
+  const E=()=>S.lv?S.wave+S.lv.off:S.wave;
+  let ran=false;
+  const g={key:'trap'};let S,uid=0;
+  const pop=(s,x,y,col)=>S.pops.push({s,x,y,col:col||C.fg,life:1.6});
+  const flash=s=>{S.msg=s;S.msgT=1.6;SFX.play('error')};
+  const MUTE=()=>CMP?{x:W-178,y:14}:{x:780,y:96};
+  const LBTN=()=>CMP?{x:W-220,y:14}:{x:826,y:96};
+  function drawLang(c){const m=LBTN();bevel(c,m.x-20,m.y-12,40,22,'#c86aa8',{depth:3,r:6,shadow:false});txtO(c,LANG_LABEL[LANG],m.x,m.y-1,13,PAL.w,'center',800,3)}
+  function drawMute(c){const m=MUTE();bevel(c,m.x-16,m.y-12,32,22,'#c86aa8',{depth:3,r:6,shadow:false});c.save();c.translate(m.x-1,m.y-1);c.scale(0.8,0.8);c.fillStyle=PAL.w;c.strokeStyle=PAL.w;c.lineWidth=2.5;c.beginPath();c.moveTo(-9,-4);c.lineTo(-4,-4);c.lineTo(2,-9);c.lineTo(2,9);c.lineTo(-4,4);c.lineTo(-9,4);c.closePath();c.fill();if(SFX.muted){c.strokeStyle=PAL.r;line(c,6,-5,14,5);line(c,14,-5,6,5)}else{c.beginPath();c.arc(4,0,6,-0.8,0.8);c.stroke();c.beginPath();c.arc(4,0,11,-0.8,0.8);c.stroke()}c.restore()}
+  function say(h,text,force){if(!force&&S.talk&&S.talk.t>0.5)return;S.talk={h,text,t:1.8}}
+  const tileAt=x=>{const i=Math.floor((x-T0)/TS);return(i>=0&&i<NT)?i:-1};
+  const tileX=i=>T0+i*TS+TS/2;
+  const alive=h=>!h.dead&&!h.escaped;
+  const schoolN=s=>S.owned.filter(k=>TD[k].sch===s).length;
+  const active=s=>schoolN(s)>=3;
+  const gasHalf=()=>S.upg.gas_wide?TS*2.5:TS*1.5;
+  function lvl(h,type){let l=S.intel[type]+Math.floor((E()-1)/10)+(S.affix==='intel'?1:0)+(h.cls==='boss'?1:0);if(h.vet)l++;if(h.cls==='thief'&&FLOORT[type])l++;return Math.min(3,l)}
+  function maxUses(type){let u=TD[type].uses;
+    if(type==='spike'&&S.upg.spike_dur)u+=2;if(type==='pit'&&S.upg.pit_dur)u+=2;if(type==='portal'&&S.upg.portal_dur)u+=3;if(type==='ceil'&&S.upg.ceil_dur)u+=3;
+    if(active('spike')&&TD[type].sch==='spike')u+=1;if(active('fall')&&(type==='ice'||type==='portal'))u+=2;return u}
+  function flameState(t){let off=1.6;const on=S.upg.flame_long?1.3:0.8;if(active('mech'))off*=0.7;const ph=t.ft%(off+on);return{on:ph>off,toOn:ph>off?0:off-ph}}
+  function slotRects(){const n=S.owned.length,gap=8,w=Math.min(164,(W-40-(n-1)*gap)/n),x0=(W-(n*w+(n-1)*gap))/2;return S.owned.map((k,i)=>({k,x:x0+i*(w+gap),y:BAR+7,w,h:CMP?60:50}))}
+  const CH=Math.min(250,BAR-CEIL-96);
+  const CARD=i=>({x:W/2-395+i*270,y:CEIL+38,w:250,h:CH});
+  const RER={x:W/2-120,y:CEIL+48+CH,w:240,h:38};
+  const inR=(x,y,r)=>x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h;
+  const rerollCost=()=>10+5*S.rerolls;
+  const costOf=k=>Math.round(TD[k].cost*(1+0.05*Math.max(0,S.wave-4)));
+  function waveCompL(n){
+    const L=S.lv,count=Math.min(12,1+Math.ceil([0.55,0.75,0.85,0.9,0.85,0.9][L.ch]*(n+Math.floor(L.off/2))))+(S.nextAffix==='horde'?3:0),list=[];
+    const ws=L.cls.map(k=>k==='rookie'?Math.max(1,4-L.ch):(k===L.newC?3:2));let sum=0;for(const w of ws)sum+=w;
+    for(let i=0;i<count;i++){let r=Math.random()*sum,k=0;for(;k<ws.length-1;k++){r-=ws[k];if(r<=0)break}list.push(L.cls[k])}
+    if(L.newC&&n<=2)list[0]=L.newC;
+    const vets=S.veterans.filter(c=>c!=='boss').splice(0).map(c=>({cls:c,vet:true}));S.veterans=[];
+    const out=vets.concat(list.map(c=>({cls:c,vet:false}))).slice(0,16);
+    if(n===L.waves&&L.r.boss)for(let b=0;b<L.r.boss;b++)out.push({cls:'boss',vet:false});
+    return out;
+  }
+  function waveComp(n){
+    if(S.lv)return waveCompL(n);
+    const count=Math.min(12,1+Math.ceil(n*0.9))+(S.nextAffix==='horde'?3:0),list=[];
+    for(let i=0;i<count;i++){let cls='rookie';const r=Math.random();
+      if(n>=8&&r<0.1)cls='scout';else if(n>=7&&r<0.2)cls='priest';else if(n>=6&&r<0.32)cls='sapper';
+      else if(n>=2&&r<0.5)cls='knight';else if(n>=3&&r<0.7)cls='thief';else if(n>=4&&r<0.85)cls='brute';list.push(cls)}
+    if(n===2)list[0]='knight';if(n===3)list[0]='thief';if(n===4)list[0]='brute';if(n===6)list[0]='sapper';if(n===7)list[0]='priest';if(n===8)list[0]='scout';
+    const vets=S.veterans.filter(c=>c!=='boss').splice(0).map(c=>({cls:c,vet:true}));S.veterans=[];
+    const out=vets.concat(list.map(c=>({cls:c,vet:false}))).slice(0,16);
+    if(n%5===0)out.push({cls:'boss',vet:false});
+    return out;
+  }
+  g.reset=function(ch){
+    M=loadMeta();
+    S={screen:ch===undefined?'title':'menu',att:null,ch:ch==null?curCh():ch,fx:makeFX(),pops:[],msg:'',msgT:0,t:0,hover:null,traps:[],heroes:[],owned:[],wave:0,over:false,win:null};
+  };
+  function startRun(mode,i){const go=()=>{begin(mode,i);ran=true};if(ran&&HOOK.ad)HOOK.ad(go);else go()}
+  function toMenu(){const ch=S.lv?S.lv.ch:null;if(g.inPlay()&&HOOK.stop)HOOK.stop();g.reset(ch)}
+  function begin(mode,li){
+    M=loadMeta();
+    const Lv=mode==='level'?LV[li]:null;
+    const others=ALL.filter(k=>M.unlocked[k]&&k!=='spike'&&k!=='ceil');
+    S={screen:'play',mode,lv:Lv,lost:0,home:0,blocked:new Set(),btns:[],win:null,wave:0,lives:Lv?Lv.lives:5,gold:Lv?Lv.gold:50,cap:Lv?Lv.cap:8,traps:[],arrows:[],balls:[],heroes:[],queue:[],spawnT:0,intel:{},glow:{},waveKills:{},veterans:[],owned:['spike',choice(others)],upg:{},sel:'spike',over:false,t:0,fx:makeFX(),pops:[],msg:'',msgT:0,hover:null,phase:'break',breakT:10,preview:[],seen:{},talk:null,kills:0,announce:null,unlock:null,draft:null,rerolls:0,escThisWave:0,affix:null,nextAffix:null,run:{spikeKills:0,streak:0}};
+    for(const k of ALL){S.intel[k]=0;S.glow[k]=0}
+    if(Lv){S.owned=Lv.start.slice();S.sel=S.owned[0];S.nextAffix=Lv.r.affix&&Lv.r.affix!=='rand'?Lv.r.affix:null;
+      if(Lv.r.block)for(let t=1;t<NT-1;t++)if((t+Lv.i)%4===0)S.blocked.add(t)}
+    S.preview=waveComp(1);
+    S.tut=(Lv&&Lv.i===0&&!(M.lv[0]>0))?2:0;
+    if(HOOK.play)HOOK.play();
+  }
+  function checkUnlocks(){for(const gl of GOALS){if(M.unlocked[gl.id])continue;const[a,b]=gl.p();if(a>=b){M.unlocked[gl.id]=1;saveMeta();SFX.play('unlock');S.unlock={text:T('unlockNew',{name:TD[gl.id].name}),t:4.5};S.fx.shake=Math.max(S.fx.shake,6)}}}
+  function makeDraft(){
+    const pool=[];
+    if(S.owned.length<8)ALL.filter(k=>(S.lv?S.lv.pool.includes(k):M.unlocked[k])&&!S.owned.includes(k)).forEach(k=>pool.push({kind:'trap',id:k,w:3}));
+    Object.keys(UPG).filter(u=>S.owned.includes(UPG[u].trap)&&!S.upg[u]).forEach(u=>pool.push({kind:'upg',id:u,w:2}));
+    pool.push({kind:'gen',id:'gold',w:1});if(S.lives<7&&!(S.lv&&S.lv.r.lives))pool.push({kind:'gen',id:'life',w:1});if(S.cap<14&&!(S.lv&&S.lv.r.cap))pool.push({kind:'gen',id:'cap',w:1});
+    const out=[];
+    while(out.length<3&&pool.length){let sum=0;for(const p of pool)sum+=p.w;let r=Math.random()*sum,i=0;for(;i<pool.length-1;i++){r-=pool[i].w;if(r<=0)break}out.push(pool.splice(i,1)[0])}
+    return out;
+  }
+  function pickCard(cd){
+    SFX.play('card');
+    const before=Object.keys(SCH).filter(active);
+    if(cd.kind==='trap'){S.owned.push(cd.id);S.sel=cd.id;pop(T('gotTrap',{name:TD[cd.id].name}),W/2,CEIL+150,C.sun)}
+    else if(cd.kind==='upg'){S.upg[cd.id]=1;const t=UPG[cd.id].trap;const add={spike_dur:2,pit_dur:2,portal_dur:3,ceil_dur:3}[cd.id]||0;if(add)for(const q of S.traps)if(q.type===t&&!q.done)q.uses+=add;pop(T('gotUpg',{name:UPG[cd.id].name}),W/2,CEIL+150,C.sun)}
+    else{if(cd.id==='gold')S.gold+=40;else if(cd.id==='life')S.lives++;else S.cap+=2;pop(GEN[cd.id].name,W/2,CEIL+150,C.sun)}
+    const now=Object.keys(SCH).filter(active).filter(s=>!before.includes(s));
+    if(now.length){const s=SCH[now[0]];S.announce={text:T('schoolDone',{name:s.name,bonus:s.bonus}),t:5,col:s.col};
+      if(now[0]==='spike')for(const q of S.traps)if(TD[q.type].sch==='spike'&&!q.done)q.uses++;
+      if(now[0]==='fall')for(const q of S.traps)if((q.type==='ice'||q.type==='portal')&&!q.done)q.uses+=2;}
+    S.draft=null;S.phase='break';S.breakT=7;
+  }
+  function draftClick(x,y){
+    for(let i=0;i<S.draft.length;i++)if(inR(x,y,CARD(i))){pickCard(S.draft[i]);return}
+    if(inR(x,y,RER)){const c=rerollCost();if(S.gold<c){flash(T('rerollNoGold',{n:c}));return}S.gold-=c;S.rerolls++;S.draft=makeDraft();SFX.play('card')}
+  }
+  function startWave(){
+    S.wave++;S.phase='fight';S.affix=S.nextAffix;S.queue=S.preview.slice();SFX.play(S.queue.some(q=>q.cls==='boss')?'boss':'wave');S.spawnT=0;S.waveKills={};S.heroes=[];S.escThisWave=0;
+    const fresh=[...new Set(S.queue.map(q=>q.cls))].filter(c=>!S.seen[c]&&c!=='rookie');
+    for(const c of S.queue)S.seen[c.cls]=true;
+    if(fresh.length){const c=CLS[fresh[0]];S.announce={text:T('newClass',{name:c.name,info:c.info}),t:4,col:C.sky}}
+    else if(S.affix)S.announce={text:T('affixNow',{a:AFX[S.affix]}),t:3.5,col:C.coral}
+  }
+  function endWave(){
+    SFX.play('clear');const bonus=(S.lv&&S.lv.r.poor)?20+4*S.wave:10+S.wave;S.gold+=bonus;pop(T('waveHeld',{n:S.wave,g:bonus}),W/2,CEIL+96,C.mint);
+    const forgot=[];for(const k of ALL)if(S.intel[k]>0&&!S.waveKills[k]){S.intel[k]--;forgot.push(TD[k].name)}
+    if(forgot.length)pop(T('forgot',{list:forgot.join(T('listSep'))}),W/2,CEIL+126,C.muted);
+    if(S.escThisWave===0)S.run.streak++;else S.run.streak=0;
+    if(!S.lv)M.best=Math.max(M.best,S.wave);saveMeta();checkUnlocks();
+    S.arrows=[];S.balls=[];for(const t of S.traps)if(t.type==='pit'){t.open=false;t.openT=0}
+    if(S.lv&&S.wave>=S.lv.waves){winLevel();return}
+    if(S.lv)S.nextAffix=S.lv.r.affix==='rand'?(Math.random()<0.65?choice(Object.keys(AFX)):null):(S.lv.r.affix||null);
+    else S.nextAffix=(S.wave+1>=6&&Math.random()<0.5)?choice(Object.keys(AFX)):null;
+    S.preview=waveComp(S.wave+1);S.breakT=7;
+    if(S.lv&&S.lv.r.nodraft){S.draft=null;S.phase='break'}
+    else{S.draft=makeDraft();S.phase=S.draft.length?'draft':'break'}
+  }
+  function winLevel(){
+    const L=S.lv,st=S.revived?1:S.lost===0?3:S.lost<=Math.floor(L.lives/2)?2:1;
+    S.win={stars:st,t:0,best:Math.max(st,M.lv[L.i]||0)};
+    M.lv[L.i]=S.win.best;for(const k of [].concat(CHD[L.ch].it[L.j]||[]))M.unlocked[k]=1;saveMeta();
+    SFX.play('unlock');S.phase='break';S.heroes=[];S.queue=[];
+    if(HOOK.stop)HOOK.stop();if(HOOK.happy&&st===3)HOOK.happy();
+  }
+  function spawnHero(spec){
+    const c=CLS[spec.cls],mul=(1+0.03*(E()-1))*(spec.vet?1.15:1)*(S.affix==='fast'?1.25:1);
+    const hp=(spec.cls==='boss'?3+Math.floor(E()/10):c.hp)+(S.affix==='armor'?1:0);
+    S.heroes.push({id:++uid,cls:spec.cls,vet:spec.vet,x:10,y:FLOOR,vy:0,air:false,base:c.spd*mul*SPD,hp,maxhp:hp,inv:0,revives:spec.cls==='priest'?1:0,disarms:spec.cls==='sapper'?2:0,revived:false,reviveT:0,dash:0,duck:false,wait:0,stun:0,slideT:0,poison:0,dead:false,escaped:false,gone:false,deadT:0,fall:false,lastChest:-9,iceT:-9,lastIce:null,ported:false,jvx:0,vx:0,bonked:false,run:0,eval:new Set(),spot:new Set(),spikeHit:new Set(),hurt:0});
+  }
+  function breakTrap(t){t.done=true;t.doneT=0;t.broke=true;S.fx.burst(t.x,TD[t.type].up?FLOOR-60:FLOOR-6,C.muted,10,150);wpop(T('broke',{name:TD[t.type].name}),t.x,FLOOR-96,C.muted)}
+  function useUp(t){if(t.done)return;t.uses--;if(t.uses<=0)breakTrap(t)}
+  function kill(h,type,fall,trap){
+    if(!alive(h)||h.inv>0)return;
+    if(h.hp>1&&(type!=='pit'||h.cls==='boss')){
+      h.hp-=type==='pit'?2:1;
+      if(h.hp>0){h.inv=0.7;h.hurt=0.3;S.fx.burst(h.x,h.y-20,C.coral,10,160);
+        if(type==='pit'){h.air=true;h.y=FLOOR;h.vy=-650;h.jvx=h.base}
+        if(type==='gas')h.poison=0;
+        say(h,h.cls==='boss'?T('bossTaunt'):T('tough'),true);SFX.play('hurt');
+        if(!S.intel[type]||S.intel[type]<3){S.intel[type]=Math.min(3,S.intel[type]+1);S.glow[type]=1.2}S.waveKills[type]=true;
+        if(trap&&['spike','pit','arrow','flame','gas','ceil'].includes(trap.type))useUp(trap);
+        return}
+    }
+    h.dead=true;h.deadT=0;h.fall=!!fall;SFX.play('kill');h.vy=fall?-60:0;
+    S.kills++;const rw=(h.revived||(S.lv&&S.lv.r.poor))?0:CLS[h.cls].gold+(h.vet?5:0);S.gold+=rw;if(rw)wpop(`+${rw}`,h.x,h.y-62,C.sun);
+    S.fx.burst(h.x,h.y-17,CLS[h.cls].body,18,240);S.fx.shake=Math.max(S.fx.shake,8);
+    S.killBy=S.killBy||{};S.killBy[type]=(S.killBy[type]||0)+1;
+    const learned=[type];
+    if(type!=='chest'&&S.t-h.lastChest<1.8)learned.push('chest');
+    if(type!=='ice'&&S.t-h.iceT<2.4)learned.push('ice');
+    if(type==='ceil')learned.push('spring');
+    if(h.ported&&type!=='portal')learned.push('portal');
+    for(const k of learned){if(S.intel[k]<3){S.intel[k]++;S.glow[k]=1.2}S.waveKills[k]=true}
+    if(S.t-h.lastChest<(S.upg.chest_long?2.1:1.1))M.chestKills++;
+    if(h.cls==='knight')M.knightKills++;if(h.vet)M.vetKills++;if(type==='spike')S.run.spikeKills++;
+    if(trap){if(S.t-(trap.lastKill==null?-9:trap.lastKill)<0.45)M.multi++;trap.lastKill=S.t;
+      if(['spike','pit','arrow','flame','gas','ceil'].includes(trap.type))useUp(trap);
+      if(active('heavy')&&(trap.type==='rock'||trap.type==='boulder')&&!trap.refunded){trap.refunded=1;S.gold+=Math.floor((trap.paid||TD[trap.type].cost)/2)}}
+    say(h,DEATH[type]||T('ah'),true);
+    if(!h.fall){const pr=S.heroes.find(q=>q!==h&&alive(q)&&q.cls==='priest'&&q.revives>0&&Math.abs(q.x-h.x)<260);if(pr){pr.revives--;h.reviveT=1.2;h.reviver=pr;h.killer=trap?trap.id:null;say(pr,T('priest'),true)}}
+    checkUnlocks();
+  }
+  function escape(h){
+    h.escaped=true;h.deadT=0;const cost=h.cls==='boss'?(E()<=5?2:3):1;S.lives-=cost;S.lost+=cost;S.escThisWave++;S.veterans.push(h.cls);
+    SFX.play('escape');say(h,choice(ESC),true);pop(T('escaped'),W/2,CEIL+96,C.coral);S.fx.shake=6;
+    if(S.lives<=0){SFX.play('over');S.over=true;if(!S.lv){M.best=Math.max(M.best,S.wave-1);saveMeta();saveBest('trap3',Math.max(0,S.wave-1))}if(HOOK.stop)HOOK.stop()}
+  }
+  function spawnBall(x,big,src,type){S.balls.push({x,big,src,type,r:big?24:14,vx:-280,rot:0})}
+  g.down=function(x,y){
+    SFX.unlock();
+    {const m=MUTE();if(Math.abs(x-m.x)<20&&Math.abs(y-m.y)<20){SFX.toggle();return}}
+    {const m=LBTN();if(Math.abs(x-m.x)<22&&Math.abs(y-m.y)<20){cycleLang();localize();SFX.play('card');return}}
+    if(S.screen==='menu'){menuClick(x,y);return}
+    if(S.screen==='title'){titleClick(x,y);return}
+    {const m=HOME();if(Math.abs(x-m.x)<22&&Math.abs(y-m.y)<22){if(S.home>0)toMenu();else{S.home=2;S.msg=T('homeConfirm');S.msgT=2}return}}
+    if(S.over||S.win){for(const b of S.btns||[])if(inR(x,y,b)){btnAct(b.id);return}return}
+    if(S.phase==='draft'){draftClick(x,y);return}
+    if(S.phase==='break'&&S.goBtn&&inR(x,y,S.goBtn)){S.breakT=0;if(S.tut===1)S.tut=0;SFX.play('card');return}
+    if(y>=BAR){for(const r of slotRects())if(inR(x,y,r)){S.sel=r.k;return}return}
+    if(y<CEIL)return;
+    const ti=tileAt(x/K);if(ti<0)return;
+    if(S.blocked&&S.blocked.has(ti)){flash(T('blockedTile'));return}
+    const tx=tileX(ti),type=S.sel,up=!!TD[type].up;
+    const same=S.traps.find(t=>t.tile===ti&&!t.done&&!!TD[t.type].up===up);
+    if(same){const back=Math.floor((same.paid||TD[same.type].cost)/2);S.gold+=back;S.traps.splice(S.traps.indexOf(same),1);S.msg=T('removed',{name:TD[same.type].name,g:back});S.msgT=1.6;SFX.play('remove');S.fx.burst(tx,up?FLOOR-60:FLOOR-6,C.muted,8,120);return}
+    if(S.traps.filter(t=>!t.done&&t.type===type).length>=3){flash(T('max3'));return}
+    if(S.traps.filter(t=>!t.done).length>=S.cap){flash(T('maxCap',{n:S.cap}));return}
+    const price=costOf(type);if(S.gold<price){flash(T('noGold',{name:TD[type].name,n:price}));return}
+    if(S.heroes.some(h=>alive(h)&&Math.abs(tx-h.x)<48)){flash(T('tooClose'));return}
+    S.gold-=price;
+    S.traps.push({id:++uid,paid:price,type,tile:ti,x:tx,uses:maxUses(type),arm:0.25,open:false,openT:0,cd:0.3,rockY:WCEIL+34,rockVy:0,rockOn:false,done:false,doneT:0,ft:Math.random()*2,lastKill:null});
+    S.fx.burst(tx,up?FLOOR-60:FLOOR-6,C.muted,6,90);SFX.play('place');
+  };
+  g.move=function(x,y){S.hover={x,y}};
+  g.fresh=()=>S.screen==='menu'||S.screen==='title';
+  g.autoStart=()=>{if(S.screen==='title'&&!Object.keys(M.lv).length&&!M.best)begin('level',0)};
+  g.inPlay=()=>S.screen==='play'&&!S.over&&!S.win;
+  g.isOver=()=>S.screen!=='play'||!!(S.over||S.win);
+  function doRevive(){S.revived=true;S.over=false;S.lives=2;for(const h of S.heroes)h.gone=true;S.heroes=[];S.queue=[];S.arrows=[];S.balls=[];pop(T('reviveDone'),W/2,CEIL+96,C.mint)}
+  g.revive=doRevive;g.flash=s=>flash(s);
+  function btnAct(id){
+    if(id==='revive'){if(HOOK.revive)HOOK.revive(ok=>{if(ok)doRevive();else flash(T('adFail'))});return}
+    if(id==='retry'){startRun(S.mode,S.lv?S.lv.i:0);return}
+    if(id==='next'){startRun('level',S.lv.i+1);return}
+    if(id==='menu'){toMenu();return}
+  }
+  function btnRow(defs,y){const gap=14;let tot=gap*(defs.length-1);for(const d of defs)tot+=d.w;const sc=Math.min(1,(W-60)/tot);let x=(W-tot*sc)/2;return defs.map(d=>{const r=Object.assign({},d,{x,y,w:d.w*sc,h:50});x+=r.w+gap*sc;return r})}
+  function drawBtns(c,list){for(const b of list){bevel(c,b.x,b.y,b.w,b.h-6,b.col||'#d886bc',{depth:6,r:10});fitTxtO(c,b.label,b.x+b.w/2,b.y+b.h/2-4,17,b.w-24,b.fg||PAL.w,'center',800,4)}}
+  const HOME=()=>CMP?{x:22,y:23}:{x:734,y:96};
+  function drawHome(c){const m=HOME();bevel(c,m.x-17,m.y-14,34,26,S.home>0?PAL.r:'#c86aa8',{depth:3,r:6,shadow:false});c.save();c.translate(m.x,m.y-1);c.scale(0.85,0.85);c.fillStyle=PAL.w;c.beginPath();c.moveTo(-10,-1);c.lineTo(0,-10);c.lineTo(10,-1);c.closePath();c.fill();c.fillRect(-7,-1,14,10);c.fillStyle=C.deep;c.fillRect(-2,3,4,6);c.restore()}
+  const MT=CMP?46:112;
+  function menuGeo(){
+    const tabY=MT+12,tabH=38,tabW=(W-40-5*8)/6,tabs=CHD.map((_,k)=>({k,x:20+k*(tabW+8),y:tabY,w:tabW,h:tabH}));
+    const headY=tabY+tabH+24,gridY=headY+20,endH=46,endY=H-endH-16,bw=(W-40-4*14)/5,bh=Math.min(112,(endY-14-gridY-14)/2);
+    const lv=[];for(let j=0;j<10;j++)lv.push({i:S.ch*10+j,x:20+(j%5)*(bw+14),y:gridY+Math.floor(j/5)*(bh+14),w:bw,h:bh});
+    return{tabs,headY,lv,end:{x:W/2-210,y:endY,w:420,h:endH}};
+  }
+  function menuClick(x,y){
+    {const m=HOME();if(Math.abs(x-m.x)<24&&Math.abs(y-m.y)<22){SFX.play('card');toTitle();return}}
+    const G=menuGeo();
+    for(const t of G.tabs)if(inR(x,y,t)){if(chOpen(t.k)){S.ch=t.k;SFX.play('card')}else flash(T('chLocked',{id:LV[t.k*10-1].id}));return}
+    for(const b of G.lv)if(inR(x,y,b)){if(lvOpen(b.i)){SFX.play('wave');startRun('level',b.i)}else flash(T('lvLocked'));return}
+    if(inR(x,y,G.end)){if(endlessOpen()){SFX.play('wave');startRun('endless')}else flash(T('endlessLock'));return}
+  }
+  function starStr(n){return '★'.repeat(n)+'☆'.repeat(3-n)}
+  function drawStars(c,n,x,y,size,gap){for(let k=0;k<3;k++)drawSpr(c,tspr(k<n?'star':'starE'),x+(k-1)*gap,y+size*0.45,size/7)}
+  function starTotal(){let tot=0;for(const k in M.lv)tot+=M.lv[k];return tot}
+  function sceneBG(c,dark){c.save();c.translate(0,FLOOR*(1-K));c.scale(K,K);drawScene(c,{});c.restore();drawLights(c);if(dark){c.fillStyle=`rgba(150,60,120,${dark*0.6})`;c.fillRect(0,0,W,H)}}
+  function nextLevel(){for(let i=0;i<LV.length;i++)if(lvOpen(i)&&!(M.lv[i]>0))return i;let k=0;for(let i=0;i<LV.length;i++)if(lvOpen(i))k=i;return k}
+  function drawMenu(c){
+    c.fillStyle=PAL.D;c.fillRect(-20,-20,W+40,H+40);
+    sceneBG(c,0.72);
+    hudBar(c,0,MT,true);
+    drawHome(c);
+    txtO(c,T('levels'),50,MT/2-2,22,PAL.w,'left',800,4);c.font=`800 22px ${FONT}`;const tw=c.measureText(T('levels')).width;
+    drawSpr(c,tspr('star'),50+tw+28,MT/2+6,2.4);txtO(c,`${starTotal()}/${LV.length*3}`,50+tw+42,MT/2-2,17,PAL.y,'left',800,3);
+    const G=menuGeo();
+    for(const t of G.tabs){const open=chOpen(t.k),sel=t.k===S.ch;
+      bevel(c,t.x,t.y-(sel?3:0),t.w,t.h-5,sel?'#f0b030':open?'#ffd6e8':'#eab4cf',{depth:sel?6:4,r:8,shadow:false});
+      c.globalAlpha=open?1:0.5;fitTxtO(c,T('chapter',{n:t.k+1}),t.x+t.w/2,t.y+t.h/2-4-(sel?3:0),15,t.w-14,sel?PAL.w:PAL.w,'center',800,3);c.globalAlpha=1;
+      if(!open)drawSpr(c,tspr('lock'),t.x+t.w-14,t.y+t.h/2+5,2)}
+    let cs=0;for(let j=0;j<10;j++)cs+=M.lv[S.ch*10+j]||0;
+    fitTxtO(c,T('chapter',{n:S.ch+1})+' · '+T('ch'+(S.ch+1)),20,G.headY,18,W-200,PAL.w,'left',800,4);
+    drawSpr(c,tspr('star'),W-80,G.headY+8,2.4);txtO(c,`${cs}/30`,W-20,G.headY,16,PAL.y,'right',800,3);
+    const nextI=nextLevel();
+    for(const b of G.lv){const Lv=LV[b.i],open=lvOpen(b.i),st=M.lv[b.i]||0,isNext=b.i===nextI&&!st;
+      const lift=isNext?Math.round(Math.sin(S.t*5)*2):0;
+      bevel(c,b.x,b.y+lift,b.w,b.h-6,!open?'#eab4cf':isNext?'#fff6fb':st?'#ffe6f1':'#ffd6e8',{depth:6,r:10,ring:isNext?PAL.y:null,dark:'#d68ab0'});
+      c.globalAlpha=open?1:0.45;
+      txtO(c,Lv.id,b.x+b.w/2,b.y+lift+b.h*0.38,28,PAL.w,'center',800,5);
+      if(open)drawStars(c,st,b.x+b.w/2,b.y+lift+b.h*0.72,20,26);
+      else drawSpr(c,tspr('lock'),b.x+b.w/2,b.y+b.h*0.86,3);
+      if(Lv.newT)icon(c,Lv.newT,b.x+b.w-20,b.y+lift+18,0.6);
+      else if(Lv.newC)drawSpr(c,heroSpr(Lv.newC,0),b.x+b.w-20,b.y+lift+30,1.6);
+      if(Lv.r.boss)drawSpr(c,tspr('crown'),b.x+18,b.y+lift+24,3);
+      else if(Object.keys(Lv.r).length)txtO(c,'!',b.x+16,b.y+lift+18,18,PAL.o,'center',800,4);
+      c.globalAlpha=1}
+    const e=G.end,eo=endlessOpen();bevel(c,e.x,e.y,e.w,e.h-6,eo?'#4fbf6a':'#a8508c',{depth:6,r:10});
+    fitTxtO(c,eo?T('endless')+' · '+T('endlessBest',{n:getBest('trap3')}):T('endlessLock'),e.x+e.w/2,e.y+e.h/2-4,17,e.w-24,eo?PAL.w:'#8a80a8','center',800,4);
+    drawMute(c);drawLang(c);
+    if(S.msgT>0)pill(c,S.msg,W/2,G.headY+80,15,PAL.r,PAL.w);
+  }
+  /* ---------- 标题页 ---------- */
+  const ATT_SP=Math.max(2,Math.floor(NT*0.36)),ATT_PIT=Math.max(4,Math.floor(NT*0.64));
+  function toTitle(){S.screen='title';S.att=null}
+  function attUpdate(dt){
+    const A=S.att||(S.att={w:[],spawnT:0.3,n:0,pitT:0});
+    A.spawnT-=dt;if(A.spawnT<=0){const cl=['rookie','knight','thief','brute','sapper','priest','scout'][A.n%7];A.w.push({x:6,y:FLOOR,vy:0,air:false,cls:cl,fate:A.n%3,st:'walk',t:0,run:0});A.n++;A.spawnT=2.1}
+    if(A.pitT>0)A.pitT-=dt;
+    const sx=tileX(ATT_SP),px=tileX(ATT_PIT);
+    for(const w of A.w){w.t+=dt;
+      if(w.st==='walk'){const sp=78;w.x+=sp*dt;w.run+=sp*dt;
+        if(w.air){w.vy+=1400*dt;w.y+=w.vy*dt;if(w.y>=FLOOR){w.y=FLOOR;w.air=false;w.vy=0}}
+        if(!w.air&&((w.fate>0&&w.x>sx-40&&w.x<sx-30)||(w.fate===2&&w.x>px-40&&w.x<px-30))){w.air=true;w.vy=-470;SFX.play('jump')}
+        if(!w.air&&w.fate===0&&Math.abs(w.x-sx)<10){w.st='dead';w.t=0;S.fx.burst(w.x,FLOOR-18,PAL.r,16,220);S.fx.shake=5;SFX.play('kill')}
+        else if(!w.air&&Math.abs(w.x-px)<10){w.st='fall';w.t=0;w.vy=-60;A.pitT=1.1;SFX.play('kill')}
+        if(w.x>=EXIT){w.st='gone'}}
+      else if(w.st==='fall'){w.vy+=1400*dt;w.y+=w.vy*dt;if(w.y>FLOOR+120)w.st='gone'}
+      else if(w.st==='dead'&&w.t>1)w.st='gone'}
+    A.w=A.w.filter(w=>w.st!=='gone');
+  }
+  function titleGeo(){const by=Math.round(clamp(H*0.37,150,230));return{play:{x:W/2-140,y:by,w:280,h:76},levels:{x:W/2-140-28-196,y:by+14,w:196,h:58},endless:{x:W/2+140+28,y:by+14,w:196,h:58}}}
+  function titleClick(x,y){const G=titleGeo();
+    if(inR(x,y,G.play)){SFX.play('wave');startRun('level',nextLevel());return}
+    if(inR(x,y,G.levels)){SFX.play('card');S.screen='menu';S.ch=curCh();return}
+    if(inR(x,y,G.endless)){if(endlessOpen()){SFX.play('wave');startRun('endless')}else flash(T('endlessLock'));return}
+  }
+  function drawTitle(c){
+    c.fillStyle=PAL.D;c.fillRect(-20,-20,W+40,H+40);
+    c.save();S.fx.apply(c);c.translate(0,FLOOR*(1-K));c.scale(K,K);drawScene(c,{});
+    const A=S.att;const sx=tileX(ATT_SP),px=tileX(ATT_PIT);
+    drawSpr(c,tspr('spike'),sx,FLOOR+PX);
+    if(A&&A.pitT>0){c.fillStyle='#07050d';c.fillRect(px-24,FLOOR,48,WBAR-FLOOR);c.fillStyle=PAL.P;c.fillRect(px-24,FLOOR,6,30);c.fillRect(px+18,FLOOR,6,30)}else drawSpr(c,tspr('hatch'),px,FLOOR+5*PX);
+    if(A)for(const w of A.w){const fr=w.st==='walk'&&!w.air?Math.floor(w.run/16)%2:0,sp=heroSpr(w.cls,fr);c.save();
+      if(w.st==='fall'){c.beginPath();c.rect(0,yTop,WW,FLOOR-yTop);c.rect(px-24,FLOOR,48,WBAR-FLOOR);c.clip()}
+      c.translate(Math.round(w.x/PX)*PX,Math.round(w.y/PX)*PX);if(w.st==='dead'){c.globalAlpha=clamp(1-w.t,0,1);c.translate(-w.t*70,-w.t*50)}
+      if(!w.air&&w.st==='walk'){c.fillStyle='rgba(10,6,20,0.35)';c.fillRect(-sp.width*PX/2+3,0,sp.width*PX-6,PX)}
+      drawSpr(c,sp,0,PX+(fr?-PX:0));c.restore()}
+    S.fx.draw(c);c.restore();drawLights(c);
+    // 标志
+    const ly=Math.round(clamp(H*0.17,64,110)),bob=Math.sin(S.t*2)*3;const tt=T('title');
+    let fs=86;c.font=`800 ${fs}px ${FONT}`;while(fs>40&&c.measureText(tt).width>W-220){fs-=2;c.font=`800 ${fs}px ${FONT}`}
+    c.save();c.translate(W/2,ly+bob);
+    txtO(c,tt,0,fs*0.1,fs,PAL.R,'center',800,fs*0.3,PAL.k);
+    txtO(c,tt,0,0,fs,PAL.y,'center',800,fs*0.22,PAL.k);
+    c.save();c.beginPath();c.rect(-W/2,-fs*0.6,W,fs*0.42);c.clip();txtO(c,tt,0,0,fs,PAL.l,'center',800,0.01);c.restore();
+    c.font=`800 ${fs}px ${FONT}`;const lw=c.measureText(tt).width;drawSpr(c,tspr('heart'),-lw/2-38,fs*0.3,7);drawSpr(c,tspr('bheart'),lw/2+38,fs*0.3,7);
+    c.restore();
+    // 按钮
+    const G=titleGeo(),pl=G.play,pulse=1+0.035*Math.sin(S.t*5);
+    c.save();c.translate(pl.x+pl.w/2,pl.y+pl.h/2);c.scale(pulse,pulse);bevel(c,-pl.w/2,-pl.h/2,pl.w,pl.h-8,'#4fbf6a',{depth:8,r:12});
+    const ni=nextLevel();txtO(c,'▶ '+T('play'),0,-12,32,PAL.w,'center',800,6);txtO(c,T('lvShort',{id:LV[ni].id}),0,18,15,'#d8ffe0','center',800,4);c.restore();
+    const lb=G.levels;bevel(c,lb.x,lb.y,lb.w,lb.h-6,'#4a8fe0',{depth:6,r:10});fitTxtO(c,T('levels'),lb.x+lb.w/2,lb.y+lb.h/2-4,22,lb.w-24,PAL.w,'center',800,5);
+    const eb=G.endless,eo=endlessOpen();bevel(c,eb.x,eb.y,eb.w,eb.h-6,eo?'#9a6ae0':'#c86aa8',{depth:6,r:10});fitTxtO(c,T('endless'),eb.x+eb.w/2,eb.y+eb.h/2-4,22,eb.w-24,eo?PAL.w:'#8a80a8','center',800,5);if(!eo)drawSpr(c,tspr('lock'),eb.x+eb.w-18,eb.y+16,2.4);
+    // 角标
+    bevel(c,14,10,120,32,'#a8508c',{depth:3,r:6,shadow:false});drawSpr(c,tspr('star'),36,36,2.6);txtO(c,`${starTotal()}/${LV.length*3}`,54,25,16,PAL.y,'left',800,3);
+    drawMute(c);drawLang(c);
+    if(S.msgT>0)pill(c,S.msg,W/2,G.play.y+G.play.h+40,15,PAL.r,PAL.w);
+  }
+  function ruleTexts(Lv){const r=Lv.r,o=[];
+    if(r.cap)o.push(T('r_cap',{n:r.cap}));if(r.lives)o.push(T('r_lives',{n:r.lives}));if(r.poor)o.push(T('r_poor'));if(r.nodraft)o.push(T('r_nodraft'));if(r.block)o.push(T('r_block'));
+    if(r.affix)o.push(r.affix==='rand'?T('r_rand'):T('r_affix',{a:AFX[r.affix]}));if(r.boss)o.push(T('r_boss',{name:CLS.boss.name,n:r.boss}));return o}
+  function jumpOver(h,t){
+    let end=t.x;
+    const fl=S.traps.filter(q=>!q.done&&FLOORT[q.type]&&q.x>t.x&&h.spot.has(q.id)).sort((a,b)=>a.x-b.x);
+    const reach=(h.cls==='thief'||h.vet||h.cls==='boss')?TS*2:TS;
+    for(const q of fl){if(q.x-end<=TS+1&&q.x-t.x<=reach)end=q.x;else break}
+    if(end>t.x)say(h,T('chainJump'),true);SFX.play('jump');
+    const d=end+34-h.x;h.air=true;h.vy=-470;h.jvx=Math.min(420,Math.max(h.base,d/0.67));
+  }
+  function hitCeil(h){
+    const t=S.traps.find(q=>q.type==='ceil'&&!q.done&&q.arm<=0&&Math.abs(q.x-h.x)<28);
+    if(t){kill(h,'ceil',false,t);return}
+    h.bonked=true;M.bonks++;say(h,T('bonk'));S.fx.burst(h.x,WCEIL+4,C.fg,6,100);checkUnlocks();
+  }
+  function updHero(h,dt){
+    const cl=CLS[h.cls];
+    if(!alive(h)){h.deadT+=dt;if(h.fall){h.vy+=1400*dt;h.y+=h.vy*dt}
+      if(h.reviveT>0){h.reviveT-=dt;if(h.reviveT<=0){if(h.reviver&&alive(h.reviver)&&!h.escaped){h.dead=false;h.revived=true;h.hp=1;h.inv=0.9;h.deadT=0;h.air=false;h.y=FLOOR;if(h.killer)h.spot.add(h.killer);S.fx.burst(h.x,h.y-20,C.sun,14,160);say(h,T('revived'),true)}}return}
+      if(h.deadT>1.4)h.gone=true;return}
+    if(h.hurt>0)h.hurt-=dt;
+    if(h.inv>0)h.inv-=dt;
+    for(const t of S.traps){
+      if(t.arm>0||t.done||h.eval.has(t.id)||t.type==='ceil')continue;
+      const ahead=t.x-h.x,range=RANGE[t.type]||120;
+      if(ahead>-20&&ahead<range){h.eval.add(t.id);if(Math.random()<DET[lvl(h,t.type)]){h.spot.add(t.id);if(h.cls==='scout'){for(const q of S.heroes)if(alive(q)){q.spot.add(t.id);q.eval.add(t.id)}say(h,T('scout',{name:TD[t.type].name}),true)}else if(!(t.type==='arrow'&&h.cls==='knight'))say(h,choice(DODGE))}}
+    }
+    let speed=h.base;
+    const sliding=h.slideT>0;if(sliding)h.slideT-=dt;
+    const busy=h.wait>0||h.stun>0;
+    if(h.wait>0){h.wait-=dt;speed=0}
+    if(h.stun>0){h.stun-=dt;speed=0}
+    if(sliding&&!h.air&&!busy)speed=h.base*(S.upg.ice_long?2.3:1.8);
+    const free=!busy&&!sliding;
+    if(free&&!h.air)for(const t of S.traps){
+      if(!h.spot.has(t.id)||t.done||t.arm>0||!FLOORT[t.type])continue;
+      const ahead=t.x-h.x;if(ahead>0&&ahead<36){if(h.cls==='sapper'&&h.disarms>0&&!t.disarmAt){h.disarms--;h.wait=0.9;t.disarmAt=S.t+0.9;say(h,T('sapper'),true)}else jumpOver(h,t);break}
+    }
+    if(free)for(const t of S.traps){
+      if(!h.spot.has(t.id)||t.done||t.arm>0)continue;
+      const ahead=t.x-h.x;
+      if(t.type==='rock'&&!t.rockOn&&ahead>0&&ahead<130&&h.dash<=0)h.dash=0.6;
+      if(t.type==='gas'&&ahead>0&&ahead<gasHalf()+30&&h.dash<=0)h.dash=Math.max(0.6,(gasHalf()*2+60)/(h.base*2.6));
+      if(t.type==='flame'&&ahead>0&&ahead<70&&!h.air&&h.dash<=0){const st=flameState(t);if(st.on||st.toOn<0.5)speed=0}
+    }
+    if(h.dash>0){h.dash-=dt;if(free)speed=h.base*2.6}
+    h.duck=false;
+    if(free&&h.cls!=='knight')for(const a of S.arrows){if(!h.spot.has(a.src.id)||a.x<=h.x||a.x-h.x>130)continue;if(a.low){if(!h.air&&a.x-h.x<90){h.air=true;h.vy=-470;h.jvx=h.base}}else h.duck=true}
+    if(free&&!h.air)for(const b of S.balls){if(b.big||!h.spot.has(b.src.id))continue;const d=b.x-h.x;if(d>0&&d<70){h.air=true;h.vy=-520;h.jvx=h.base*0.5}}
+    if(h.duck&&!h.air)speed*=0.55;
+    if(!sliding&&!busy)for(const t of S.traps){
+      if(t.type!=='chest'||t.done||t.arm>0||h.spot.has(t.id)||h.air)continue;
+      if(Math.abs(t.x-h.x)<6){h.wait=S.upg.chest_long?2.0:1.0;speed=0;t.done=true;t.doneT=-1;h.lastChest=S.t;say(h,T('chestMine'));SFX.play('chest');S.fx.burst(t.x,FLOOR-14,C.sun,10,150)}
+    }
+    let vx=speed;if(h.air){if(h.vx)vx=h.vx;else if(h.jvx)vx=h.jvx}
+    h.x=Math.max(8,h.x+vx*dt);h.run+=Math.abs(vx)*dt;
+    if(h.air){h.vy+=1400*dt;h.y+=h.vy*dt;
+      if(h.vy<0&&h.y-cl.h<=WCEIL+2){h.y=WCEIL+2+cl.h;h.vy=80;hitCeil(h);if(!alive(h))return}
+      if(h.y>=FLOOR){h.y=FLOOR;h.vy=0;h.air=false;h.jvx=0;h.vx=0;if(h.bonked){h.stun=0.6;h.bonked=false}}}
+    if(h.lastSpring!=null){const sp=S.traps.find(q=>q.id===h.lastSpring);if(!sp||Math.abs(sp.x-h.x)>40)h.lastSpring=null}
+    if(!h.air)for(const t of S.traps){
+      if(t.arm>0||t.done)continue;const dx=Math.abs(t.x-h.x);
+      if(t.type==='spike'&&dx<18&&!h.spikeHit.has(t.id)){h.spikeHit.add(t.id);kill(h,'spike',false,t);if(!alive(h))return}
+      else if(t.type==='pit'&&dx<14&&h.inv<=0){t.open=true;t.openT=active('fall')?2:0.9;kill(h,'pit',true,t);if(!alive(h))return}
+      else if(t.type==='ice'&&dx<22&&h.lastIce!==t.id){h.lastIce=t.id;h.slideT=S.upg.ice_long?2:1.2;h.iceT=S.t;useUp(t);say(h,T('slide'))}
+      else if(t.type==='spring'&&dx<16&&h.lastSpring!==t.id){h.lastSpring=t.id;h.air=true;h.vy=-920;h.jvx=0;h.vx=S.upg.spring_back?-150:0;useUp(t);S.fx.burst(t.x,FLOOR-6,C.sun,6,120);SFX.play('spring');break}
+      else if(t.type==='portal'&&dx<14&&!h.ported){h.ported=true;h.lastIce=null;S.fx.burst(h.x,h.y-17,C.sky,12,160);h.x=14;say(h,T('ported'));SFX.play('portal');useUp(t);break}
+    }
+    for(const t of S.traps){
+      if(t.done||t.arm>0)continue;
+      if(t.type==='rock'&&!t.rockOn){const pred=h.x+speed*RFT;if(pred>=t.x-20&&h.x<t.x+30)t.rockOn=true}
+      if(t.type==='boulder'&&h.x>t.x+14){t.done=true;t.doneT=0;SFX.play('rock');spawnBall(t.x,!!S.upg.boulder_big,t,'boulder')}
+    }
+    if(h.x>=EXIT)escape(h);
+  }
+  function hazards(dt){
+    const mech=active('mech');
+    for(const t of S.traps){
+      if(t.type==='pit'&&t.open&&t.openT>0){t.openT-=dt;if(t.openT<=0)t.open=false}
+      if(t.disarmAt&&!t.done&&S.t>=t.disarmAt){breakTrap(t);wpop(T('disarmed'),t.x,FLOOR-120,C.coral)}
+      if(t.done||t.arm>0)continue;
+      if(t.type==='arrow'&&S.phase==='fight'){t.cd-=dt;if(t.cd<=0&&S.heroes.some(h=>alive(h)&&h.x<t.x-24&&t.x-h.x<380)){S.arrows.push({x:t.x-16,y:FLOOR-27,src:t});SFX.play('arrow');if(S.upg.arrow_double)S.arrows.push({x:t.x-16,y:FLOOR-9,src:t,low:true});t.cd=mech?0.85:1.2}}
+      if(t.type==='flame'&&S.phase==='fight'){t.ft+=dt;const fon=flameState(t).on;if(fon&&!t.wasOn)SFX.play('flame');t.wasOn=fon;if(fon)for(const h of S.heroes){if(alive(h)&&Math.abs(h.x-t.x)<22&&h.y>FLOOR-55)kill(h,'flame',false,t)}}
+      if(t.type==='rock'&&t.rockOn){
+        t.rockVy+=1400*dt;t.rockY+=t.rockVy*dt;
+        for(const h of S.heroes){if(!alive(h))continue;const cl=CLS[h.cls];if(Math.abs(t.x-h.x)<20+cl.w/2&&t.rockY>=h.y-((h.duck&&!h.air)?cl.h*0.55:cl.h)&&t.rockY-40<=h.y)kill(h,'rock',false,t)}
+        if(t.rockY>=FLOOR){t.rockY=FLOOR;t.done=true;t.doneT=0;S.fx.burst(t.x,FLOOR-6,C.stone,14,200);S.fx.shake=Math.max(S.fx.shake,6);SFX.play('rock');if(S.upg.rock_roll)spawnBall(t.x,false,t,'rock')}
+      }
+    }
+    for(const h of S.heroes){
+      if(!alive(h))continue;
+      let inside=null;for(const t of S.traps)if(t.type==='gas'&&!t.done&&t.arm<=0&&Math.abs(h.x-t.x)<gasHalf()){inside=t;break}
+      if(inside){h.poison+=dt*(mech?1.35:1);if(h.poison>=1.3){kill(h,'gas',false,inside)}}else h.poison=Math.max(0,h.poison-0.4*dt);
+    }
+    for(const b of S.balls){
+      b.x+=b.vx*dt;b.rot+=b.vx*dt/b.r;
+      for(const h of S.heroes){if(!alive(h))continue;const cl=CLS[h.cls];if(Math.abs(h.x-b.x)<b.r+cl.w/2-2&&h.y>FLOOR-b.r*2+4)kill(h,b.type,false,b.src)}
+    }
+    S.balls=S.balls.filter(b=>b.x>-40);
+    for(const a of S.arrows){
+      a.x-=440*dt;
+      for(const h of S.heroes){
+        if(!alive(h)||a.hit)continue;const cl=CLS[h.cls];
+        const top=h.y-((h.duck&&!h.air)?cl.h*0.55:cl.h);
+        if(a.x>h.x-cl.w/2&&a.x<h.x+cl.w/2&&a.y>=top&&a.y<=h.y){a.hit=true;
+          if(h.cls==='knight'){S.fx.burst(a.x,a.y,C.sky,6,120);if(Math.random()<0.4)say(h,T('blocked'))}
+          else kill(h,'arrow',false,a.src)}
+      }
+      if(a.x<0)a.hit=true;
+    }
+    S.arrows=S.arrows.filter(a=>!a.hit);
+  }
+  g.update=function(dt){
+    S.t+=dt;S.fx.update(dt);stepPops(S,dt);
+    if(S.screen==='title')attUpdate(dt);
+    if(S.screen==='menu'||S.screen==='title')return;
+    if(S.home>0)S.home-=dt;if(S.tut===2&&S.traps.length>=2)S.tut=1;if(S.tut&&S.wave>0)S.tut=0;if(S.tut&&S.phase==='break'&&S.breakT<3)S.breakT=3;if(S.win)S.win.t+=dt;
+    if(S.talk){S.talk.t-=dt;if(S.talk.t<=0)S.talk=null}
+    if(S.announce){S.announce.t-=dt;if(S.announce.t<=0)S.announce=null}
+    if(S.unlock){S.unlock.t-=dt;if(S.unlock.t<=0)S.unlock=null}
+    for(const k of ALL)if(S.glow[k]>0)S.glow[k]-=dt;
+    for(const t of S.traps){if(t.arm>0)t.arm-=dt;if(t.done)t.doneT+=dt}
+    S.traps=S.traps.filter(t=>!(t.done&&t.doneT>1.2));
+    if(S.over||S.win||S.phase==='draft')return;
+    hazards(dt);
+    if(S.phase==='break'){S.breakT-=dt;if(S.breakT<=0)startWave();return}
+    S.spawnT-=dt;if(S.queue.length&&S.spawnT<=0){spawnHero(S.queue.shift());S.spawnT=1.3}
+    for(const h of S.heroes){updHero(h,dt);if(S.over)return}
+    S.heroes=S.heroes.filter(h=>!h.gone);
+    if(!S.queue.length&&!S.heroes.length&&!S.balls.length)endWave();
+  };
+  g.skip=function(){if(S.screen==='play'&&S.phase==='break'&&!S.over&&!S.win)S.breakT=0};
+  const RUBBLE=mkSpr(['....XX....','..XXxxX.X.','.XxmxxXXxX','XxxxxxxxxX']);
+  /* ---------- 像素场景 ---------- */
+  const yTop=FLOOR-FLOOR/K,yBot=FLOOR+(H-FLOOR)/K;
+  const BGW=Math.ceil(WW/PX)+2,BGWH=Math.ceil((FLOOR-yTop)/PX)+1,BGFH=Math.ceil((yBot-FLOOR)/PX)+1;
+  const BG=buildBG(BGW,BGWH,BGFH,11,T0/PX,TS/PX);
+  const TORCH=[];for(let i=1;i<NT;i+=4)TORCH.push(T0+i*TS+TS);
+  const toW=(sx,sy)=>({x:sx/K,y:FLOOR-(FLOOR-sy)/K});
+  const ICONS={};
+  function makeIcon(type){
+    const cv=newCv(20,20),c=cv.getContext('2d');c.imageSmoothingEnabled=false;
+    const put=(sp,bx,by)=>c.drawImage(sp,Math.round(bx-sp.width/2),Math.round(by-sp.height));
+    if(type==='spike')put(tspr('spike'),10,16);
+    else if(type==='pit'){c.fillStyle=PAL.k;c.fillRect(1,7,18,10);c.fillStyle='#07050d';c.fillRect(2,8,16,8);c.fillStyle=PAL.X;c.fillRect(1,6,18,2);c.fillStyle=PAL.x;c.fillRect(1,6,18,1);for(let i=0;i<5;i++){c.fillStyle=PAL.k;c.fillRect(2+i,8+i,3,2);c.fillRect(15-i,8+i,3,2);c.fillStyle=i%2?PAL.P:PAL.p;c.fillRect(2+i,8+i,2,1);c.fillRect(16-i,8+i,2,1)}}
+    else if(type==='chest')put(tspr('chest'),10,16);
+    else if(type==='arrow'){put(tspr('arrowBox'),13,13);put(tspr('arrow'),6,12)}
+    else if(type==='rock'){put(tspr('rock'),10,18)}
+    else if(type==='boulder')put(boulderSpr(6,1),10,18);
+    else if(type==='spring')put(tspr('spring'),10,16);
+    else if(type==='ceil'){const s=ceilSpr();c.drawImage(s,Math.round(10-s.width/2),3)}
+    else if(type==='ice'){c.fillStyle=PAL.k;c.fillRect(1,9,18,6);c.fillStyle=PAL.z;c.fillRect(2,10,16,4);c.fillStyle=PAL.w;c.fillRect(4,10,3,1);c.fillRect(12,11,2,1);c.fillStyle='#f0a8cc';c.fillRect(2,13,16,1)}
+    else if(type==='flame'){pxFlame(c,10,11,8,9,0.3,1);put(tspr('nozzle'),10,19)}
+    else if(type==='portal'){c.drawImage(portalSpr(0),3,3)}
+    else if(type==='gas'){const pf=(x,y,r)=>{for(let j=-r;j<=r;j++)for(let i=-r;i<=r;i++)if(i*i+j*j<=r*r+1){c.fillStyle=(j<0&&i<0)?'#ffc8ee':'#d878e0';c.fillRect(x+i,y+j,1,1)}};c.fillStyle='#b058c0';c.fillRect(3,8,15,9);pf(7,12,4);pf(13,10,4);pf(12,15,3);c.globalCompositeOperation='destination-over';c.fillStyle=PAL.k;for(const[x,y,r]of[[7,12,5],[13,10,5],[12,15,4]])for(let j=-r;j<=r;j++)for(let i=-r;i<=r;i++)if(i*i+j*j<=r*r+1)c.fillRect(x+i,y+j,1,1);c.globalCompositeOperation='source-over'}
+    return cv}
+  const PORTAL={};
+  function portalSpr(f){f=0;if(PORTAL[f])return PORTAL[f];const B=newCv(14,14),b=B.getContext('2d');for(let y=0;y<14;y++)for(let x=0;x<14;x++){const dx=x-6.5,dy=y-6.5,d=Math.sqrt(dx*dx+dy*dy);if(d>7)continue;let col=d>6.2?PAL.k:d>4.6?PAL.r:PAL.z;if(d<=4.6&&Math.abs(dx+dy)<1.3)col=PAL.r;b.fillStyle=col;b.fillRect(x,y,1,1)}return PORTAL[f]=B;const w=12,h=18,cv=newCv(w,h),c=cv.getContext('2d');
+    for(let y=0;y<h;y++)for(let x=0;x<w;x++){const nx=(x+0.5-w/2)/(w/2),ny=(y+0.5-h/2)/(h/2),d=nx*nx+ny*ny;
+      if(d>1)continue;let col=d>0.62?PAL.P:d>0.38?PAL.p:'#c8a8ff';if(d>0.86)col=PAL.k;
+      const a=Math.atan2(ny,nx),sw=Math.sin(a*2+d*7-f*0.8);if(d<0.86&&d>0.2&&sw>0.75)col=PAL.c;c.fillStyle=col;c.fillRect(x,y,1,1)}
+    return PORTAL[f]=cv}
+  function icon(c,type,x,y,s){const cv=ICONS[type]||(ICONS[type]=makeIcon(type));const p=2*s;c.imageSmoothingEnabled=false;c.drawImage(cv,x-10*p,y-10*p,20*p,20*p)}
+  function drawScene(c,opt){
+    opt=opt||{};c.imageSmoothingEnabled=false;
+    c.drawImage(BG,0,FLOOR-BGWH*PX,BGW*PX,(BGWH+BGFH)*PX);
+    // 旗帜
+    if(opt.ceil)for(const bx of [T0+TS*2.5,WW-T0-TS*3.5]){drawSpr(c,tspr('banner'),bx,WCEIL+30,PX)}
+    // 火把 + 光
+    for(let i=0;i<TORCH.length;i++){const tx=TORCH[i],ty=FLOOR-(FLOOR-WCEIL)*0.58;
+      drawSpr(c,tspr('torch'),tx,ty+15,PX);pxFlame(c,tx,ty,12,18+Math.sin(S.t*9+i)*3,S.t+i,PX);
+      c.save();c.globalCompositeOperation='lighter';const r=90+Math.sin(S.t*7+i*2)*6;const gr=c.createRadialGradient(tx,ty-4,4,tx,ty-4,r);gr.addColorStop(0,'rgba(255,160,60,0.30)');gr.addColorStop(1,'rgba(255,170,70,0)');c.fillStyle=gr;c.fillRect(tx-r,ty-4-r,r*2,r*2);c.restore()}
+    // 入口：石拱门
+    c.fillStyle=PAL.k;c.fillRect(0,FLOOR-78,45,78);c.fillStyle='#0b0812';c.fillRect(0,FLOOR-72,39,72);
+    for(let y=FLOOR-78;y<FLOOR;y+=12){c.fillStyle=(y/12)%2?PAL.x:PAL.X;c.fillRect(39,y,6,11);c.fillStyle=PAL.m;c.fillRect(39,y,6,2)}
+    c.fillStyle=PAL.X;c.fillRect(0,FLOOR-78,45,6);c.fillStyle=PAL.x;c.fillRect(0,FLOOR-78,45,2);
+    // 出口：发光的木门
+    const ex=WW-42;c.save();c.globalCompositeOperation='lighter';const gl=c.createRadialGradient(ex+21,FLOOR-36,6,ex+21,FLOOR-36,90);gl.addColorStop(0,'rgba(255,210,80,0.35)');gl.addColorStop(1,'rgba(255,210,80,0)');c.fillStyle=gl;c.fillRect(ex-80,FLOOR-130,170,130);c.restore();
+    c.fillStyle=PAL.k;c.fillRect(ex-3,FLOOR-84,48,84);c.fillStyle=PAL.l;c.fillRect(ex+3,FLOOR-78,39,78);c.fillStyle=PAL.y;c.fillRect(ex+3,FLOOR-30,39,30);
+    c.fillStyle=PAL.N;c.fillRect(ex,FLOOR-84,6,84);c.fillRect(ex,FLOOR-84,45,6);c.fillStyle=PAL.n;c.fillRect(ex,FLOOR-84,45,2);
+    c.fillStyle=PAL.n;c.fillRect(ex+6,FLOOR-75,9,75);c.fillStyle=PAL.N;c.fillRect(ex+12,FLOOR-75,3,75);c.fillStyle=PAL.y;c.fillRect(ex+9,FLOOR-40,3,3);
+    if(opt.ceil){c.fillStyle=PAL.k;c.fillRect(0,WCEIL,WW,PX*3);c.fillStyle=PAL.V;c.fillRect(0,WCEIL,WW,PX*2);for(let x=0;x<WW;x+=PX*6){c.fillStyle=PAL.v;c.fillRect(x,WCEIL,PX*5,PX)}}
+  }
+  function drawLights(c){c.save();const g2=c.createLinearGradient(0,0,0,H);g2.addColorStop(0,'rgba(120,40,90,0.12)');g2.addColorStop(0.35,'rgba(14,9,26,0)');c.fillStyle=g2;c.fillRect(0,0,W,H);
+    const v=c.createRadialGradient(W/2,H*0.55,H*0.4,W/2,H*0.55,W*0.62);v.addColorStop(0,'rgba(10,6,20,0)');v.addColorStop(1,'rgba(120,40,90,0.14)');c.fillStyle=v;c.fillRect(0,0,W,H);c.restore()}
+  function pips(c,x,y,n,col){for(let i=0;i<n;i++){const px=Math.round(x-(n*8-3)/2+i*8);c.fillStyle=PAL.k;c.fillRect(px-1,y-1,7,7);c.fillStyle=col||PAL.w;c.fillRect(px,y,5,5)}}
+  function drawTrap(c,t){
+    c.globalAlpha=t.arm>0?0.5:(t.broke?clamp(1-t.doneT,0,1):1);
+    const ty=t.type,x=t.x;
+    if(ty==='spike')drawSpr(c,tspr('spike'),x,FLOOR+PX);
+    else if(ty==='spring')drawSpr(c,tspr('spring'),x,FLOOR+PX);
+    else if(ty==='pit'){if(t.open){c.fillStyle='#07050d';c.fillRect(x-24,FLOOR,48,WBAR-FLOOR);c.fillStyle=PAL.P;c.fillRect(x-24,FLOOR,6,30);c.fillRect(x+18,FLOOR,6,30);c.fillStyle=PAL.p;c.fillRect(x-24,FLOOR,3,30);c.fillRect(x+18,FLOOR,3,30)}
+      else drawSpr(c,tspr('hatch'),x,FLOOR+5*PX)}
+    else if(ty==='chest')drawSpr(c,tspr(t.done&&!t.broke?'chestOpen':'chest'),x,FLOOR+PX);
+    else if(ty==='ice'){c.fillStyle=PAL.k;c.fillRect(x-24,FLOOR-PX,48,PX*4);c.fillStyle=PAL.z;c.fillRect(x-21,FLOOR,42,PX*2);c.fillStyle=PAL.w;c.fillRect(x-15,FLOOR,9,PX);c.fillRect(x+6+Math.round(Math.sin(S.t*2)*2)*PX,FLOOR,6,PX);c.fillStyle='#f0a8cc';c.fillRect(x-21,FLOOR+PX*2,42,PX)}
+    else if(ty==='portal')drawSpr(c,portalSpr(0),x,FLOOR-3+Math.round(Math.sin(S.t*4)*1)*PX,PX*0.85);
+    else if(ty==='arrow')drawSpr(c,tspr('arrowBox'),x,FLOOR-27+10);
+    else if(ty==='rock'){if(!t.rockOn){c.fillStyle=PAL.N;c.fillRect(Math.round(x/PX)*PX,WCEIL,PX,t.rockY-30-WCEIL)}if(!(t.done&&S.upg.rock_roll))drawSpr(c,tspr('rock'),x,t.rockY+PX)}
+    else if(ty==='boulder'){c.fillStyle=PAL.k;c.fillRect(x-27,FLOOR-54,54,9);c.fillStyle=PAL.X;c.fillRect(x-24,FLOOR-51,48,3);c.fillStyle=PAL.x;c.fillRect(x-24,FLOOR-51,48,PX/3*2);if(!t.done){const R=S.upg.boulder_big?8:5;drawSpr(c,boulderSpr(R,1),x,FLOOR-51+PX)}}
+    else if(ty==='ceil'){const s=ceilSpr();drawSpr(c,s,x,WCEIL+s.height*PX)}
+    else if(ty==='flame'){drawSpr(c,tspr('nozzle'),x,FLOOR+PX);if(!t.done&&t.arm<=0){const st=flameState(t);if(st.on){const fl=1+Math.sin(S.t*40)*0.08;pxFlame(c,x,FLOOR-20,30,54*fl,S.t)}else if(st.toOn<0.4){c.fillStyle=PAL.y;c.fillRect(Math.round((x-6+Math.random()*12)/PX)*PX,FLOOR-12-Math.round(Math.random()*3)*PX,PX,PX)}}}
+    else if(ty==='gas'){const hw=gasHalf();drawSpr(c,tspr('vent'),x,FLOOR-78);
+      const g0=Math.round((x-hw)/6)*6;for(let gy=FLOOR-72;gy<FLOOR;gy+=6)for(let gx=g0;gx<x+hw;gx+=6){const n=Math.sin(gx*0.09+S.t*1.7)+Math.sin(gy*0.13-S.t*2.3)+Math.sin((gx+gy)*0.05+S.t);if(n>0.3){c.fillStyle=n>1.3?'rgba(255,190,232,0.6)':'rgba(214,120,220,0.32)';c.fillRect(gx,gy,6,6)}}}
+    if(maxUses(ty)>1&&!t.done&&!window.__nopips){const py=TD[ty].up?(ty==='ceil'?WCEIL+30:ty==='gas'?FLOOR-96:FLOOR-48):FLOOR+18;
+      if(t.uses>6)txtO(c,`×${t.uses}`,x,py+2,11,PAL.w,'center',800,3);else pips(c,x,py,t.uses)}
+    c.globalAlpha=1;
+  }
+  function drawHero(c,h){
+    if(h.escaped&&h.x>=EXIT)return;
+    const moving=!h.air&&!h.dead&&h.wait<=0&&h.stun<=0;
+    const fr=moving?(Math.floor(h.run/16)%2):0;
+    let spr=heroSpr(h.cls,fr);const sh=spr.height*PX;
+    c.save();
+    if(h.fall){c.beginPath();c.rect(0,yTop,WW,FLOOR-yTop);c.rect(h.x-24,FLOOR,48,WBAR-FLOOR);c.clip()}
+    if(!h.air&&!h.dead){c.fillStyle='rgba(10,6,20,0.35)';c.fillRect(Math.round((h.x-spr.width*PX/2+3)/PX)*PX,FLOOR,spr.width*PX-6,PX)}
+    c.translate(Math.round(h.x/PX)*PX,Math.round(h.y/PX)*PX);
+    if(h.dead&&!h.fall){c.globalAlpha=clamp(1-h.deadT*0.9,0,1);c.translate(-h.deadT*70,-h.deadT*50);c.rotate(-Math.min(0.5,h.deadT*2))}
+    if(h.inv>0&&!h.dead&&Math.floor(S.t*20)%2)c.globalAlpha=0.4;
+    const bob=moving&&fr?-PX:0;
+    if(h.duck&&!h.air){c.scale(1.1,0.6)}
+    drawSpr(c,spr,0,PX+bob);
+    if(h.hurt>0)drawSpr(c,HSPR[h.cls+fr+'w'],0,PX+bob);
+    if(h.poison>0.2&&!h.dead){c.globalAlpha=clamp(h.poison/1.3,0,0.7);drawSpr(c,HSPR[h.cls+fr+'g'],0,PX+bob);c.globalAlpha=1}
+    if(h.duck&&!h.air)c.scale(1/1.1,1/0.6);
+    const top=-sh+PX;
+    if(h.dead&&!h.fall)drawSpr(c,tspr('bheart'),0,top-4,2.4);
+    if(h.maxhp>1&&!h.dead){for(let i=0;i<h.maxhp;i++){const px=-h.maxhp*5+i*10;c.fillStyle=PAL.k;c.fillRect(px-1,top-12,9,8);c.fillStyle=i<h.hp?PAL.r:PAL.V;c.fillRect(px,top-11,7,6)}}
+    if(h.vet)drawSpr(c,tspr('star'),0,top-(h.maxhp>1?14:2),2);
+    if(!h.dead&&(h.dash>0||h.slideT>0)){c.fillStyle=h.slideT>0?PAL.c:PAL.w;c.globalAlpha=0.6;for(let i=0;i<3;i++)c.fillRect(-spr.width*PX/2-9-i*9,top+9+i*9,12,PX)}
+    if(h.stun>0&&!h.dead){c.fillStyle=PAL.y;for(let i=0;i<3;i++){const a=S.t*6+i*2.1;c.fillRect(Math.round(Math.cos(a)*12/PX)*PX-2,top-9+Math.round(Math.sin(a)*4/PX)*PX,PX*1.4,PX*1.4)}}
+    c.restore();
+  }
+  function heroTop(h){return heroSpr(h.cls,0).height*PX}
+  function summary(list){
+    const m={};let vets=0;for(const q of list){if(q.vet){vets++;continue}m[q.cls]=(m[q.cls]||0)+1}
+    const parts=Object.keys(m).map(k=>`${CLS[k].name}×${m[k]}`);if(vets)parts.unshift(T('vets',{n:vets}));if(S.nextAffix&&S.phase!=='fight')parts.push(`[${AFX[S.nextAffix].split(/[：:]/)[0]}]`);return parts.join('  ');
+  }
+  function wrap(c,s,maxW,size){c.font=`600 ${size}px ${FONT}`;const lines=[];let cur='';const toks=SPACED()?s.split(/(\s+)/):[...s];for(const tk of toks){if(c.measureText(cur+tk).width>maxW&&cur.trim()){lines.push(cur.trim());cur=tk.replace(/^\s+/,'')}else cur+=tk}if(cur.trim())lines.push(cur.trim());return lines}
+  function drawCard(c,cd,r){
+    const hv=S.hover&&inR(S.hover.x,S.hover.y,r);const lift=hv?-4:0;
+    let tag,col,name,desc,ic;
+    if(cd.kind==='trap'){const d=TD[cd.id],s=SCH[d.sch];tag=T('tagNew',{s:s.name});col=s.col;name=d.name;desc=T('cardTrapDesc',{desc:d.desc,n:costOf(cd.id)});ic=cd.id}
+    else if(cd.kind==='upg'){const u=UPG[cd.id],s=SCH[TD[u.trap].sch];tag=T('tagUpg',{name:TD[u.trap].name});col=s.col;name=u.name;desc=u.desc;ic=u.trap}
+    else{tag=T('tagItem');col=PAL.x;name=GEN[cd.id].name;desc=GEN[cd.id].desc;ic=null}
+    const y=r.y+lift;
+    bevel(c,r.x,y,r.w,r.h-6,'#fff0f7',{depth:6,ring:hv?PAL.y:null,dark:'#d68ab0'});
+    c.save();rr(c,r.x,y,r.w,36,[10,10,0,0]);c.clip();c.fillStyle=col;c.fillRect(r.x,y,r.w,36);c.fillStyle=shade(col,0.25);c.fillRect(r.x,y,r.w,4);c.fillStyle=shade(col,-0.35);c.fillRect(r.x,y+33,r.w,3);c.restore();
+    fitTxt(c,tag,r.x+r.w/2,y+19,14,r.w-16,PAL.k,'center',800);
+    const cy=y+r.h*0.34;
+    c.fillStyle='rgba(214,138,176,0.3)';rr(c,r.x+r.w/2-44,cy-38,88,76,10);c.fill();
+    if(ic)icon(c,ic,r.x+r.w/2,cy,r.h<230?1.6:1.9);
+    else if(cd.id==='gold'){drawSpr(c,tspr('coin'),r.x+r.w/2,cy+24,7)}
+    else if(cd.id==='life'){drawSpr(c,tspr('heart'),r.x+r.w/2,cy+22,7)}
+    else txtO(c,'+2',r.x+r.w/2,cy,40,PAL.y,'center',800);
+    fitTxtO(c,name,r.x+r.w/2,y+r.h*0.55+4,22,r.w-20,PAL.w,'center',800,4);
+    wrap(c,desc,r.w-28,15).slice(0,r.h<230?2:3).forEach((l,i)=>txt(c,l,r.x+r.w/2,y+r.h*0.55+32+i*21,15,'#7a3a66','center',600));
+    if(cd.kind==='trap'||cd.kind==='upg'){const s=TD[cd.kind==='trap'?cd.id:UPG[cd.id].trap].sch;const n=schoolN(s)+(cd.kind==='trap'?1:0);txt(c,T('schoolProg',{name:SCH[s].name,n:Math.min(n,3)})+(n>=3?T('schoolReady'):''),r.x+r.w/2,y+r.h-22,13,SCH[s].col,'center',800)}
+  }
+  function hudBar(c,y,h,top){c.fillStyle='#e46fa0';c.fillRect(0,y,W,h);c.fillStyle=top?'#f088b4':'#f088b4';c.fillRect(0,top?y:y,W,h*0.5);c.fillStyle=PAL.k;c.fillRect(0,top?y+h-3:y,W,3);c.fillStyle='#ffc1da';c.fillRect(0,top?y+h-6:y+3,W,3)}
+  function goldTxt(c,n,x,y,size,align){const s=String(n);c.font=`800 ${size}px ${FONT}`;const tw=c.measureText(s).width,cw=size*0.95;let lx=align==='right'?x-tw-cw-6:align==='center'?x-(tw+cw+6)/2:x;drawSpr(c,tspr('coin'),lx+cw/2,y+cw/2,cw/8);txtO(c,s,lx+cw+6,y,size,PAL.y,'left',800);return tw+cw+6}
+  g.draw=function(c){
+    c.imageSmoothingEnabled=false;
+    if(S.screen==='menu'){c.save();drawMenu(c);c.restore();return}
+    if(S.screen==='title'){c.save();drawTitle(c);c.restore();return}
+    c.save();S.fx.apply(c);
+    c.fillStyle=PAL.D;c.fillRect(-20,-20,W+40,H+40);
+    c.save();c.translate(0,FLOOR*(1-K));c.scale(K,K);
+    drawScene(c,{ceil:true});
+    for(const bt of S.blocked||[]){const bx=tileX(bt);c.fillStyle='rgba(155,143,158,0.10)';c.fillRect(bx-TS/2+3,WCEIL,TS-6,FLOOR-WCEIL);drawSpr(c,RUBBLE,bx,FLOOR+PX)}
+    const hv=S.hover;
+    if(hv&&hv.y>=CEIL&&hv.y<BAR&&!S.over&&S.phase!=='draft'){const ti=tileAt(hv.x/K);if(ti>=0){const tx=T0+ti*TS;c.fillStyle='rgba(255,210,80,0.08)';c.fillRect(tx,WCEIL,TS,FLOOR-WCEIL);c.fillStyle='rgba(255,210,80,0.7)';for(const[ax,ay]of[[tx,FLOOR-6],[tx+TS-6,FLOOR-6]]){c.fillRect(ax,ay,6,PX);c.fillRect(ax+(ax===tx?0:3),ay-6,PX,6)}}}
+    for(const t of S.traps)drawTrap(c,t);
+    for(const b of S.balls){const R=b.big?8:5,i=((Math.floor(-b.rot/(Math.PI/4))%8)+8)%8;drawSpr(c,boulderSpr(R,i),b.x,FLOOR+PX)}
+    for(const a of S.arrows)drawSpr(c,tspr('arrow'),a.x+10,a.y+6);
+    for(const h of S.heroes)drawHero(c,h);
+    S.fx.draw(c);
+    c.restore();
+    drawLights(c);
+    if(S.talk){const h=S.talk.h;const q=toS(h.escaped?EXIT-20:h.x,Math.min(h.y,FLOOR)-heroTop(h)-8);bubble(c,S.talk.text,q.x,Math.max(CEIL+44,q.y))}
+    // 顶栏
+    hudBar(c,0,CEIL,true);
+    const st=S.owned.length>6?40:44;
+    S.owned.forEach((k,i)=>{const x=60+i*st;
+      if(S.glow[k]>0){c.fillStyle=`rgba(224,75,60,${clamp(S.glow[k],0,1)*0.5})`;rr(c,x-20,2,40,CEIL-8,6);c.fill()}
+      icon(c,k,x,16,0.62);for(let j=0;j<3;j++){const px=x-13+j*9;c.fillStyle=PAL.k;c.fillRect(px-1,30,9,7);c.fillStyle=S.intel[k]>j?PAL.r:PAL.V;c.fillRect(px,31,7,5)}});
+    const wv=S.phase==='fight'?S.wave:Math.min(S.wave+1,S.lv?S.lv.waves:999);
+    const segs=[];if(S.lv)segs.push([S.lv.id,15,'#a99fc4',10]);
+    segs.push([S.lv?T('waveOf',{n:wv,m:S.lv.waves}):T('wave',{n:wv}),20,PAL.w,22],['$'+S.gold,20,PAL.y,22],[T('traps',{a:S.traps.filter(t=>!t.done).length,b:S.cap}),15,'#a99fc4',0]);
+    let tot=0;for(const g2 of segs){c.font=`800 ${g2[1]}px ${FONT}`;tot+=c.measureText(g2[0]).width+g2[3]+(g2[0][0]==='$'?10:0)}
+    const left=60+S.owned.length*st,right=LBTN().x-30;let sc=1,tx=Math.max(left,Math.min(380,right-tot));
+    if(tx+tot>right){sc=Math.max(0.6,(right-left)/tot);tx=left}
+    const ty=CEIL/2-2;
+    for(const g2 of segs){const size=Math.round(g2[1]*sc);if(g2[0][0]==='$'){tx+=goldTxt(c,S.gold,tx,ty,size,'left')+g2[3]*sc;continue}c.font=`800 ${size}px ${FONT}`;txtO(c,g2[0],tx,ty,size,g2[2],'left',800);c.font=`800 ${size}px ${FONT}`;tx+=c.measureText(g2[0]).width+g2[3]*sc}
+    for(let i=0;i<Math.max(5,S.lives);i++){const x=W-18-i*20;drawSpr(c,tspr(i<S.lives?'heart':'heartE'),x,22,2)}
+    {const sch=Object.keys(SCH).filter(s=>schoolN(s)>0);let sx=W-10;
+    for(const s2 of [...sch].reverse()){const n=schoolN(s2),t=`${SCH[s2].short} ${Math.min(n,3)}/3`;c.font=`800 12px ${FONT}`;txtO(c,t,sx,33,12,n>=3?SCH[s2].col:'#a99fc4','right',800,3);c.font=`800 12px ${FONT}`;sx-=c.measureText(t).width+10}}
+    drawMute(c);drawLang(c);drawHome(c);
+    if(S.tut&&S.phase==='break'&&!S.over){
+      const bob=Math.sin(S.t*6)*6;
+      const arrow=(x,y,dir)=>{c.save();c.translate(x,y+bob*dir);c.fillStyle=PAL.y;c.strokeStyle=PAL.k;c.lineWidth=4;c.beginPath();c.moveTo(0,0);c.lineTo(-16,-20*dir);c.lineTo(-7,-20*dir);c.lineTo(-7,-40*dir);c.lineTo(7,-40*dir);c.lineTo(7,-20*dir);c.lineTo(16,-20*dir);c.closePath();c.stroke();c.fill();c.restore()};
+      if(S.tut===2){
+        let t2=[2,4,3,5,1].find(t=>!S.traps.some(q=>q.tile===t&&!q.done))||2;
+        const x=(T0+t2*TS+TS/2)*K,w=TS*K-6;c.save();c.globalAlpha=0.3+0.25*Math.sin(S.t*6);c.fillStyle=PAL.y;rr(c,x-w/2,FLOOR-70,w,70,8);c.fill();c.restore();
+        arrow(x,FLOOR-78,1);
+        pill(c,T('tut1'),W/2,CEIL+160,17,PAL.y,PAL.k);
+      }else if(S.tut===1&&S.goBtn){
+        {const gx=S.goBtn.x+S.goBtn.w+10+Math.abs(bob),gy=S.goBtn.y+S.goBtn.h/2;c.save();c.translate(gx,gy);c.rotate(Math.PI/2);c.translate(0,-bob);arrow(0,0,1);c.restore()}
+        pill(c,T('tut2'),W/2,CEIL+170,17,PAL.y,PAL.k);
+      }
+    }
+    // 底栏
+    hudBar(c,BAR,H-BAR,false);
+    for(const r of slotRects()){
+      const k=r.k,sel=k===S.sel,can=S.gold>=costOf(k);const y=r.y+(sel?-3:0);
+      bevel(c,r.x,y,r.w,r.h-6,sel?'#fffaf0':'#ffe6f1',{depth:sel?6:4,r:8,ring:sel?PAL.y:null,shadow:false,dark:'#d68ab0'});
+      c.globalAlpha=can?1:0.4;
+      c.fillStyle='rgba(214,138,176,0.35)';rr(c,r.x+5,y+5,34,r.h-16,6);c.fill();
+      icon(c,k,r.x+22,y+(r.h-6)/2,0.8);fitTxtO(c,TD[k].name,r.x+46,y+(CMP?19:16),r.w>130?(CMP?18:16):15,r.w-52,PAL.w,'left',800,3);
+      {const cost=costOf(k);drawSpr(c,tspr('coin'),r.x+53,y+(CMP?47:38),1.7);fitTxtO(c,String(cost),r.x+62,y+(CMP?41:33),CMP?15:13,r.w-68,can?PAL.y:PAL.r,'left',800,3)}
+      c.globalAlpha=1;
+    }
+    // 提示
+    if(S.phase==='break'&&!S.over&&!S.win&&S.wave===0&&S.lv){
+      const Lv=S.lv;pill(c,T('lvTitle',{id:Lv.id,n:Lv.waves}),W/2,CEIL+110,16,PAL.y,PAL.k);let yy=CEIL+146;
+      if(Lv.newT&&Lv.i>0){pill(c,T('newTrapLv',{name:TD[Lv.newT].name,desc:TD[Lv.newT].desc}),W/2,yy,14,PAL.c,PAL.k);yy+=34}
+      for(const rt of ruleTexts(Lv).slice(0,3)){pill(c,rt,W/2,yy,14,'rgba(0,0,0,1)',PAL.o);yy+=34}
+    }
+    if(S.phase==='break'&&!S.over&&!S.win){
+      pill(c,T('next',{s:summary(S.preview)}),W/2,CEIL+28,15,'rgba(0,0,0,1)',PAL.w);
+      {const gl=T('go',{n:Math.ceil(S.breakT)});c.font=`800 17px ${FONT}`;const gw=c.measureText(gl).width+40;S.goBtn={x:W/2-gw/2,y:CEIL+50,w:gw,h:40};const pulse=S.tut===1?1+0.05*Math.sin(S.t*8):1;c.save();c.translate(W/2,CEIL+68);c.scale(pulse,pulse);bevel(c,-gw/2,-19,gw,34,'#4fbf6a',{depth:5,r:8});txtO(c,gl,0,-2,17,PAL.w,'center',800,4);c.restore()}
+      if(S.wave===0&&(!S.lv||S.lv.i===0)&&!S.tut)pill(c,T('hint',{a:ALL.filter(k=>M.unlocked[k]).length,b:ALL.length}),W/2,CEIL+230,14,'rgba(0,0,0,1)',PAL.w);
+    }
+    if(S.announce)pill(c,S.announce.text,W/2,CEIL+28,15,S.announce.col||PAL.c,PAL.k);
+    if(S.unlock)pill(c,S.unlock.text,W/2,CEIL+160,17,PAL.y,PAL.k);
+    if(S.msgT>0)pill(c,S.msg,W/2,CEIL+196,15,PAL.r,PAL.w);
+    if(S.phase!=='draft')drawPops(c,S);
+    if(S.phase==='draft'&&!S.over&&!S.win&&S.draft){
+      c.fillStyle='rgba(120,50,100,0.55)';c.fillRect(0,CEIL,W,BAR-CEIL);
+      txtO(c,T('pickCard',{n:S.wave}),W/2,CEIL+20,20,PAL.w,'center',800);
+      S.draft.forEach((cd,i)=>drawCard(c,cd,CARD(i)));
+      const can=S.gold>=rerollCost();bevel(c,RER.x,RER.y,RER.w,RER.h-4,can?'#d886bc':'#c86aa8',{depth:4,r:8});
+      txtO(c,T('reroll',{n:rerollCost()}),W/2,RER.y+RER.h/2-3,15,can?PAL.w:'#8a80a8','center',800,3);
+      if(S.unlock)pill(c,S.unlock.text,W/2,CEIL+160,17,PAL.y,PAL.k);
+    }
+    const BY=H-(CMP?70:76);
+    const dim=()=>{c.fillStyle='rgba(110,40,95,0.82)';c.fillRect(0,0,W,H)};
+    if(S.win){
+      dim();const y0=CMP?60:100,Lv=S.lv;
+      txtO(c,T('winT',{id:Lv.id}),W/2,y0,CMP?38:44,PAL.y,'center',800,7);
+      for(let k=0;k<3;k++){const a=clamp((S.win.t-0.3-k*0.35)*4,0,1),on=k<S.win.stars&&a>0;const sz=(on?(1+0.4*(1-a)):1)*8;drawSpr(c,tspr(on?'star':'starE'),W/2+(k-1)*80,y0+112-(k===1?10:0),sz)}
+      txtO(c,T('winStats',{k:S.kills,e:S.lost}),W/2,y0+140,17,PAL.w,'center',700,3);
+      if(S.win.stars<3)txt(c,T('star3'),W/2,y0+172,15,'#a99fc4','center',600);
+      else if(Lv.i===LV.length-1)txtO(c,T('allDone'),W/2,y0+172,17,PAL.g,'center',800);
+      const d=[];if(LV[Lv.i+1])d.push({id:'next',label:T('nextLv'),w:240,col:'#f0b030',fg:PAL.w});d.push({id:'retry',label:T('retry'),w:170},{id:'menu',label:T('menu'),w:150});
+      S.btns=btnRow(d,BY);drawBtns(c,S.btns);
+    }
+    if(S.over&&S.lv){
+      dim();const y0=CMP?70:110;
+      txtO(c,T('lost'),W/2,y0,CMP?38:44,PAL.r,'center',800,7);
+      txt(c,T('lostLv',{w:S.wave,m:S.lv.waves,k:S.kills}),W/2,y0+46,17,'#c9bfe6','center',600);
+      txtO(c,T('lvTitle',{id:S.lv.id,n:S.lv.waves}),W/2,y0+90,16,PAL.y,'center',800,3);
+      ruleTexts(S.lv).slice(0,3).forEach((rt,k)=>txt(c,rt,W/2,y0+122+k*26,14,PAL.o,'center',600));
+      const d=[];if(HOOK.revive&&!S.revived)d.push({id:'revive',label:T(HOOK.reviveKey||'revive'),w:330,col:'#4fbf6a',fg:PAL.w});d.push({id:'retry',label:T('retry'),w:170},{id:'menu',label:T('menu'),w:150});
+      S.btns=btnRow(d,BY);drawBtns(c,S.btns);
+    }
+    if(S.over&&!S.lv){
+      dim();
+      const y0=CMP?36:70;
+      txtO(c,T('lost'),W/2,y0,CMP?34:42,PAL.r,'center',800,6);
+      txt(c,T('lostStats',{w:Math.max(0,S.wave-1),k:S.kills,b:getBest('trap3')}),W/2,y0+(CMP?36:48),CMP?16:18,'#c9bfe6','center',600);
+      const locked=GOALS.filter(gl=>!M.unlocked[gl.id]);
+      txtO(c,T('unlockProg',{a:ALL.filter(k=>M.unlocked[k]).length,b:ALL.length}),W/2,y0+(CMP?70:100),17,PAL.y,'center',800,3);
+      const ly=y0+(CMP?104:136),lstep=CMP?32:40,rh=CMP?28:32;
+      if(!locked.length)txt(c,T('allUnlocked'),W/2,ly,17,PAL.w,'center',700);
+      locked.slice(0,CMP?(H<470?4:5):6).forEach((gl,i)=>{const[a,b]=gl.p(),y=ly+i*lstep;bevel(c,W/2-270,y-rh/2,540,rh-3,'#c86aa8',{depth:3,r:6,shadow:false});icon(c,gl.id,W/2-246,y-1,0.7);
+        fitTxt(c,T('goalLine',{name:TD[gl.id].name,text:gl.text}),W/2-222,y-1,15,430,PAL.w,'left',600);txtO(c,`${Math.min(a,b)}/${b}`,W/2+256,y-1,15,PAL.y,'right',800,3)});
+      const d=[];if(HOOK.revive&&!S.revived)d.push({id:'revive',label:T(HOOK.reviveKey||'revive'),w:330,col:'#4fbf6a',fg:PAL.w});d.push({id:'retry',label:T('restart'),w:170},{id:'menu',label:T('menu'),w:150});
+      S.btns=btnRow(d,BY);drawBtns(c,S.btns);
+    }
+    c.restore();
+  };
+  if(/debug/.test(location.search)){g.debug=()=>S;g.dbgBegin=(m,i)=>begin(m,i);g.LV=LV;g.meta=()=>M;g.spawn=spawnHero;g.place=(type,ti)=>{S.traps.push({id:++uid,paid:0,type,tile:ti,x:tileX(ti),uses:maxUses(type),arm:0,open:false,openT:0,cd:0.3,rockY:WCEIL+34,rockVy:0,rockOn:false,done:false,doneT:0,ft:Math.random()*2,lastKill:null})};g.geo={NT,TS,T0,K,FLOOR,WCEIL,WW,WBAR,yTop,yBot,EXIT};g.renderWorld=(c,s,ox,oy)=>{c.save();c.setTransform(s,0,0,s,-ox*s,-oy*s);c.imageSmoothingEnabled=false;drawScene(c,{ceil:true});for(const t of S.traps)drawTrap(c,t);for(const b of S.balls){const R2=b.big?8:5,i=((Math.floor(-b.rot/(Math.PI/4))%8)+8)%8;drawSpr(c,boulderSpr(R2,i),b.x,FLOOR+PX)}for(const a of S.arrows)drawSpr(c,tspr('arrow'),a.x+10,a.y+6);for(const h of S.heroes)drawHero(c,h);S.fx.draw(c);c.restore()};g.flame=(t,on)=>{t.ft=on?1.9:0.2};g.txtO=txtO}
+  return g;
+}
+
+/* ===== Poki SDK 接入 ===== */
+const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+let game=null;
+function applyLang(){try{document.title=T('title');const r=document.querySelector('#rotate div');if(r)r.textContent=T('rotate');document.documentElement.lang=LANG}catch(e){}}window.__onLang=applyLang;applyLang();
+
+const sdk=()=>window.PokiSDK||null;
+let playing=false,adPlaying=false,last=0;
+function gpStart(){if(playing)return;playing=true;try{sdk()&&sdk().gameplayStart()}catch(e){}}
+function gpStop(){if(!playing)return;playing=false;try{sdk()&&sdk().gameplayStop()}catch(e){}}
+function muteAudio(){SFX.setAdMute(true)}
+function unmuteAudio(){SFX.setAdMute(false)}
+function commercial(){
+  gpStop();adPlaying=true;
+  let p;try{p=sdk()?sdk().commercialBreak(muteAudio):Promise.resolve()}catch(e){p=Promise.resolve()}
+  return Promise.resolve(p).catch(()=>{}).then(()=>{unmuteAudio();adPlaying=false});
+}
+function rewarded(){
+  gpStop();adPlaying=true;
+  let p;try{p=sdk()?sdk().rewardedBreak(muteAudio):Promise.resolve(true)}catch(e){p=Promise.resolve(false)}
+  return Promise.resolve(p).catch(()=>false).then(ok=>{unmuteAudio();adPlaying=false;return !!ok});
+}
+HOOK.reviveKey='reviveFree';HOOK.stop=()=>gpStop();
+HOOK.ad=cb=>{commercial().then(cb)};
+HOOK.revive=cb=>{rewarded().then(ok=>{cb(ok);if(ok)gpStart()})};
+
+function resize(){const r=cv.getBoundingClientRect();if(!r.width)return;const d=Math.min(2,window.devicePixelRatio||1);cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d)}
+function avail(){const w=document.getElementById('wrap');const cs=getComputedStyle(w);return{aw:w.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),ah:w.clientHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom)}}
+function wantH(){const a=avail();if(!a.aw||!a.ah||a.ah>a.aw)return H;return Math.round(clamp(W*a.ah/a.aw,420,600))}
+function fit(){const a=avail();if(!a.aw||!a.ah)return;const sc=Math.min(a.aw/W,a.ah/H);cv.style.width=Math.floor(W*sc)+'px';cv.style.height=Math.floor(H*sc)+'px';resize()}
+function layout(force){const nh=wantH();if(!game||(Math.abs(nh-H)>8&&(force||game.fresh()))){H=nh;game=TrapGame();game.reset()}fit()}
+window.addEventListener('resize',()=>layout(false));
+function pt(e){const r=cv.getBoundingClientRect();return{x:(e.clientX-r.left)/r.width*W,y:(e.clientY-r.top)/r.height*H}}
+cv.addEventListener('pointerdown',e=>{e.preventDefault();if(adPlaying||!game)return;try{cv.setPointerCapture(e.pointerId)}catch(_){}
+  const p=pt(e);game.move(p.x,p.y);game.down(p.x,p.y);if(game.inPlay())gpStart()});
+cv.addEventListener('pointermove',e=>{if(adPlaying||!game)return;const p=pt(e);game.move(p.x,p.y)});
+window.addEventListener('keydown',e=>{
+  if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code))e.preventDefault();
+  if(adPlaying||!game)return;
+  if((e.code==='Space'||e.code==='Enter')&&game.inPlay()){gpStart();game.skip()}
+});
+window.addEventListener('wheel',e=>e.preventDefault(),{passive:false});
+window.addEventListener('contextmenu',e=>e.preventDefault());
+function frame(t){
+  const dt=Math.min(0.05,(t-last)/1000||0);last=t;
+  if(!adPlaying&&!window.__manual)game.update(dt);
+  if(cv.width){ctx.setTransform(cv.width/W,0,0,cv.height/H,0,0);game.draw(ctx)}
+  requestAnimationFrame(frame);
+}
+if(/debug/.test(location.search))window.__game=()=>game;
+let booted=false;
+function boot(){if(booted)return;booted=true;layout(true);try{game.autoStart()}catch(e){}requestAnimationFrame(frame);try{sdk()&&sdk().gameLoadingFinished()}catch(e){}}
+if(sdk()){try{sdk().init().then(boot).catch(boot)}catch(e){boot()}}else boot();
+})();
+</script>
+</body>
+</html>
