@@ -616,7 +616,7 @@ function TrapGame(){
     if(S.over||S.win){for(const b of S.btns||[])if(inR(x,y,b)){btnAct(b.id);return}return}
     if(S.phase==='draft'){draftClick(x,y);return}
     if(S.phase==='break'&&S.goBtn&&inR(x,y,S.goBtn)){S.breakT=0;if(S.tut===1)S.tut=0;SFX.play('card');return}
-    if(y>=BAR){for(const r of slotRects())if(inR(x,y,r)){S.sel=r.k;return}return}
+    if(y>=BAR){for(const r of slotRects())if(inR(x,y,r)){S.sel=r.k;S.selT=S.t;return}return}
     if(y<CEIL)return;
     const ti=tileAt(x/K);if(ti<0)return;
     if(S.blocked&&S.blocked.has(ti)){flash(T('blockedTile'));return}
@@ -1079,6 +1079,10 @@ function TrapGame(){
       {const cost=costOf(k);drawSpr(c,tspr('coin'),r.x+53,y+(CMP?47:38),1.7);fitTxtO(c,String(cost),r.x+62,y+(CMP?41:33),CMP?15:13,r.w-68,can?PAL.y:PAL.r,'left',800,3)}
       c.globalAlpha=1;
     }
+    // 陷阱说明：鼠标停在底栏某个陷阱上，或刚点选（手机）3 秒内，在底栏上方显示它的作用
+    if(S.phase!=='draft'&&!S.over&&!S.win){const hv=S.hover&&S.hover.y>=BAR?slotRects().find(r=>S.hover.x>=r.x&&S.hover.x<=r.x+r.w):null;
+      const k=hv?hv.k:(S.selT!=null&&S.t-S.selT<3?S.sel:null);
+      if(k&&TD[k])pill(c,T('goalLine',{name:TD[k].name,text:TD[k].desc}),W/2,BAR-22,14,'rgba(0,0,0,1)',PAL.w)}
     // 提示
     if(S.phase==='break'&&!S.over&&!S.win&&S.wave===0&&S.lv){
       const Lv=S.lv;pill(c,T('lvTitle',{id:Lv.id,n:Lv.waves}),W/2,CEIL+110,16,PAL.y,PAL.k);let yy=CEIL+146;
