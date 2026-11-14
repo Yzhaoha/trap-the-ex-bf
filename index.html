@@ -1070,15 +1070,12 @@ function TrapGame(){
     for(let i=0;i<TORCH.length;i++){const tx=TORCH[i],ty=FLOOR-(FLOOR-WCEIL)*0.58;
       drawSpr(c,tspr('torch'),tx,ty+15,PX);pxFlame(c,tx,ty,12,18+Math.sin(S.t*9+i)*3,S.t+i,PX);
       c.save();c.globalCompositeOperation='lighter';const r=90+Math.sin(S.t*7+i*2)*6;const gr=c.createRadialGradient(tx,ty-4,4,tx,ty-4,r);gr.addColorStop(0,'rgba(255,160,60,0.30)');gr.addColorStop(1,'rgba(255,170,70,0)');c.fillStyle=gr;c.fillRect(tx-r,ty-4-r,r*2,r*2);c.restore()}
-    // 入口：石拱门
-    c.fillStyle=PAL.k;c.fillRect(0,FLOOR-78,45,78);c.fillStyle='#0b0812';c.fillRect(0,FLOOR-72,39,72);
-    for(let y=FLOOR-78;y<FLOOR;y+=12){c.fillStyle=(y/12)%2?PAL.x:PAL.X;c.fillRect(39,y,6,11);c.fillStyle=PAL.m;c.fillRect(39,y,6,2)}
-    c.fillStyle=PAL.X;c.fillRect(0,FLOOR-78,45,6);c.fillStyle=PAL.x;c.fillRect(0,FLOOR-78,45,2);
+    // 入口：深色门洞 + 灰色方块门框
+    BK(c,-6,FLOOR-78,48,82,'#2c2140',{r:4,lw:1.4});for(let y=FLOOR-78;y<FLOOR;y+=13)BK(c,36,y+0.5,9,12,'#9b94b0',{r:2,lw:1.2});BK(c,-6,FLOOR-82,52,9,'#b3acc8',{r:3,lw:1.4});
     // 出口：发光的木门
     const ex=WW-42;c.save();c.globalCompositeOperation='lighter';const gl=c.createRadialGradient(ex+21,FLOOR-36,6,ex+21,FLOOR-36,90);gl.addColorStop(0,'rgba(255,210,80,0.35)');gl.addColorStop(1,'rgba(255,210,80,0)');c.fillStyle=gl;c.fillRect(ex-80,FLOOR-130,170,130);c.restore();
-    c.fillStyle=PAL.k;c.fillRect(ex-3,FLOOR-84,48,84);c.fillStyle=PAL.l;c.fillRect(ex+3,FLOOR-78,39,78);c.fillStyle=PAL.y;c.fillRect(ex+3,FLOOR-30,39,30);
-    c.fillStyle=PAL.N;c.fillRect(ex,FLOOR-84,6,84);c.fillRect(ex,FLOOR-84,45,6);c.fillStyle=PAL.n;c.fillRect(ex,FLOOR-84,45,2);
-    c.fillStyle=PAL.n;c.fillRect(ex+6,FLOOR-75,9,75);c.fillStyle=PAL.N;c.fillRect(ex+12,FLOOR-75,3,75);c.fillStyle=PAL.y;c.fillRect(ex+9,FLOOR-40,3,3);
+    BK(c,ex-3,FLOOR-86,50,90,'#a96a3c',{r:4,lw:1.4});BK(c,ex+4,FLOOR-79,40,79,'#ffe9a8',{r:3,lw:1.2,flat:true});BK(c,ex+4,FLOOR-30,40,30,'#ffd250',{r:2,lw:0,flat:true});
+    BK(c,ex+5,FLOOR-77,16,77,'#c57f48',{r:3,lw:1.2});BK(c,ex+16,FLOOR-44,4,4,'#ffd250',{r:2,lw:0.8});
     if(opt.ceil){c.fillStyle=PAL.k;c.fillRect(0,WCEIL,WW,PX*3);c.fillStyle=PAL.V;c.fillRect(0,WCEIL,WW,PX*2);for(let x=0;x<WW;x+=PX*6){c.fillStyle=PAL.v;c.fillRect(x,WCEIL,PX*5,PX)}}
   }
   function drawLights(c){c.save();const g2=c.createLinearGradient(0,0,0,H);g2.addColorStop(0,'rgba(120,40,90,0.12)');g2.addColorStop(0.35,'rgba(14,9,26,0)');c.fillStyle=g2;c.fillRect(0,0,W,H);
