@@ -1,0 +1,43 @@
+Title: Trap the Ex BF
+
+Description:
+Your exes want back in, and you are done with them. Trap the Ex BF is a cute, chunky blocky trap-defense game: exes march through your hallway toward your door, and you stop them with stiletto heels, open suitcases, gift boxes, lipstick launchers, hair dryers, yoga balls and more.
+But exes learn. Every trap that gets one of them is shared in the ex group chat, so the next ones know how to dodge it. Exes who get through come back more stubborn. Mix up your traps, combine them (Bouncy Pillow + Hanger Hooks!) and keep them guessing.
+After each wave, pick one of three cards: a new trap, an upgrade or a bonus. Collect a full trap family to unlock its build bonus.
+
+Features:
+- 60 levels in 6 chapters (Living Room to Wedding Hall), each with new traps, new kinds of exes and special rules
+- 12 traps and 8 types of ex, from the Gym Bro and the Influencer to the Toxic Ex boss
+- Earn up to 3 stars per level: let no ex get through
+- Endless mode with unlockable traps
+- Plays in 7 languages
+
+Controls:
+Mouse: click a trap in the bottom bar, then click the floor to place it. Click a placed trap to remove it (half refund).
+Click a card to pick it after each wave.
+Space or Enter: start the next wave right away.
+Mobile: tap to select and place traps (landscape).
+
+Category: Strategy (Tower Defense if available)
+Tags: Tower Defense, Strategy, Trap, Cute, Funny, Girly
+Languages: English, Chinese, Portuguese, Spanish, Japanese, Hindi, Bengali
+Saving: Data Module from the CrazyGames SDK
+Devices: Desktop + Mobile (landscape only)
+Multiplayer: No
+Supports SDK mute: Yes
+Fullscreen: Yes (CrazyGames full screen; no in-game fullscreen button)
+Ads: midgame ads between levels, rewarded ad to revive (+2 lives)
+Tools/Engine: Custom engine / framework (HTML5 Canvas, single index.html). Do NOT select any AI option.
+
+Files in this folder:
+- trap-the-ex-bf-crazygames.zip  (game build, index.html at the root)
+- trap-the-ex-bf_landscape_1920x1080.png
+- trap-the-ex-bf_portrait_800x1200.png
+- trap-the-ex-bf_square_800x800.png
+- trap-the-ex-bf-landscape-1080p.mp4  (preview video, landscape)
+- trap-the-ex-bf-portrait-1080x1620.mp4  (preview video, portrait)
+
+Test link: https://yzhaoha.github.io/trap-the-ex-bf/
+
+Account: not decided (ask the user). Options: a new CrazyGames account, or MiracleGames after 2026-11-28 (suspended until then).
+Before submitting: the user checks the test link on computer and phone first. The user ticks confirmation boxes and signs in; screenshot the filled form for the user before the final Submit.

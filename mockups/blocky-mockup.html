@@ -1,0 +1,195 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Trap the Ex BF block mockup</title>
+<style>html,body{margin:0;background:#222}canvas{display:block;width:960px;height:540px}</style>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+// Block-style mockup for Trap the Ex BF: flat chunky shapes, thick outlines, big readable faces.
+const cv = document.getElementById('c'), x = cv.getContext('2d');
+const W = 1920, H = 1080, FLOOR = 905, CEIL = 170;
+const INK = '#2a1838';
+const shade = (hex, a) => { let n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255; const t = a < 0 ? 0 : 255, f = Math.abs(a);
+  r = Math.round(r + (t - r) * f); g = Math.round(g + (t - g) * f); b = Math.round(b + (t - b) * f); return `rgb(${r},${g},${b})`; };
+function rr(px, py, w, h, r) { x.beginPath(); x.roundRect(px, py, w, h, r); }
+// A block: flat colour, darker bottom band, light top band, thick ink outline.
+function B(px, py, w, h, col, o = {}) {
+  const r = o.r ?? 6, lw = o.lw ?? 5;
+  x.save(); rr(px, py, w, h, r); x.fillStyle = col; x.fill(); x.clip();
+  if (!o.flat) { x.fillStyle = shade(col, -0.18); x.fillRect(px, py + h - Math.min(h * 0.28, 14), w, 40);
+    x.fillStyle = shade(col, 0.28); x.fillRect(px, py, w, Math.min(h * 0.18, 8)); }
+  x.restore();
+  if (lw) { rr(px, py, w, h, r); x.lineWidth = lw; x.strokeStyle = INK; x.stroke(); }
+}
+function txt(s, px, py, size, col, align = 'center') {
+  x.font = `900 ${size}px "Arial Rounded MT Bold","Arial Black",system-ui,sans-serif`; x.textAlign = align; x.textBaseline = 'middle';
+  x.lineJoin = 'round'; x.lineWidth = size * 0.24; x.strokeStyle = INK; x.strokeText(s, px, py); x.fillStyle = col; x.fillText(s, px, py);
+}
+
+// ---------- room ----------
+function room() {
+  x.fillStyle = '#f2a3c3'; x.fillRect(0, 0, W, H);
+  const bh = 64; let row = 0;
+  for (let y = CEIL + 18; y < FLOOR; y += bh, row++) {
+    for (let bx = (row % 2) ? -70 : 0; bx < W; bx += 150) {
+      const col = ['#f6b3cd', '#efa0bf', '#f4aac7'][(bx / 150 + row) % 3 | 0];
+      B(bx + 4, y + 4, 142, bh - 8, col, { r: 8, lw: 0 });
+    }
+  }
+  // ceiling beam
+  B(-10, CEIL - 40, W + 20, 58, '#c58ad8', { r: 0 });
+  B(-10, 0, W + 20, CEIL - 40, '#e5a0d0', { r: 0, lw: 0 });
+  for (let bx = 0; bx < W; bx += 150) B(bx + 4, 30, 142, 56, '#eeb2db', { r: 8, lw: 0 });
+  // pillars
+  for (const px of [470, 1290]) { B(px, CEIL + 10, 110, FLOOR - CEIL - 10, '#d9b4f0', { r: 4 });
+    for (let y = CEIL + 70; y < FLOOR - 20; y += 90) { x.fillStyle = INK; x.fillRect(px, y, 110, 5); }
+    B(px - 16, FLOOR - 34, 142, 34, '#f0d4fb', { r: 4 }); }
+  // heart lamps
+  for (const hx of [300, 960, 1620]) heart(hx, CEIL + 60, 26, '#ff8fc4');
+  // floor
+  B(-10, FLOOR, W + 20, H - FLOOR + 10, '#b07ad0', { r: 0 });
+  for (let fx = 0; fx < W; fx += 160) B(fx + 6, FLOOR + 22, 148, 90, '#bf8ddd', { r: 10, lw: 0 });
+  B(-10, FLOOR - 8, W + 20, 22, '#e2bdf5', { r: 0 });
+  // entrance and door
+  B(-20, 520, 150, FLOOR - 520 + 4, '#2c2140', { r: 8 }); B(100, 510, 40, FLOOR - 510, '#8f8aa3', { r: 4 });
+  B(1770, 480, 170, FLOOR - 480 + 4, '#a96a3c', { r: 8 }); B(1795, 505, 140, FLOOR - 505, '#ffd36a', { r: 6 });
+  B(1800, 520, 110, FLOOR - 520, '#c57f48', { r: 6 }); B(1880, 680, 16, 16, '#ffd36a', { r: 8, lw: 3 });
+}
+function heart(cx, cy, s, col) {
+  x.save(); x.translate(cx, cy); x.beginPath();
+  x.moveTo(0, s * 0.9); x.bezierCurveTo(-s * 1.4, -s * 0.1, -s * 0.7, -s * 1.1, 0, -s * 0.35);
+  x.bezierCurveTo(s * 0.7, -s * 1.1, s * 1.4, -s * 0.1, 0, s * 0.9); x.closePath();
+  x.fillStyle = col; x.fill(); x.lineWidth = 5; x.strokeStyle = INK; x.stroke(); x.restore();
+}
+function brokenHeart(cx, cy, s) { heart(cx, cy, s, '#ff4d6d');
+  x.save(); x.strokeStyle = INK; x.lineWidth = 5; x.beginPath(); x.moveTo(cx, cy - s * 0.35); x.lineTo(cx - 8, cy); x.lineTo(cx + 8, cy + 14); x.lineTo(cx, cy + s * 0.9); x.stroke(); x.restore(); }
+
+// ---------- exes ----------
+// u = block unit. Body is built from blocks: legs, torso, arms, big square head.
+function ex(cx, foot, type, o = {}) {
+  const u = (o.big ? 1.25 : 1) * 10.5;
+  const T = {
+    basic:  { hair: '#6b4430', skin: '#f6c39b', top: '#9aa0b4', pants: '#4b6fb8' },
+    gamer:  { hair: '#3b2a22', skin: '#f2b98f', top: '#5bc46e', pants: '#3e5b9a' },
+    smooth: { hair: '#1d1630', skin: '#f3c09a', top: '#7a4a2c', pants: '#2f2a40', shirt: '#fff4e8' },
+    gym:    { hair: '#6b4430', skin: '#f0b285', top: '#ffffff', pants: '#3f8ee0' },
+    fixit:  { hair: '#6b4430', skin: '#f6c39b', top: '#e04b3c', pants: '#3e5b9a', cap: '#ff9a3c' },
+    mama:   { hair: '#9a6038', skin: '#f8cfa9', top: '#ffd250', pants: '#7a5a3a' },
+    influ:  { hair: '#ff7eb6', skin: '#f6c39b', top: '#8fd3ff', pants: '#3e5b9a' },
+    toxic:  { hair: '#2a1f38', skin: '#efb48c', top: '#d6334a', pants: '#2f2a40' },
+  }[type];
+  x.save(); x.translate(cx, foot);
+  if (o.rot) x.rotate(o.rot);
+  const bw = type === 'gym' ? 9 : 7; // torso width in units
+  // legs
+  const step = o.step || 0;
+  B(-3.4 * u, -5 * u + step, 3 * u, 5 * u - step, T.pants, { r: 4 });
+  B(0.4 * u, -5 * u - step, 3 * u, 5 * u + step, T.pants, { r: 4 });
+  B(-3.6 * u, -1.2 * u + step, 3.4 * u, 1.4 * u, INK, { r: 4, lw: 0 }); B(0.2 * u, -1.2 * u - step, 3.4 * u, 1.4 * u, INK, { r: 4, lw: 0 });
+  // arms
+  const armW = type === 'gym' ? 2.8 : 2;
+  B(-bw / 2 * u - armW * u + 2, -10.5 * u, armW * u, 5 * u, T.top === '#ffffff' ? T.skin : T.top, { r: 5 });
+  B(bw / 2 * u - 2, -10.5 * u, armW * u, 5 * u, T.top === '#ffffff' ? T.skin : T.top, { r: 5 });
+  // torso
+  B(-bw / 2 * u, -11 * u, bw * u, 6.4 * u, T.top, { r: 6 });
+  if (type === 'smooth') B(-1.2 * u, -11 * u, 2.4 * u, 5.4 * u, T.shirt, { r: 2, lw: 3 });
+  if (type === 'fixit') { x.save(); x.globalAlpha = 0.35; x.fillStyle = INK; for (let i = -3; i <= 3; i += 2) x.fillRect(i * u, -11 * u, u * 0.5, 6.4 * u); x.fillRect(-3.5 * u, -8.5 * u, 7 * u, u * 0.5); x.restore(); }
+  if (type === 'mama') { x.fillStyle = '#fff4c2'; x.fillRect(-2 * u, -11 * u, 4 * u, u); }
+  if (type === 'toxic') { B(-1 * u, -10 * u, 2 * u, 2 * u, '#ffd250', { r: 3, lw: 3 }); }
+  // head
+  B(-4 * u, -18.5 * u, 8 * u, 7.6 * u, T.skin, { r: 10 });
+  // hair
+  if (type === 'influ') { B(-4.4 * u, -19.6 * u, 8.8 * u, 3.2 * u, T.hair, { r: 10 }); B(-4.6 * u, -18 * u, 2 * u, 6 * u, T.hair, { r: 6 }); }
+  else if (type === 'fixit') { B(-4.4 * u, -19.6 * u, 8.8 * u, 3 * u, T.cap, { r: 8 }); B(2 * u, -17.4 * u, 4.4 * u, 1.4 * u, T.cap, { r: 4 }); }
+  else if (type === 'smooth') { B(-4.4 * u, -19.8 * u, 8.8 * u, 3.4 * u, T.hair, { r: 12 }); B(1 * u, -17.6 * u, 3.6 * u, 1.6 * u, T.hair, { r: 6, lw: 0 }); }
+  else B(-4.4 * u, -19.4 * u, 8.8 * u, 2.8 * u, T.hair, { r: 8 });
+  // face
+  const ey = -14.6 * u, look = o.look || 0;
+  if (type === 'smooth') { B(-3.2 * u, ey - 0.8 * u, 6.6 * u, 1.8 * u, INK, { r: 3, lw: 0 }); x.fillStyle = '#8fd3ff'; x.fillRect(-2.6 * u, ey - 0.6 * u, 1.2 * u, 0.5 * u); x.fillRect(0.8 * u, ey - 0.6 * u, 1.2 * u, 0.5 * u); }
+  else if (o.ko) { x.strokeStyle = INK; x.lineWidth = 5; for (const ex2 of [-1.8 * u, 1.8 * u]) { x.beginPath(); x.moveTo(ex2 - 0.7 * u, ey - 0.7 * u); x.lineTo(ex2 + 0.7 * u, ey + 0.7 * u); x.moveTo(ex2 + 0.7 * u, ey - 0.7 * u); x.lineTo(ex2 - 0.7 * u, ey + 0.7 * u); x.stroke(); } }
+  else for (const ex2 of [-1.8 * u, 1.8 * u]) { B(ex2 - 0.65 * u + look, ey - 1 * u, 1.3 * u, 2 * u, INK, { r: 5, lw: 0, flat: true }); x.fillStyle = '#ffffff'; x.fillRect(ex2 - 0.3 * u + look, ey - 0.7 * u, 0.45 * u, 0.55 * u); }
+  // mouth
+  x.strokeStyle = INK; x.lineWidth = 4; x.beginPath();
+  if (o.ko) { x.arc(0, -12.2 * u, 0.9 * u, Math.PI, 0); } else if (type === 'toxic' || type === 'smooth') { x.moveTo(-1 * u, -12.4 * u); x.quadraticCurveTo(0.6 * u, -11.6 * u, 1.6 * u, -12.8 * u); } else { x.arc(0, -12.8 * u, 0.9 * u, 0.15 * Math.PI, 0.85 * Math.PI); }
+  x.stroke();
+  // blush
+  x.fillStyle = 'rgba(255,110,150,0.45)'; x.fillRect(-3.4 * u, -13.2 * u, 1.3 * u, 0.7 * u); x.fillRect(2.1 * u, -13.2 * u, 1.3 * u, 0.7 * u);
+  // accessories
+  if (type === 'gamer') { B(-4.8 * u, -19.6 * u, 9.6 * u, 1.2 * u, INK, { r: 4, lw: 0 }); B(-5.4 * u, -16.4 * u, 1.6 * u, 3 * u, '#3b3550', { r: 4, lw: 3 }); B(3.8 * u, -16.4 * u, 1.6 * u, 3 * u, '#3b3550', { r: 4, lw: 3 });
+    B(4 * u, -7.6 * u, 4.2 * u, 2.4 * u, '#3b3550', { r: 8, lw: 4 }); x.fillStyle = '#ff5a8a'; x.fillRect(6.6 * u, -6.9 * u, 0.8 * u, 0.8 * u); }
+  if (type === 'fixit') { B(5.2 * u, -9.6 * u, 1.1 * u, 5 * u, '#9aa0b4', { r: 2, lw: 3 }); B(4.6 * u, -10.4 * u, 2.4 * u, 1.4 * u, '#9aa0b4', { r: 2, lw: 3 }); }
+  if (type === 'influ') { B(4.6 * u, -13 * u, 2.2 * u, 3.8 * u, '#2a1f38', { r: 3, lw: 3 }); x.fillStyle = '#ffd250'; x.fillRect(5 * u, -12.4 * u, 1.4 * u, 1.6 * u); }
+  if (type === 'mama') { B(4.4 * u, -9.4 * u, 2 * u, 3.2 * u, '#ff9ac6', { r: 3, lw: 3 }); }
+  if (type === 'toxic') { x.fillStyle = '#ffd250'; x.strokeStyle = INK; x.lineWidth = 4; x.beginPath(); x.moveTo(-3.4 * u, -19.2 * u); x.lineTo(-3.4 * u, -23 * u); x.lineTo(-1.7 * u, -21 * u); x.lineTo(0, -23.6 * u); x.lineTo(1.7 * u, -21 * u); x.lineTo(3.4 * u, -23 * u); x.lineTo(3.4 * u, -19.2 * u); x.closePath(); x.fill(); x.stroke(); }
+  x.restore();
+  if (o.hp) { const top = foot - (type === 'toxic' ? 24.5 : 21) * u - 26; for (let i = 0; i < o.hp; i++) B(cx - o.hp * 14 + i * 28 + 2, top, 22, 16, '#ff4d6d', { r: 4, lw: 3 }); }
+}
+
+// ---------- traps ----------
+function stiletto(cx) { // a big pink high heel with spikes on the insole
+  x.save(); x.translate(cx, FLOOR);
+  x.fillStyle = '#ff5f9e'; x.strokeStyle = INK; x.lineWidth = 5; x.lineJoin = 'round';
+  x.beginPath(); x.moveTo(-70, 0); x.lineTo(-70, -26); x.quadraticCurveTo(-60, -44, -30, -42); x.lineTo(10, -40); x.quadraticCurveTo(40, -44, 52, -92); x.lineTo(74, -92); x.lineTo(74, -70); x.lineTo(64, -70); x.lineTo(62, 0); x.lineTo(46, 0); x.lineTo(48, -56); x.quadraticCurveTo(30, -20, 0, -14); x.lineTo(-40, -12); x.lineTo(-46, 0); x.closePath(); x.fill(); x.stroke();
+  x.fillStyle = '#ff9ac6'; x.fillRect(-60, -34, 50, 8);
+  for (let i = 0; i < 4; i++) { const sx = -56 + i * 22; x.fillStyle = '#e8e4f4'; x.beginPath(); x.moveTo(sx - 8, -40); x.lineTo(sx, -66); x.lineTo(sx + 8, -40); x.closePath(); x.fill(); x.stroke(); }
+  x.restore();
+}
+function suitcase(cx) { // open suitcase in the floor
+  x.save(); x.translate(cx, FLOOR);
+  B(-70, -6, 140, 40, '#2a1838', { r: 6, lw: 5 });
+  B(-74, -74, 148, 30, '#8e5bd6', { r: 8 }); x.save(); x.translate(0, -44); x.restore();
+  B(-76, -14, 152, 18, '#a874ea', { r: 6 }); B(-14, -88, 28, 16, '#8e5bd6', { r: 6, lw: 4 });
+  x.fillStyle = '#ffd250'; x.fillRect(-60, -62, 120, 6);
+  x.restore();
+}
+function gift(cx) {
+  x.save(); x.translate(cx, FLOOR);
+  B(-54, -80, 108, 80, '#ff7eb6', { r: 8 }); B(-60, -96, 120, 26, '#ff9ac6', { r: 8 });
+  B(-10, -96, 20, 96, '#ffd250', { r: 3, lw: 4 });
+  B(-30, -122, 26, 26, '#ffd250', { r: 10, lw: 4 }); B(4, -122, 26, 26, '#ffd250', { r: 10, lw: 4 });
+  x.restore();
+}
+function lipstick(cx, cy) { // wall launcher
+  B(cx - 70, cy - 26, 90, 52, '#ff7eb6', { r: 10 }); B(cx + 14, cy - 20, 50, 40, '#ffd250', { r: 8 });
+  B(cx + 60, cy - 14, 34, 28, '#e0335f', { r: 10 });
+}
+function lipShot(cx, cy) { B(cx, cy - 10, 44, 20, '#e0335f', { r: 10 }); B(cx - 30, cy - 8, 32, 16, '#ffd250', { r: 4, lw: 4 });
+  x.fillStyle = 'rgba(255,255,255,0.7)'; for (let i = 1; i < 4; i++) x.fillRect(cx - 30 - i * 26, cy - 3, 14, 6); }
+function dryer(cx) {
+  x.save(); x.translate(cx, FLOOR);
+  B(-14, -60, 28, 60, '#c58ad8', { r: 6 }); B(-46, -112, 92, 56, '#9b6be0', { r: 24 }); B(30, -100, 44, 32, '#7f4fd0', { r: 8 });
+  // hot air
+  for (let i = 0; i < 4; i++) { B(80 + i * 34, -98 + (i % 2) * 8, 26, 14, ['#ffd250', '#ff9a3c', '#ff5f6d', '#ffd250'][i], { r: 7, lw: 3 }); }
+  x.restore();
+}
+function pot(cx, cy) { x.strokeStyle = INK; x.lineWidth = 4; x.beginPath(); x.moveTo(cx, CEIL + 18); x.lineTo(cx, cy - 40); x.stroke();
+  B(cx - 30, cy - 30, 60, 46, '#ff9a3c', { r: 8 }); B(cx - 36, cy - 40, 72, 16, '#ffb35c', { r: 6 });
+  B(cx - 5, cy - 72, 10, 34, '#5bc46e', { r: 4, lw: 3 }); B(cx - 20, cy - 92, 40, 26, '#ff5f9e', { r: 13, lw: 4 }); B(cx - 7, cy - 85, 14, 12, '#ffd250', { r: 6, lw: 0 }); }
+function pillow(cx) { x.save(); x.translate(cx, FLOOR); B(-60, -40, 120, 40, '#ffffff', { r: 18 }); B(-46, -30, 16, 10, '#ff9ac6', { r: 5, lw: 0 }); B(30, -30, 16, 10, '#ff9ac6', { r: 5, lw: 0 }); x.restore(); }
+function hooks(cx) { B(cx - 70, CEIL + 14, 140, 20, '#9aa0b4', { r: 4 }); for (let i = 0; i < 4; i++) { x.strokeStyle = INK; x.lineWidth = 6; x.beginPath(); x.moveTo(cx - 52 + i * 35, CEIL + 34); x.lineTo(cx - 52 + i * 35, CEIL + 58); x.arc(cx - 44 + i * 35, CEIL + 58, 8, Math.PI, 0, true); x.stroke(); } }
+function durability(cx, n, used) { for (let i = 0; i < n; i++) B(cx - n * 15 + i * 30 + 3, FLOOR + 50, 22, 22, i < n - used ? '#fff7ef' : '#c9a3dd', { r: 4, lw: 3, flat: true }); }
+
+// ---------- scene ----------
+room();
+hooks(1440); pot(1100, 300);
+lipstick(560, 690);
+stiletto(330); durability(330, 3, 1);
+suitcase(770); durability(770, 2, 0);
+gift(1120); durability(1120, 3, 0);
+dryer(1300); durability(1300, 4, 1);
+pillow(1500); durability(1500, 3, 0);
+ex(170, FLOOR, 'basic', { step: 6 });
+ex(320, FLOOR - 70, 'influ', { rot: -0.35, ko: true }); brokenHeart(250, 560, 34);
+ex(770, FLOOR + 40, 'smooth', {}); // falling into the suitcase
+lipShot(700, 700);
+ex(1000, FLOOR, 'gamer', { step: -6, look: 4, hp: 2 });
+ex(1190, FLOOR, 'gym', { look: 4, hp: 2 });
+ex(1420, FLOOR - 40, 'mama', { rot: 0.25, ko: true }); brokenHeart(1470, 470, 30);
+ex(1500, 400, 'fixit', {});
+ex(1665, FLOOR, 'toxic', { big: true, hp: 3, look: -4 });
+// suitcase lid in front of falling ex
+x.save(); x.beginPath(); x.rect(0, FLOOR + 6, W, H); x.clip(); x.fillStyle = '#b07ad0'; x.fillRect(690, FLOOR + 6, 160, 200); x.restore();
+B(700, FLOOR - 6, 140, 40, '#2a1838', { r: 6, lw: 5 });
+B(696, FLOOR - 14, 148, 14, '#a874ea', { r: 6 });
+txt('Trap the Ex BF', W / 2, 108, 120, '#ffd250');
+window.done = true;
+</script>
