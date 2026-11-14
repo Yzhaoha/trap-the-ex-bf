@@ -18,7 +18,7 @@ window.__cgInit=(async()=>{try{if(!window.CrazyGames||!window.CrazyGames.SDK)ret
 }
 html,body{margin:0;height:100%;background:var(--deep);overflow:hidden;overscroll-behavior:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none}
 #wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
-canvas{display:block;width:min(100vw, calc(100vh * 960 / 440));height:min(100vh, calc(100vw * 440 / 960));width:min(100vw, calc(100dvh * 960 / 440));height:min(100dvh, calc(100vw * 440 / 960));touch-action:none;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent;background:var(--deep)}
+canvas{display:block;image-rendering:crisp-edges;image-rendering:pixelated;width:min(100vw, calc(100vh * 960 / 440));height:min(100vh, calc(100vw * 440 / 960));width:min(100vw, calc(100dvh * 960 / 440));height:min(100dvh, calc(100vw * 440 / 960));touch-action:none;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent;background:var(--deep)}
 #rotate{display:none;position:fixed;inset:0;z-index:5;background:var(--deep);color:var(--fg);flex-direction:column;align-items:center;justify-content:center;gap:16px;font:700 20px system-ui,'PingFang SC',sans-serif;text-align:center;padding:24px}
 #rotate svg{width:72px;height:72px}
 @media (orientation:portrait) and (pointer:coarse){#rotate{display:flex}}
@@ -1170,7 +1170,7 @@ HOOK.happy=()=>{if(CG)cgSafe(()=>CG.game.happytime())};
 HOOK.ad=cb=>{showAd('midgame').then(()=>{cb();HOOK.play()})};
 HOOK.revive=cb=>{showAd('rewarded').then(ok=>{cb(!!ok);if(ok)gpStart()})};
 
-function resize(){const r=cv.getBoundingClientRect();if(!r.width)return;const d=Math.min(2,window.devicePixelRatio||1);cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d)}
+function resize(){const r=cv.getBoundingClientRect();if(!r.width)return;const d=Math.min(3,window.devicePixelRatio||1);cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d)}
 function avail(){const w=document.getElementById('wrap');const cs=getComputedStyle(w);return{aw:w.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),ah:w.clientHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom)}}
 function wantH(){const a=avail();if(!a.aw||!a.ah||a.ah>a.aw)return H;return Math.round(clamp(W*a.ah/a.aw,420,600))}
 function fit(){const a=avail();if(!a.aw||!a.ah)return;const sc=Math.min(a.aw/W,a.ah/H);cv.style.width=Math.floor(W*sc)+'px';cv.style.height=Math.floor(H*sc)+'px';resize()}
