@@ -344,7 +344,8 @@ const SFX=(function(){
 })();
 /* ====================== A. 坑勇者（第三版：抽卡 + 流派 + 解锁） ====================== */
 function TrapGame(){
-  const CMP=(typeof COMPACT!=='undefined'&&COMPACT)||H<500,BAR=H-(CMP?74:64),FLOOR=BAR-(CMP?40:44),CEIL=CMP?46:112,K=CMP?clamp((FLOOR-CEIL)/190,1.4,2.0):1,WW=W/K,WCEIL=FLOOR-(FLOOR-CEIL)/K,WBAR=FLOOR+(BAR-FLOOR)/K,T0=48,TS=48,NT=Math.floor((WW-96)/TS),EXIT=WW-42,SPD=CMP?WW/W:1;
+  const DESC=28; // 底栏顶部留给陷阱说明的高度
+  const CMP=(typeof COMPACT!=='undefined'&&COMPACT)||H<500,BAR=H-(CMP?74:64)-DESC,FLOOR=BAR-(CMP?40:44),CEIL=CMP?46:112,K=CMP?clamp((FLOOR-CEIL)/190,1.4,2.0):1,WW=W/K,WCEIL=FLOOR-(FLOOR-CEIL)/K,WBAR=FLOOR+(BAR-FLOOR)/K,T0=48,TS=48,NT=Math.floor((WW-96)/TS),EXIT=WW-42,SPD=CMP?WW/W:1;
   const RFT=Math.sqrt(2*(FLOOR-34-(WCEIL+34))/1400);
   const toS=(x,y)=>({x:x*K,y:FLOOR-(FLOOR-y)*K});
   const wpop=(s,x,y,col)=>{const q=toS(x,y);pop(s,q.x,q.y,col)};
@@ -461,7 +462,7 @@ function TrapGame(){
     if(type==='spike'&&S.upg.spike_dur)u+=2;if(type==='pit'&&S.upg.pit_dur)u+=2;if(type==='portal'&&S.upg.portal_dur)u+=3;if(type==='ceil'&&S.upg.ceil_dur)u+=3;
     if(active('spike')&&TD[type].sch==='spike')u+=1;if(active('fall')&&(type==='ice'||type==='portal'))u+=2;return u}
   function flameState(t){let off=1.6;const on=S.upg.flame_long?1.3:0.8;if(active('mech'))off*=0.7;const ph=t.ft%(off+on);return{on:ph>off,toOn:ph>off?0:off-ph}}
-  function slotRects(){const n=S.owned.length,gap=8,w=Math.min(164,(W-40-(n-1)*gap)/n),x0=(W-(n*w+(n-1)*gap))/2;return S.owned.map((k,i)=>({k,x:x0+i*(w+gap),y:BAR+7,w,h:CMP?60:50}))}
+  function slotRects(){const n=S.owned.length,gap=8,w=Math.min(164,(W-40-(n-1)*gap)/n),x0=(W-(n*w+(n-1)*gap))/2;return S.owned.map((k,i)=>({k,x:x0+i*(w+gap),y:BAR+7+DESC,w,h:CMP?60:50}))}
   const CH=Math.min(250,BAR-CEIL-96);
   const CARD=i=>({x:W/2-395+i*270,y:CEIL+38,w:250,h:CH});
   const RER={x:W/2-120,y:CEIL+48+CH,w:240,h:38};
@@ -616,7 +617,7 @@ function TrapGame(){
     if(S.over||S.win){for(const b of S.btns||[])if(inR(x,y,b)){btnAct(b.id);return}return}
     if(S.phase==='draft'){draftClick(x,y);return}
     if(S.phase==='break'&&S.goBtn&&inR(x,y,S.goBtn)){S.breakT=0;if(S.tut===1)S.tut=0;SFX.play('card');return}
-    if(y>=BAR){for(const r of slotRects())if(inR(x,y,r)){S.sel=r.k;S.selT=S.t;return}return}
+    if(y>=BAR){for(const r of slotRects())if(inR(x,y,r)){S.sel=r.k;return}return}
     if(y<CEIL)return;
     const ti=tileAt(x/K);if(ti<0)return;
     if(S.blocked&&S.blocked.has(ti)){flash(T('blockedTile'));return}
@@ -1079,10 +1080,10 @@ function TrapGame(){
       {const cost=costOf(k);drawSpr(c,tspr('coin'),r.x+53,y+(CMP?47:38),1.7);fitTxtO(c,String(cost),r.x+62,y+(CMP?41:33),CMP?15:13,r.w-68,can?PAL.y:PAL.r,'left',800,3)}
       c.globalAlpha=1;
     }
-    // 陷阱说明：鼠标停在底栏某个陷阱上，或刚点选（手机）3 秒内，在底栏上方显示它的作用
+    // 陷阱说明：底栏顶部那一行显示当前选中陷阱的作用（鼠标停在别的陷阱上时显示那个），不挡地面
     if(S.phase!=='draft'&&!S.over&&!S.win){const hv=S.hover&&S.hover.y>=BAR?slotRects().find(r=>S.hover.x>=r.x&&S.hover.x<=r.x+r.w):null;
-      const k=hv?hv.k:(S.selT!=null&&S.t-S.selT<3?S.sel:null);
-      if(k&&TD[k])pill(c,T('goalLine',{name:TD[k].name,text:TD[k].desc}),W/2,BAR-22,14,'rgba(0,0,0,1)',PAL.w)}
+      const k=hv?hv.k:S.sel;
+      if(k&&TD[k])fitTxtO(c,T('goalLine',{name:TD[k].name,text:TD[k].desc}),W/2,BAR+7+DESC/2,15,W-40,PAL.w,'center',800,3)}
     // 提示
     if(S.phase==='break'&&!S.over&&!S.win&&S.wave===0&&S.lv){
       const Lv=S.lv;pill(c,T('lvTitle',{id:Lv.id,n:Lv.waves}),W/2,CEIL+110,16,PAL.y,PAL.k);let yy=CEIL+146;
